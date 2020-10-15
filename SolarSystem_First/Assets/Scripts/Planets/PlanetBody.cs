@@ -5,10 +5,12 @@ using UnityEngine;
 [RequireComponent (typeof (Rigidbody))]
 public class PlanetBody : MonoBehaviour
 {
-    public float mass;              // mass of planet
-    public float radius;            // radius of planet
-    public Vector3 startVelocity;
-    private Vector3 currentVelocity;
+    public float mass;                  // mass of planet
+    public float radius;                // radius of planet
+    public Vector3 startVelocity;       // give starting boost to planet
+    public Vector3 currentVelocity;     // update velocity
+
+    
 
 
     Rigidbody rb;
@@ -17,7 +19,7 @@ public class PlanetBody : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.mass = mass;
-        currentVelocity = startVelocity;
+        //currentVelocity = startVelocity;
     }
 
 
@@ -32,7 +34,7 @@ public class PlanetBody : MonoBehaviour
             // don't attract your self
             if(p != this)
             {
-                //calculate distancen to each other
+                //calculate distancen to each other | r^2 
                 float sqrDistance = (p.rb.position - this.rb.position).sqrMagnitude;
                 // dir vector to each other
                 Vector3 dir = (p.rb.position - this.rb.position).normalized;
@@ -42,6 +44,29 @@ public class PlanetBody : MonoBehaviour
                 Vector3 acceleration = force / mass;
                 currentVelocity += acceleration * timeSteps;
             }
+        }
+    }
+
+    // calculate start Velocity
+    public void CalculateStartVelocity(PlanetBody[] planets)
+    {
+        foreach (var p in planets)
+        {
+            if(p != this && this.CompareTag("Planet"))
+            {
+                // calculate r
+                float sqrDistance = (p.rb.position - this.rb.position).magnitude;
+                // ----------- 
+                // dir vector to each other - has to be turned 90 degrees! or? REWORK HERE! Which Vector to rotate
+                // ----------- 
+                Vector3 dir = (p.rb.position - this.rb.position).normalized;
+                dir = Quaternion.Euler(-90.0f, -90.0f, 0.0f) * dir;
+                // v = sqr(G*(M/r))
+                Vector3 forceToStart = dir * (Mathf.Sqrt(Universe.gravitationalConstant * (p.mass / sqrDistance)));
+                startVelocity = forceToStart;
+                currentVelocity = forceToStart;
+            }
+
         }
     }
 

@@ -10,6 +10,12 @@ public class PlanetSimulation : MonoBehaviour
     {
         planets = FindObjectsOfType<PlanetBody>();
         Time.fixedDeltaTime = Universe.timeSteps;
+
+        // calculate StartVelocity
+        for (int i = 0; i < planets.Length; i++)
+        {
+            planets[i].CalculateStartVelocity(planets);
+        }
     }
 
     private void FixedUpdate()

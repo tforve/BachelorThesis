@@ -14,8 +14,10 @@ public class DebugOrbit : MonoBehaviour
     public float width = 100;
     public bool useThickLines;
 
+    public bool drawInPlayMode = false;
+
     void Start()
-    {
+    {        
         if (Application.isPlaying)
         {
             HideOrbits();
@@ -24,7 +26,11 @@ public class DebugOrbit : MonoBehaviour
 
     void Update()
     {
-
+        if(drawInPlayMode)
+        {
+            DrawOrbits();
+        }
+        
         if (!Application.isPlaying)
         {
             DrawOrbits();
