@@ -4,6 +4,24 @@ using UnityEngine;
 
 public class PlanetSimulation : MonoBehaviour
 {
+    #region SINGLETON PATTERN
+    private static PlanetSimulation instance;
+    public static PlanetSimulation Instance
+    {
+        get
+        {
+            if(instance == null)
+            {
+                instance = GameObject.FindObjectOfType<PlanetSimulation>();
+            }
+
+            return instance;
+        }
+        
+    }
+    #endregion
+
+
     public PlanetBody[] planets;
 
     private void Awake()

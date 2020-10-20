@@ -11,8 +11,6 @@ public class PlanetBody : MonoBehaviour
     public Vector3 currentVelocity;     // update velocity
 
     
-
-
     Rigidbody rb;
 
     private void Awake()
