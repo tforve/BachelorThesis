@@ -26,12 +26,7 @@ public class DebugOrbit : MonoBehaviour
 
     void Update()
     {
-        if(drawInPlayMode)
-        {
-            DrawOrbits();
-        }
-        
-        if (!Application.isPlaying)
+        if(drawInPlayMode || !Application.isPlaying)
         {
             DrawOrbits();
         }

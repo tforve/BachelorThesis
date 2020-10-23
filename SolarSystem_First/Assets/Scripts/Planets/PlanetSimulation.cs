@@ -22,11 +22,13 @@ public class PlanetSimulation : MonoBehaviour
     #endregion
 
 
-    public PlanetBody[] planets;
+    public PlanetBody[] planets;            // array to store all celestial bodies
 
     private void Awake()
     {
+        // populate array of planets
         planets = FindObjectsOfType<PlanetBody>();
+        // set fixedDeltaTime to own Universe time for more controll
         Time.fixedDeltaTime = Universe.timeSteps;
 
         // calculate StartVelocity
@@ -38,11 +40,12 @@ public class PlanetSimulation : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // recalculate velocity every timeStep
         for (int i = 0; i < planets.Length; i++)
         {
             planets[i].UpdateVelocity(planets, Universe.timeSteps);
         }
-
+        // use calculated velocity to update Position of planets
         for (int i = 0; i < planets.Length; i++)
         {
             planets[i].UpdatePosition(Universe.timeSteps);

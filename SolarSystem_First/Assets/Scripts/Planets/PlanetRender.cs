@@ -1,11 +1,7 @@
-﻿
-using UnityEngine;
-
+﻿using UnityEngine;
 
 /*  Update scale of mash if radius is changed
- *  maybe need to recalculate everything on the fly?
- * 
- * 
+ *  maybe need to recalculate everything on the fly? 
  */
 
 [ExecuteInEditMode]
