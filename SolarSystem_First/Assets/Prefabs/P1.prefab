@@ -3139,7 +3139,6 @@ GameObject:
   - component: {fileID: 7297455865257905789}
   - component: {fileID: 7297455865257905778}
   - component: {fileID: 7297455865257905779}
-  - component: {fileID: 7297455865257905788}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -3223,19 +3222,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7297455865257905788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7297455865257905777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9786129f852c56846851e59628a4261b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updatedRadius: 10
 --- !u!1 &7297455866511366566
 GameObject:
   m_ObjectHideFlags: 0
@@ -3284,7 +3270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 1
   radius: 10
-  startVelocity: {x: 0, y: 4.61, z: 0}
+  startVelocity: {x: 0, y: 5, z: 0}
   currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!54 &7297455866511366560
 Rigidbody:

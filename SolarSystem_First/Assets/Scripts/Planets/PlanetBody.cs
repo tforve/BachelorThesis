@@ -5,20 +5,24 @@ using UnityEngine;
 [RequireComponent (typeof (Rigidbody))]
 public class PlanetBody : MonoBehaviour
 {
+    [HideInInspector]
     public float mass;                  // mass of planet
+
+    [Header("Values of Celestial Body")]
     public float radius;                // radius of planet
     public Vector3 startVelocity;       // give starting boost to planet
     public Vector3 currentVelocity;     // update velocity
         
     Rigidbody rb;
+    Transform mesh;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         rb.mass = mass;
-        //currentVelocity = startVelocity;
     }
 
+    // ------ RUNTIME: Move Planet --------
 
     /// <summary>
     /// calculate Velocity of planet based on law of universal gravitation (F = G *((m1*m2)/r^2))
@@ -77,4 +81,19 @@ public class PlanetBody : MonoBehaviour
         this.rb.position += currentVelocity * time;
     }
 
+    // -------- MOSTLY FOR DEBUGGING PURPOSE: while in editor mode ---------
+
+    /// <summary>
+    /// Update mesh based on Radius of Planet
+    /// </summary>
+    void UpdateMesh()
+    {
+        mesh = this.transform.GetChild(0);
+        mesh.localScale = new Vector3(radius, radius, radius);
+    }
+
+    private void OnValidate()
+    {
+        UpdateMesh();
+    }
 }

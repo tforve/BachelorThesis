@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4372219421114914135}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4372219422309291234}
   m_RootOrder: 2
@@ -116,7 +116,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 5
-      minScalar: 25
+      minScalar: 20
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 500
+      scalar: 250
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1243,8 +1243,8 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.43633232
-      minScalar: -0.43633232
+      scalar: 0.6981317
+      minScalar: -0.6981317
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -8223,8 +8223,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 20
-      minScalar: 6
+      scalar: 150
+      minScalar: 100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -8685,7 +8685,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 5
+      value: 59.5
       mode: 0
       spread: 0
       speed:
@@ -9182,8 +9182,8 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.034906585
-      minScalar: -0.034906585
+      scalar: 0.13962634
+      minScalar: -0.13962634
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -12865,7 +12865,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.9353772, b: 0.36320752, a: 1}
   m_Intensity: 8.5
-  m_Range: 157.07
+  m_Range: 1131.7
   m_SpotAngle: 159.3
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -12940,7 +12940,7 @@ Transform:
   m_GameObject: {fileID: 4372219422852150712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4372219422309291234}
   m_RootOrder: 3
@@ -13197,8 +13197,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 80
-      minScalar: 50
+      scalar: 150
+      minScalar: 100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -13778,7 +13778,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 8
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -17737,7 +17737,6 @@ GameObject:
   - component: {fileID: 4372219423023918032}
   - component: {fileID: 4372219423023918039}
   - component: {fileID: 4372219423023918038}
-  - component: {fileID: 4372219423023918033}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -17821,16 +17820,3 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4372219423023918033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4372219423023918036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9786129f852c56846851e59628a4261b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updatedRadius: 100
