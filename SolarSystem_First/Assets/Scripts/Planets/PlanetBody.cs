@@ -10,6 +10,7 @@ public class PlanetBody : MonoBehaviour
 
     [Header("Values of Celestial Body")]
     public float radius;                // radius of planet
+    public float surfaceGravity;         // surface Gravity to calculate mass
     public Vector3 startVelocity;       // give starting boost to planet
     public Vector3 currentVelocity;     // update velocity
         
@@ -46,6 +47,14 @@ public class PlanetBody : MonoBehaviour
                 currentVelocity += acceleration * timeSteps;
             }
         }
+    }      
+
+    /// <summary>
+    /// Update Position of this.Planet based on calculated velocity
+    /// </summary>
+    public void UpdatePosition(float time)
+    {
+        this.rb.position += currentVelocity * time;
     }
 
     ///<summary>
@@ -63,7 +72,7 @@ public class PlanetBody : MonoBehaviour
                 // dir vector to each other - has to be turned 90 degrees! or? REWORK HERE! Which Vector to rotate
                 // ----------- 
                 Vector3 dir = (otherPlanet.rb.position - this.rb.position).normalized;
-                dir = Quaternion.Euler(-90.0f, -90.0f, 0.0f) * dir;
+                dir = Quaternion.Euler(0.0f, -90.0f, -90.0f) * dir;
                 // v = sqr(G*(M/r))
                 Vector3 forceToStart = dir * (Mathf.Sqrt(Universe.gravitationalConstant * (otherPlanet.mass / sqrDistance)));
                 startVelocity = forceToStart;
@@ -71,14 +80,6 @@ public class PlanetBody : MonoBehaviour
             }
 
         }
-    }
-
-    /// <summary>
-    /// Update Position of this.Planet based on calculated velocity
-    /// </summary>
-    public void UpdatePosition(float time)
-    {
-        this.rb.position += currentVelocity * time;
     }
 
     // -------- MOSTLY FOR DEBUGGING PURPOSE: while in editor mode ---------
@@ -92,8 +93,17 @@ public class PlanetBody : MonoBehaviour
         mesh.localScale = new Vector3(radius, radius, radius);
     }
 
+    /// <summary>
+    /// caculate Mass based on radius and surfaceGravity. m = (g*r^2) / G || g = M*G/r^2
+    /// </summary>
+    void CalculateMass()
+    {
+        mass = (surfaceGravity*(radius*radius)) / Universe.gravitationalConstant;
+    }
+
     private void OnValidate()
     {
         UpdateMesh();
+        CalculateMass();
     }
 }
