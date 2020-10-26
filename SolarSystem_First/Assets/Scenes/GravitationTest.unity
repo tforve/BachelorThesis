@@ -3334,7 +3334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &681758799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3366,7 +3366,7 @@ MonoBehaviour:
   mass: 4500000
   radius: 150
   surfaceGravity: 20
-  startVelocity: {x: 0, y: 41.95, z: 0}
+  startVelocity: {x: 0, y: 85, z: 0}
   currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!4 &681758801
 Transform:
@@ -3606,6 +3606,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4372219422309291234, guid: 1dc582205a8c5854da334fb719e48513, type: 3}
   m_PrefabInstance: {fileID: 4372219421239367076}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &951372789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4372219422309291232, guid: 1dc582205a8c5854da334fb719e48513, type: 3}
+  m_PrefabInstance: {fileID: 4372219421239367076}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ae7f75b9a857f4893f8ae983928d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -7089,8 +7100,8 @@ MonoBehaviour:
   numSteps: 1000
   timeStep: 1
   usePhysicsTimeStep: 0
-  relativeToBody: 0
-  centralBody: {fileID: 681758800}
+  relativeToBody: 1
+  centralBody: {fileID: 951372789}
   width: 20
   useThickLines: 0
   drawInPlayMode: 1
@@ -7138,6 +7149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planets: []
+  recalculateStartvelocity: 0
 --- !u!4 &1878141364
 Transform:
   m_ObjectHideFlags: 0
@@ -7362,7 +7374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7297455866511366561, guid: 8e286fbb402f5084e98f09d492df1c80, type: 3}
       propertyPath: startVelocity.y
-      value: 53.68
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7297455866511366561, guid: 8e286fbb402f5084e98f09d492df1c80, type: 3}
       propertyPath: radius
@@ -7370,7 +7382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7297455866511366563, guid: 8e286fbb402f5084e98f09d492df1c80, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3456
+      value: 2551
       objectReference: {fileID: 0}
     - target: {fileID: 7297455866511366563, guid: 8e286fbb402f5084e98f09d492df1c80, type: 3}
       propertyPath: m_LocalPosition.y
