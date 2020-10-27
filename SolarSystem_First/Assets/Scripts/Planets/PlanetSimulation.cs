@@ -54,7 +54,7 @@ public class PlanetSimulation : MonoBehaviour
         }
     }
 
-    /*
+    
     void OnValidate()
     {
         // calculate Startvelocity for debugging in Editor 
@@ -62,12 +62,15 @@ public class PlanetSimulation : MonoBehaviour
         {
             // populate planets array
             planets = FindObjectsOfType<PlanetBody>();
+            // set fixedDeltaTime to own Universe time for more controll
+            Time.fixedDeltaTime = Universe.timeSteps;
 
+            // calculate StartVelocity
             for (int i = 0; i < planets.Length; i++)
             {
                 planets[i].CalculateStartVelocity(planets);
             }
             recalculateStartvelocity = false;
         }
-    }*/
+    }
 }

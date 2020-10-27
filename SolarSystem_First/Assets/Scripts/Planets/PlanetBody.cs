@@ -6,14 +6,15 @@ using UnityEngine;
 public class PlanetBody : MonoBehaviour
 {
     [HideInInspector]
-    public float mass;                  // mass of planet
+    public float mass;                             // mass of planet
 
     [Header("Values of Celestial Body")]
-    public float radius;                // radius of planet
-    public float surfaceGravity;         // surface Gravity to calculate mass
-    public Vector3 startVelocity;       // give starting boost to planet
-    public Vector3 currentVelocity;     // update velocity
-        
+    public float radius;                    // radius of planet
+    public float surfaceGravity;            // surface Gravity to calculate mass
+    public Vector3 startVelocity;           // give starting boost to planet
+    public Vector3 currentVelocity;         // update velocity
+    
+    [SerializeField]
     Rigidbody rb;
     Transform mesh;
 
