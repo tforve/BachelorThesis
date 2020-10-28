@@ -65,6 +65,7 @@ public class PlanetBody : MonoBehaviour
     {
         foreach (var otherPlanet in planets)
         {
+            // don't want to effect the sun
             if(otherPlanet != this && this.CompareTag("Planet") || this.CompareTag("Moon"))
             {
                 // calculate r
