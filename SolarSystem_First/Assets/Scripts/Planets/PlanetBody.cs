@@ -15,8 +15,8 @@ public class PlanetBody : MonoBehaviour
     public Vector3 currentVelocity;         // update velocity
     
     [SerializeField]
-    Rigidbody rb;
-    Transform mesh;
+    private Rigidbody rb;
+    private Transform mesh;
 
     private void Awake()
     {
