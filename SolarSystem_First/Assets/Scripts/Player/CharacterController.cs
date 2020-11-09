@@ -29,6 +29,7 @@ public class CharacterController: MonoBehaviour
         rb = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
         //characterCamera = GetComponentInChildren<Camera>();
+        Cursor.visible = false;
     }
 
     void Update()

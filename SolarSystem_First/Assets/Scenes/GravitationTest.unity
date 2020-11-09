@@ -6394,7 +6394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &300111113
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13813,19 +13813,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764425358}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e545769b7a337ed499b47e743ea6a195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numSteps: 3000
-  timeStep: 1
-  usePhysicsTimeStep: 0
-  relativeToBody: 1
-  centralBody: {fileID: 951372789}
-  width: 20
-  useThickLines: 0
-  drawInPlayMode: 1
+  numSteps: 10000
+  timeSteps: 0.1
+  centralBody: {fileID: 0}
+  relativeToCentralBody: 1
+  drawInPlayMode: 0
 --- !u!4 &1764425360
 Transform:
   m_ObjectHideFlags: 0
