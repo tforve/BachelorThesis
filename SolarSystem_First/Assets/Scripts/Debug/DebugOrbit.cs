@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
 public class DebugOrbit : MonoBehaviour
 {
-
-    public int numSteps = 1000;             // how many steps to calculate in future
-    public float timeSteps = 0.1f;
-
+    public int numSteps = 1000;
+    public float timeStep = 0.1f;
+    public bool usePhysicsTimeStep;
 
     [Header("Relative to Body")]
     public PlanetBody centralBody;
     public bool relativeToCentralBody = true;
-    public bool usePhysicsTimeStep = true;
-    public bool useThickLines;
+    public bool useThickLines = true;
     public float width = 100;
-
 
     public bool drawInPlayMode = false;
 
-
-    private void Start()
+    void Start()
     {
         if (Application.isPlaying)
         {
@@ -30,9 +25,9 @@ public class DebugOrbit : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
-        if(drawInPlayMode || !Application.isPlaying)
+        if (drawInPlayMode || !Application.isPlaying)
         {
             DrawOrbits();
         }
@@ -43,7 +38,7 @@ public class DebugOrbit : MonoBehaviour
     /// </summary>
     void DrawOrbits()
     {
-        // all bodies 
+        // all bodies
         PlanetBody[] bodies = FindObjectsOfType<PlanetBody>();
         var simulatedBodies = new SimulatedBody[bodies.Length];
         var drawPoints = new Vector3[bodies.Length][];
@@ -56,8 +51,7 @@ public class DebugOrbit : MonoBehaviour
             simulatedBodies[i] = new SimulatedBody(bodies[i]);
             drawPoints[i] = new Vector3[numSteps];
 
-            //
-            if(bodies[i] == centralBody && relativeToCentralBody)
+            if (bodies[i] == centralBody && relativeToCentralBody)
             {
                 referenceFrameIndex = i;
                 referenceBodyInitialPosition = simulatedBodies[i].position;
@@ -68,24 +62,23 @@ public class DebugOrbit : MonoBehaviour
         for (int step = 0; step < numSteps; step++)
         {
             // celectial body which is seen as the center
-            Vector3 refernceBody = relativeToCentralBody ? simulatedBodies[referenceFrameIndex].position : Vector3.zero;
+            Vector3 referenceBodyPosition = (relativeToCentralBody) ? simulatedBodies[referenceFrameIndex].position : Vector3.zero;
 
             // loop through simulated Bodies and calculate all accelerations
             for (int i = 0; i < simulatedBodies.Length; i++)
             {
-                simulatedBodies[i].velocity += CalculateAcceleration(i, simulatedBodies) * timeSteps;
+                simulatedBodies[i].velocity += CalculateAcceleration(i, simulatedBodies) * timeStep;
             }
-
-            // update Positions
+            // Update positions
             for (int i = 0; i < simulatedBodies.Length; i++)
             {
                 // calculate new Position for all bodies
-                Vector3 newPos = simulatedBodies[i].position + simulatedBodies[i].velocity * timeSteps;
+                Vector3 newPos = simulatedBodies[i].position + simulatedBodies[i].velocity * timeStep;
                 simulatedBodies[i].position = newPos;
 
                 if (relativeToCentralBody)
                 {
-                    var referenceFrameOffset = referenceBodyInitialPosition - referenceBodyInitialPosition;
+                    var referenceFrameOffset = referenceBodyPosition - referenceBodyInitialPosition;
                     newPos -= referenceFrameOffset;
                 }
                 if (relativeToCentralBody && i == referenceFrameIndex)
@@ -95,43 +88,41 @@ public class DebugOrbit : MonoBehaviour
 
                 drawPoints[i][step] = newPos;
             }
-
-
-            // draw paths
-            for (int bodyIndex = 0; bodyIndex < simulatedBodies.Length; bodyIndex++)
-            {
-                // set pathColor to material color
-                var pathColor = bodies[bodyIndex].gameObject.GetComponentInChildren<MeshRenderer>().sharedMaterial.color;
-
-                if(useThickLines)
-                {
-                    var lineRenderer = bodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer>();
-
-                    lineRenderer.enabled = true;
-                    lineRenderer.positionCount = drawPoints[bodyIndex].Length;
-                    lineRenderer.SetPositions(drawPoints[bodyIndex]);
-                    lineRenderer.startColor = pathColor;
-                    lineRenderer.endColor = pathColor;
-                    lineRenderer.widthMultiplier = width;
-                }
-                else
-                {
-                    for (int i = 0; i < drawPoints[bodyIndex].Length - 1; i++)
-                    {
-                        Debug.DrawLine(drawPoints[bodyIndex][i], drawPoints[bodyIndex][i + 1], pathColor);
-                    }
-
-                    // Hide renderer
-                    var lineRenderer = bodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer>();
-                    if (lineRenderer)
-                    {
-                        lineRenderer.enabled = false;
-                    }
-                }
-                
-            }
         }
 
+        // Draw paths
+        for (int bodyIndex = 0; bodyIndex < simulatedBodies.Length; bodyIndex++)
+        {
+            // set pathColor to material color
+            var pathColour = bodies[bodyIndex].gameObject.GetComponentInChildren<MeshRenderer>().sharedMaterial.color;
+
+            if (useThickLines)
+            {
+                var lineRenderer = bodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer>();
+
+                lineRenderer.enabled = true;
+                lineRenderer.positionCount = drawPoints[bodyIndex].Length;
+                lineRenderer.SetPositions(drawPoints[bodyIndex]);
+                lineRenderer.startColor = pathColour;
+                lineRenderer.endColor = pathColour;
+                lineRenderer.widthMultiplier = width;
+            }
+            else
+            {
+                for (int i = 0; i < drawPoints[bodyIndex].Length - 1; i++)
+                {
+                    Debug.DrawLine(drawPoints[bodyIndex][i], drawPoints[bodyIndex][i + 1], pathColour);
+                }
+
+                // Hide renderer
+                var lineRenderer = bodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer>();
+                if (lineRenderer)
+                {
+                    lineRenderer.enabled = false;
+                }
+            }
+
+        }
     }
 
     /// <summary>
@@ -155,34 +146,34 @@ public class DebugOrbit : MonoBehaviour
     /// <param name="i"></param>
     /// <param name="simulatedBodies"></param>
     /// <returns></returns>
-    private Vector3 CalculateAcceleration(int i, SimulatedBody[] simulatedBodies)
+    Vector3 CalculateAcceleration(int i, SimulatedBody[] simulatedBodies)
     {
         Vector3 acceleration = Vector3.zero;
-
         for (int j = 0; j < simulatedBodies.Length; j++)
         {
-            if( i == j)
+            if (i == j)
             {
-                //calculate distancen to each other | r^2 
-                float sqrDistance = (simulatedBodies[j].position - simulatedBodies[i].position).sqrMagnitude;
-                // dir vector to each other
-                Vector3 direction = (simulatedBodies[j].position - simulatedBodies[i].position).normalized;                
-                // acceleration
-                acceleration += (direction * Universe.gravitationalConstant * simulatedBodies[j].mass) / sqrDistance;
+                continue;
             }
+            // dir vector to each other
+            Vector3 forceDir = (simulatedBodies[j].position - simulatedBodies[i].position).normalized;
+            //calculate distancen to each other | r^2 
+            float sqrDst = (simulatedBodies[j].position - simulatedBodies[i].position).sqrMagnitude;
+            // acceleration
+            acceleration += forceDir * Universe.gravitationalConstant * simulatedBodies[j].mass / sqrDst;
         }
         return acceleration;
     }
 
 
-    private void OnValidate()
+
+    void OnValidate()
     {
         if (usePhysicsTimeStep)
         {
-            timeSteps = Universe.timeSteps;
+            timeStep = Universe.timeSteps;
         }
     }
-
 
     // ----- CLASS: to simulate and precalculate celestial bodies -------
     class SimulatedBody
