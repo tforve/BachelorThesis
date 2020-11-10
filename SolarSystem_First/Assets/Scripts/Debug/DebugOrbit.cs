@@ -33,7 +33,7 @@ public class DebugOrbit : MonoBehaviour
 
     void Update()
     {
-        bodies = FindObjectsOfType<PlanetBody>();
+        
         if (drawInPlayMode || !Application.isPlaying)
         {
             DrawOrbits();            
@@ -194,9 +194,9 @@ public class DebugOrbit : MonoBehaviour
     }
 
 
-
     void OnValidate()
     {
+        bodies = FindObjectsOfType<PlanetBody>();
         if (usePhysicsTimeStep)
         {
             timeStep = Universe.timeSteps;
