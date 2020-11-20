@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class IcoPlanet : MonoBehaviour
 {
-    public Material material;                 // material to apply
-    private GameObject planetMesh;            // mesh holder
+    public Material material;                   // material to apply
+    private GameObject planetMesh;              // mesh holder
 
     private List<Polygon> polygons;             // list of all Polygons
     private List<Vector3> vertices;             // list of all vertices
@@ -27,7 +27,9 @@ public class IcoPlanet : MonoBehaviour
     }
 
 
-    // generate Icosahedron with 20 faces to subdivide later
+    /// <summary>
+    /// generate Icosahedron with 20 faces to subdivide later
+    /// </summary>
     public void CreateIcosahedron()
     {
         polygons = new List<Polygon>();
@@ -108,7 +110,10 @@ public class IcoPlanet : MonoBehaviour
     }
 
 
-    // subdivides all Polygons/triangles. 1 triangle = 4 new triangles
+    /// <summary>
+    /// subdivides all Polygons/triangles. 1 triangle = 4 new triangles
+    /// </summary>
+    /// <param name="recursions"></param>
     public void Subdivide(int recursions)
     {
         var midPointCache = new Dictionary<int, int>();
@@ -125,9 +130,9 @@ public class IcoPlanet : MonoBehaviour
             var newPolys = new List<Polygon>();
             foreach (var poly in polygons)
             {
-                int a = poly.m_Vertices[0];
-                int b = poly.m_Vertices[1];
-                int c = poly.m_Vertices[2];
+                int a = poly.vertices[0];
+                int b = poly.vertices[1];
+                int c = poly.vertices[2];
 
                 // Use GetMidPointIndex to either create a new vertex between two old vertices,
                 // or find the one that was already created.
@@ -150,7 +155,7 @@ public class IcoPlanet : MonoBehaviour
 
     public int GetMidPointIndex(Dictionary<int, int> cache, int indexA, int indexB)
     {
-        // We create a key out of the two original indices
+        // create a key out of the two original indices
         // by storing the smaller index in the upper two bytes
         // of an integer, and the larger index in the lower two
         // bytes. By sorting them according to whichever is smaller
@@ -165,13 +170,12 @@ public class IcoPlanet : MonoBehaviour
         int key = (smallerIndex << 16) + greaterIndex;
 
         // If a midpoint is already defined, just return it.
-
         int ret;
         if (cache.TryGetValue(key, out ret))
             return ret;
 
         // If we're here, it's because a midpoint for these two
-        // vertices hasn't been created yet. Let's do that now!
+        // vertices hasn't been created yet.
 
         Vector3 p1 = vertices[indexA];
         Vector3 p2 = vertices[indexB];
@@ -180,14 +184,15 @@ public class IcoPlanet : MonoBehaviour
         ret = vertices.Count;
         vertices.Add(middle);
 
-        // Add our new midpoint to the cache so we don't have
-        // to do this again. =)
+        // Add our new midpoint to the cache so we don't have to do this again.
 
         cache.Add(key, ret);
         return ret;
     }
 
+    /// <summary>
     /// generate mesh of the Icosahedron Planet
+    /// </summary>
     public void GenerateMesh()
     {
         // check if existing. if so destroy and recreate
@@ -201,7 +206,7 @@ public class IcoPlanet : MonoBehaviour
         surfaceRenderer.material = material;
         Mesh terrainMesh = new Mesh();
 
-
+        // 1 polygon has 3 vertices
         int vertexCount = polygons.Count * 3;
 
         int[] indices = new int[vertexCount];
@@ -216,27 +221,32 @@ public class IcoPlanet : MonoBehaviour
         // loop through all Polygons
         for (int i = 0; i < polygons.Count; i++)
         {
+            // get polygon
             var poly = polygons[i];
 
+            // giving every polygon 3 indices counting up from 0
             indices[i * 3 + 0] = i * 3 + 0;
             indices[i * 3 + 1] = i * 3 + 1;
             indices[i * 3 + 2] = i * 3 + 2;
+            
+            vertices[i * 3 + 0] = this.vertices[poly.vertices[0]];
+            vertices[i * 3 + 1] = this.vertices[poly.vertices[1]];
+            vertices[i * 3 + 2] = this.vertices[poly.vertices[2]];
 
-            vertices[i * 3 + 0] = this.vertices[poly.m_Vertices[0]];
-            vertices[i * 3 + 1] = this.vertices[poly.m_Vertices[1]];
-            vertices[i * 3 + 2] = this.vertices[poly.m_Vertices[2]];
-
+            // setting rnd color for now to debug
             Color32 polyColor = Color32.Lerp(green, brown, Random.Range(0.0f, 1.0f)); 
 
             colors[i * 3 + 0] = polyColor;
             colors[i * 3 + 1] = polyColor;
             colors[i * 3 + 2] = polyColor;
 
-            normals[i * 3 + 0] = this.vertices[poly.m_Vertices[0]];
-            normals[i * 3 + 1] = this.vertices[poly.m_Vertices[1]];
-            normals[i * 3 + 2] = this.vertices[poly.m_Vertices[2]];
+            // setting normal vectors
+            normals[i * 3 + 0] = this.vertices[poly.vertices[0]];
+            normals[i * 3 + 1] = this.vertices[poly.vertices[1]];
+            normals[i * 3 + 2] = this.vertices[poly.vertices[2]];
         }
 
+        // apply all saves to the mesh
         terrainMesh.vertices = vertices;
         terrainMesh.normals  = normals;
         terrainMesh.colors32 = colors;

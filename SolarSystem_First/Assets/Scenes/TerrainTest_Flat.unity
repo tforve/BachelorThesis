@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 80503d7d77ee89148bb8bbe1ed411b2a, type: 2}
-  subdivitions: 0
+  subdivitions: 1
 --- !u!4 &744589697
 Transform:
   m_ObjectHideFlags: 0
