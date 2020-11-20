@@ -355,8 +355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f35eb3f091918c4da26ebf28bdeae11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 80503d7d77ee89148bb8bbe1ed411b2a, type: 2}
-  m_Recursions: 3
+  material: {fileID: 2100000, guid: 80503d7d77ee89148bb8bbe1ed411b2a, type: 2}
+  subdivitions: 0
 --- !u!4 &744589697
 Transform:
   m_ObjectHideFlags: 0
