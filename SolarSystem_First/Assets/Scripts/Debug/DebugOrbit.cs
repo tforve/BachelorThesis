@@ -5,14 +5,21 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class DebugOrbit : MonoBehaviour
 {
-    public int numSteps = 1000;
+    public int numSteps = 1500;
     public float timeStep = 0.1f;
-    public bool usePhysicsTimeStep;
+    public bool usePhysicsTimeStep = false;
 
-    public bool relativeToBody;
+    [Header("Relative to Body")]
     public PlanetBody centralBody;
-    public float width = 100;
-    public bool useThickLines;
+    public bool relativeToCentralBody = true;
+
+    [Header("Drawing")]
+    public bool drawInPlayMode = false;
+    public bool useThickLines = true;
+    public float width = 50;
+
+    private PlanetBody[] bodies;
+
 
     void Start()
     {
@@ -20,58 +27,69 @@ public class DebugOrbit : MonoBehaviour
         {
             HideOrbits();
         }
+
+        
     }
 
     void Update()
     {
-
-        if (!Application.isPlaying)
+        
+        if (drawInPlayMode || !Application.isPlaying)
         {
-            DrawOrbits();
+            DrawOrbits();            
         }
+        
     }
 
+    /// <summary>
+    /// Draw Orbits with Linerenderer
+    /// </summary>
     void DrawOrbits()
     {
-        PlanetBody[] bodies = FindObjectsOfType<PlanetBody>();
-        var virtualBodies = new VirtualBody[bodies.Length];
+        // all bodies
+        //PlanetBody[] bodies = FindObjectsOfType<PlanetBody>();
+        var simulatedBodies = new SimulatedBody[bodies.Length];
         var drawPoints = new Vector3[bodies.Length][];
         int referenceFrameIndex = 0;
         Vector3 referenceBodyInitialPosition = Vector3.zero;
 
-        // Initialize virtual bodies (don't want to move the actual bodies)
-        for (int i = 0; i < virtualBodies.Length; i++)
+        // Init simulated bodies
+        for (int i = 0; i < simulatedBodies.Length; i++)
         {
-            virtualBodies[i] = new VirtualBody(bodies[i]);
+            simulatedBodies[i] = new SimulatedBody(bodies[i]);
             drawPoints[i] = new Vector3[numSteps];
 
-            if (bodies[i] == centralBody && relativeToBody)
+            if (bodies[i] == centralBody && relativeToCentralBody)
             {
                 referenceFrameIndex = i;
-                referenceBodyInitialPosition = virtualBodies[i].position;
+                referenceBodyInitialPosition = simulatedBodies[i].position;
             }
         }
 
         // Simulate
         for (int step = 0; step < numSteps; step++)
         {
-            Vector3 referenceBodyPosition = (relativeToBody) ? virtualBodies[referenceFrameIndex].position : Vector3.zero;
-            // Update velocities
-            for (int i = 0; i < virtualBodies.Length; i++)
+            // celectial body which is seen as the center
+            Vector3 referenceBodyPosition = (relativeToCentralBody) ? simulatedBodies[referenceFrameIndex].position : Vector3.zero;
+
+            // loop through simulated Bodies and calculate all accelerations
+            for (int i = 0; i < simulatedBodies.Length; i++)
             {
-                virtualBodies[i].velocity += CalculateAcceleration(i, virtualBodies) * timeStep;
+                simulatedBodies[i].velocity += CalculateAcceleration(i, simulatedBodies) * timeStep;
             }
             // Update positions
-            for (int i = 0; i < virtualBodies.Length; i++)
+            for (int i = 0; i < simulatedBodies.Length; i++)
             {
-                Vector3 newPos = virtualBodies[i].position + virtualBodies[i].velocity * timeStep;
-                virtualBodies[i].position = newPos;
-                if (relativeToBody)
+                // calculate new Position for all bodies
+                Vector3 newPos = simulatedBodies[i].position + simulatedBodies[i].velocity * timeStep;
+                simulatedBodies[i].position = newPos;
+
+                if (relativeToCentralBody)
                 {
                     var referenceFrameOffset = referenceBodyPosition - referenceBodyInitialPosition;
                     newPos -= referenceFrameOffset;
                 }
-                if (relativeToBody && i == referenceFrameIndex)
+                if (relativeToCentralBody && i == referenceFrameIndex)
                 {
                     newPos = referenceBodyInitialPosition;
                 }
@@ -81,19 +99,21 @@ public class DebugOrbit : MonoBehaviour
         }
 
         // Draw paths
-        for (int bodyIndex = 0; bodyIndex < virtualBodies.Length; bodyIndex++)
+        for (int bodyIndex = 0; bodyIndex < simulatedBodies.Length; bodyIndex++)
         {
-            var pathColour = bodies[bodyIndex].gameObject.GetComponentInChildren<MeshRenderer>().sharedMaterial.color; //
+            // set pathColor to material color
+            var pathColour = bodies[bodyIndex].gameObject.GetComponentInChildren<MeshRenderer>().sharedMaterial.color;
 
             if (useThickLines)
             {
                 var lineRenderer = bodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer>();
+      
                 lineRenderer.enabled = true;
                 lineRenderer.positionCount = drawPoints[bodyIndex].Length;
                 lineRenderer.SetPositions(drawPoints[bodyIndex]);
                 lineRenderer.startColor = pathColour;
                 lineRenderer.endColor = pathColour;
-                lineRenderer.widthMultiplier = width;
+                lineRenderer.widthMultiplier = width;                
             }
             else
             {
@@ -113,22 +133,9 @@ public class DebugOrbit : MonoBehaviour
         }
     }
 
-    Vector3 CalculateAcceleration(int i, VirtualBody[] virtualBodies)
-    {
-        Vector3 acceleration = Vector3.zero;
-        for (int j = 0; j < virtualBodies.Length; j++)
-        {
-            if (i == j)
-            {
-                continue;
-            }
-            Vector3 forceDir = (virtualBodies[j].position - virtualBodies[i].position).normalized;
-            float sqrDst = (virtualBodies[j].position - virtualBodies[i].position).sqrMagnitude;
-            acceleration += forceDir * Universe.gravitationalConstant * virtualBodies[j].mass / sqrDst;
-        }
-        return acceleration;
-    }
-
+    /// <summary>
+    /// Hide Orbits in playmode
+    /// </summary>
     void HideOrbits()
     {
         PlanetBody[] bodies = FindObjectsOfType<PlanetBody>();
@@ -141,21 +148,69 @@ public class DebugOrbit : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Calculate Acceleration of all celectial bodies
+    /// </summary>
+    /// <param name="i"></param>
+    /// <param name="simulatedBodies"></param>
+    /// <returns></returns>
+    Vector3 CalculateAcceleration(int i, SimulatedBody[] simulatedBodies)
+    {
+        Vector3 acceleration = Vector3.zero;
+        for (int j = 0; j < simulatedBodies.Length; j++)
+        {
+            if (i == j)
+            {
+                continue;
+            }
+            // dir vector to each other
+            Vector3 forceDir = (simulatedBodies[j].position - simulatedBodies[i].position).normalized;
+            //calculate distancen to each other | r^2 
+            float sqrDst = (simulatedBodies[j].position - simulatedBodies[i].position).sqrMagnitude;
+            // acceleration
+            acceleration += forceDir * Universe.gravitationalConstant * simulatedBodies[j].mass / sqrDst;
+        }
+        return acceleration;
+    }
+
+
+    /// <summary>
+    /// Turn on and off Orbits of celectial Bodies
+    /// </summary>
+    public void ShowOrbit()
+    {
+        ResetOrbit();
+        drawInPlayMode = drawInPlayMode ? false : true;
+        useThickLines = useThickLines ? false : true;
+    }
+
+    void ResetOrbit()
+    {
+        for (int i = 0; i < bodies.Length; i++)
+        {
+            var lineRenderer = bodies[i].gameObject.GetComponentInChildren<LineRenderer>();
+            lineRenderer.enabled = false;
+        }
+    }
+
+
     void OnValidate()
     {
+        bodies = FindObjectsOfType<PlanetBody>();
         if (usePhysicsTimeStep)
         {
             timeStep = Universe.timeSteps;
         }
     }
 
-    class VirtualBody
+    // ----- CLASS: to simulate and precalculate celestial bodies -------
+    class SimulatedBody
     {
         public Vector3 position;
         public Vector3 velocity;
         public float mass;
 
-        public VirtualBody(PlanetBody body)
+        public SimulatedBody(PlanetBody body)
         {
             position = body.transform.position;
             velocity = body.startVelocity;
