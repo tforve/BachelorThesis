@@ -54,7 +54,7 @@ public class CharacterController: MonoBehaviour
         // --- Controlls ---
         if(Input.GetKeyDown(KeyCode.O))
         {
-           // debugOrbit.ShowOrbit();
+           debugOrbit.ShowOrbit();
         }
         
         if(Input.GetKeyDown(KeyCode.Escape))
