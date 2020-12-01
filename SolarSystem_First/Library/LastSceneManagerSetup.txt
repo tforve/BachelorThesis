@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/GravitationTest.unity
+- path: Assets/Scenes/ProceduralPlanets.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
