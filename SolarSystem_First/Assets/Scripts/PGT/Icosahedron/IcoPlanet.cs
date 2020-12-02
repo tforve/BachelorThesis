@@ -30,15 +30,15 @@ public class IcoPlanet : MonoBehaviour
     //---------------------------
 
 
-    void Start()
-    {
-        // instantiate Icosahedron 
-        CreateIcosahedron();
-        // subdivide in n amount of triangles
-        Subdivide(subdivitions);
-        // generate correct Mesh
-        GenerateMesh();
-    }
+    //void Start()
+    //{
+    //    // instantiate Icosahedron 
+    //    CreateIcosahedron();
+    //    // subdivide in n amount of triangles
+    //    Subdivide(subdivitions);
+    //    // generate correct Mesh
+    //    GenerateMesh();
+    //}
 
 
     /// <summary>
@@ -224,6 +224,10 @@ public class IcoPlanet : MonoBehaviour
             vertices[i * 3 + 0] = this.vertices[poly.vertices[0]];
             vertices[i * 3 + 1] = this.vertices[poly.vertices[1]];
             vertices[i * 3 + 2] = this.vertices[poly.vertices[2]];
+            // use noise on vertices
+            vertices[i] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
+            //vertices[i * 3 + 1] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
+            //vertices[i * 3 + 2] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
 
             // setting normal vectors
             normals[i * 3 + 0] = this.vertices[poly.vertices[0]];
@@ -257,18 +261,15 @@ public class IcoPlanet : MonoBehaviour
     public void OnShapeSettingsUpdated()
     {
         CreateIcosahedron();
-        // subdivide in n amount of triangles
         Subdivide(subdivitions);
-        // generate correct Mesh
         GenerateMesh();
+        GenerateColor();
     }
 
     public void OnColorSettingsUpdate()
     {
         CreateIcosahedron();
-        // subdivide in n amount of triangles
         Subdivide(subdivitions);
-        // generate correct Mesh
         GenerateMesh();
         GenerateColor();
     }

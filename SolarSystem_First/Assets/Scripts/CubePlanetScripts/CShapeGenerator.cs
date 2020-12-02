@@ -12,6 +12,7 @@ public class CShapeGenerator
         noiseFilter = new CNoiseFilter(settings.noiseSettings);
     }
 
+
     public Vector3 CalculatePointOnPlanet(Vector3 pointOnUnitSphere)
     {
         //float noise = Mathf.PerlinNoise(pointOnUnitSphere.x * settings.noiseRroughness + settings.noiseCentre.x, pointOnUnitSphere.x * settings.noiseRroughness + settings.noiseCentre.y);
