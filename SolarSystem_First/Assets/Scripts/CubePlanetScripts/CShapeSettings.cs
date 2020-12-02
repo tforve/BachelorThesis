@@ -6,4 +6,5 @@ using UnityEngine;
 public class CShapeSettings : ScriptableObject
 {
     public float planetRadius = 1.0f;
+    public CNoiseSettings noiseSettings;
 }

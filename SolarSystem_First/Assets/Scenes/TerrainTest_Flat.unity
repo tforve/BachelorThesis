@@ -355,8 +355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f35eb3f091918c4da26ebf28bdeae11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 80503d7d77ee89148bb8bbe1ed411b2a, type: 2}
-  subdivitions: 1
+  subdivitions: 3
+  shapeSettings: {fileID: 11400000, guid: 3af8ac897194a6e45998ce67947bb1e2, type: 2}
+  colorSettings: {fileID: 11400000, guid: 86528fd989950744c9bc8753709eea85, type: 2}
 --- !u!4 &744589697
 Transform:
   m_ObjectHideFlags: 0

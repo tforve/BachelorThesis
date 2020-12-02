@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class IcoPlanet : MonoBehaviour
 {
-    public Material material;                   // material to apply
+
+    private Material material;                  // material to apply
     private GameObject planetMesh;              // mesh holder
 
     private List<Polygon> polygons;             // list of all Polygons
@@ -14,6 +15,16 @@ public class IcoPlanet : MonoBehaviour
     [Header("Subdivition")]
     [Range(0,5)][Tooltip("Unity has a default vertex limit on meshes of  5")]
     public int subdivitions;
+
+
+    // --------------------
+    [Header("ScriptableObject")]
+    public CShapeSettings shapeSettings;
+    public CColorSettings colorSettings;
+    CShapeGenerator shapeGenerator;
+
+    MeshFilter terrainFilter;
+    //---------------------------
 
 
     void Start()
@@ -175,9 +186,13 @@ public class IcoPlanet : MonoBehaviour
     {
         // check if existing. if so destroy and recreate
         if (planetMesh)
+        {
             Destroy(planetMesh);
-
+        }
         planetMesh = new GameObject("Planet Mesh");
+
+        // set all Shapesettings 
+        shapeGenerator = new CShapeGenerator(shapeSettings);
 
         // add necessary components
         MeshRenderer surfaceRenderer = planetMesh.AddComponent<MeshRenderer>();
@@ -191,10 +206,6 @@ public class IcoPlanet : MonoBehaviour
 
         Vector3[] vertices = new Vector3[vertexCount];
         Vector3[] normals  = new Vector3[vertexCount];
-        Color32[] colors   = new Color32[vertexCount];
-
-        Color32 green = new Color32(20,  255, 30, 255);
-        Color32 brown = new Color32(220, 150, 70, 255);
 
         // loop through all Polygons
         for (int i = 0; i < polygons.Count; i++)
@@ -211,13 +222,6 @@ public class IcoPlanet : MonoBehaviour
             vertices[i * 3 + 1] = this.vertices[poly.vertices[1]];
             vertices[i * 3 + 2] = this.vertices[poly.vertices[2]];
 
-            // setting rnd color for now to debug
-            Color32 polyColor = Color32.Lerp(green, brown, Random.Range(0.0f, 1.0f)); 
-
-            colors[i * 3 + 0] = polyColor;
-            colors[i * 3 + 1] = polyColor;
-            colors[i * 3 + 2] = polyColor;
-
             // setting normal vectors
             normals[i * 3 + 0] = this.vertices[poly.vertices[0]];
             normals[i * 3 + 1] = this.vertices[poly.vertices[1]];
@@ -227,11 +231,22 @@ public class IcoPlanet : MonoBehaviour
         // apply all saves to the mesh
         terrainMesh.vertices = vertices;
         terrainMesh.normals  = normals;
-        terrainMesh.colors32 = colors;
 
         terrainMesh.SetTriangles(indices, 0);
 
-        MeshFilter terrainFilter = planetMesh.AddComponent<MeshFilter>();
+        terrainFilter = planetMesh.AddComponent<MeshFilter>();
+        terrainFilter.GetComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Standard"));
         terrainFilter.mesh = terrainMesh;
+    }
+
+    public void GeneratePlanet()
+    {
+        GenerateMesh();
+        GenerateColor();
+    }
+
+    void GenerateColor()
+    {
+        terrainFilter.GetComponent<MeshRenderer>().sharedMaterial.color = colorSettings.planetColor;
     }
 }
