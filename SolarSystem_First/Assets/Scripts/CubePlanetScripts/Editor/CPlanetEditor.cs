@@ -5,10 +5,12 @@ using UnityEditor;
 /// <summary>
 /// To Customize planets in the Editor, created a customEditor
 /// </summary>
-[CustomEditor(typeof(CPlanet))]
+[CustomEditor(typeof(IcoPlanet))]
 public class CPlanetEditor : Editor
 {
-    CPlanet planet;
+    //CPlanet planet;
+    IcoPlanet planet1;
+
 
     public override void OnInspectorGUI()
     {
@@ -17,18 +19,18 @@ public class CPlanetEditor : Editor
             base.OnInspectorGUI();
             if(check.changed)
             {
-                planet.GeneratePlanet();
+                planet1.GeneratePlanet();
             }
         }
         // generate Planet button
         if(GUILayout.Button("Generate Planet"))
         {
-            planet.GeneratePlanet();
+            planet1.GeneratePlanet();
         }
 
         // add all Settings to Observers
-        DrawSettingsEditor(planet.shapeSettings, planet.OnShapeSettingsUpdated);
-        DrawSettingsEditor(planet.colorSettings, planet.OnColorSettingsUpdate);
+        DrawSettingsEditor(planet1.shapeSettings, planet1.OnShapeSettingsUpdated);
+        DrawSettingsEditor(planet1.colorSettings, planet1.OnColorSettingsUpdate);
     }
 
     void DrawSettingsEditor(Object settings, System.Action onSettingsUpdated)
@@ -51,6 +53,6 @@ public class CPlanetEditor : Editor
 
     private void OnEnable()
     {
-        planet = (CPlanet)target;
+        planet1 = (IcoPlanet)target;
     }
 }

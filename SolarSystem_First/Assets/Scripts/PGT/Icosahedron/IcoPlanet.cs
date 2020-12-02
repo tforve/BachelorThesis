@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,6 +25,8 @@ public class IcoPlanet : MonoBehaviour
     CShapeGenerator shapeGenerator;
 
     MeshFilter terrainFilter;
+
+
     //---------------------------
 
 
@@ -187,7 +190,7 @@ public class IcoPlanet : MonoBehaviour
         // check if existing. if so destroy and recreate
         if (planetMesh)
         {
-            Destroy(planetMesh);
+            DestroyImmediate(planetMesh);
         }
         planetMesh = new GameObject("Planet Mesh");
 
@@ -229,6 +232,7 @@ public class IcoPlanet : MonoBehaviour
         }
 
         // apply all saves to the mesh
+        terrainMesh.Clear();
         terrainMesh.vertices = vertices;
         terrainMesh.normals  = normals;
 
@@ -248,5 +252,24 @@ public class IcoPlanet : MonoBehaviour
     void GenerateColor()
     {
         terrainFilter.GetComponent<MeshRenderer>().sharedMaterial.color = colorSettings.planetColor;
+    }
+
+    public void OnShapeSettingsUpdated()
+    {
+        CreateIcosahedron();
+        // subdivide in n amount of triangles
+        Subdivide(subdivitions);
+        // generate correct Mesh
+        GenerateMesh();
+    }
+
+    public void OnColorSettingsUpdate()
+    {
+        CreateIcosahedron();
+        // subdivide in n amount of triangles
+        Subdivide(subdivitions);
+        // generate correct Mesh
+        GenerateMesh();
+        GenerateColor();
     }
 }
