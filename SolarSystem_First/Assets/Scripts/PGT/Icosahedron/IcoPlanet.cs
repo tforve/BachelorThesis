@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 public class IcoPlanet : MonoBehaviour
 {
-    public Material material;                   // material to apply
+    public bool autoUpdate = true;
+    private Material material;                  // material to apply
     private GameObject planetMesh;              // mesh holder
 
     private List<Polygon> polygons;             // list of all Polygons
@@ -16,15 +18,28 @@ public class IcoPlanet : MonoBehaviour
     public int subdivitions;
 
 
-    void Start()
-    {
-        // instantiate Icosahedron 
-        CreateIcosahedron();
-        // subdivide in n amount of triangles
-        Subdivide(subdivitions);
-        // generate correct Mesh
-        GenerateMesh();
-    }
+    // --------------------
+    [Header("ScriptableObject")]
+    public CShapeSettings shapeSettings = new CShapeSettings();
+    public CColorSettings colorSettings = new CColorSettings();
+    CShapeGenerator shapeGenerator;
+    CColorGenerator colorGenerator;
+
+    MeshFilter terrainFilter;
+
+
+    //---------------------------
+
+
+    //void Start()
+    //{
+    //    // instantiate Icosahedron 
+    //    CreateIcosahedron();
+    //    // subdivide in n amount of triangles
+    //    Subdivide(subdivitions);
+    //    // generate correct Mesh
+    //    GenerateMesh();
+    //}
 
 
     /// <summary>
@@ -58,50 +73,27 @@ public class IcoPlanet : MonoBehaviour
         vertices.Add(new Vector3(-t,  0, -1).normalized);
         vertices.Add(new Vector3(-t,  0,  1).normalized);
 
-        // trial ----------------- DELETE LATER ------------
-        //polygons.Add(new Polygon(0, 1, 2));
-        //polygons.Add(new Polygon(0, 2, 3));
-        //polygons.Add(new Polygon(0, 3, 4));
-        //polygons.Add(new Polygon(0, 4, 5));
-        //polygons.Add(new Polygon(0, 5, 1));
-
-        //polygons.Add(new Polygon(1, 2, 6));
-        //polygons.Add(new Polygon(2, 3, 7));
-        //polygons.Add(new Polygon(3, 4, 8));
-        //polygons.Add(new Polygon(4, 5, 9));
-        //polygons.Add(new Polygon(5, 1, 10));
-
-        //polygons.Add(new Polygon(11, 6, 7));
-        //polygons.Add(new Polygon(11, 7, 8));
-        //polygons.Add(new Polygon(11, 8, 9));
-        //polygons.Add(new Polygon(11, 9, 10));
-        //polygons.Add(new Polygon(11, 10, 6));
-
-        //polygons.Add(new Polygon(7, 8, 3));
-        //polygons.Add(new Polygon(8, 9, 4));
-        //polygons.Add(new Polygon(9, 10, 5));
-        //polygons.Add(new Polygon(10, 6, 1));
-        //polygons.Add(new Polygon(6, 7, 2));
-
         // ... and 20 faces build out of thos 12 vertices
+        // 5 faces around point 0
         polygons.Add(new Polygon( 0, 11,  5));
         polygons.Add(new Polygon( 0,  5,  1));
         polygons.Add(new Polygon( 0,  1,  7));
         polygons.Add(new Polygon( 0,  7, 10));
         polygons.Add(new Polygon( 0, 10, 11));
-
+        // 5 adjacent faces
         polygons.Add(new Polygon( 1,  5,  9));
         polygons.Add(new Polygon( 5, 11,  4));
         polygons.Add(new Polygon(11, 10,  2));
         polygons.Add(new Polygon(10,  7,  6));
         polygons.Add(new Polygon( 7,  1,  8));
-        //second half of icosahedron
+        // second half of icosahedron
+        // 5 faces around point 3
         polygons.Add(new Polygon( 3,  9,  4));
         polygons.Add(new Polygon( 3,  4,  2));
         polygons.Add(new Polygon( 3,  2,  6));
         polygons.Add(new Polygon( 3,  6,  8));
         polygons.Add(new Polygon( 3,  8,  9));
-
+        // 5 adjacent faces
         polygons.Add(new Polygon( 4,  9,  5));
         polygons.Add(new Polygon( 2,  4, 11));
         polygons.Add(new Polygon( 6,  2, 10));
@@ -127,7 +119,8 @@ public class IcoPlanet : MonoBehaviour
 
         for (int i = 0; i < recursions; i++)
         {
-            var newPolys = new List<Polygon>();
+            var newPolygons = new List<Polygon>();
+
             foreach (var poly in polygons)
             {
                 int a = poly.vertices[0];
@@ -141,13 +134,13 @@ public class IcoPlanet : MonoBehaviour
                 int ca = GetMidPointIndex(midPointCache, c, a);
 
                 // Create the four new polygons using our original three vertices, and the three new midpoints.
-                newPolys.Add(new Polygon(a, ab, ca));
-                newPolys.Add(new Polygon(b, bc, ab));
-                newPolys.Add(new Polygon(c, ca, bc));
-                newPolys.Add(new Polygon(ab, bc, ca));
+                newPolygons.Add(new Polygon(a, ab, ca));
+                newPolygons.Add(new Polygon(b, bc, ab));
+                newPolygons.Add(new Polygon(c, ca, bc));
+                newPolygons.Add(new Polygon(ab, bc, ca));
             }
             // Replace all our old polygons with the new set of subdivided ones.
-            polygons = newPolys;
+            polygons = newPolygons;
         }
 
 
@@ -197,9 +190,14 @@ public class IcoPlanet : MonoBehaviour
     {
         // check if existing. if so destroy and recreate
         if (planetMesh)
-            Destroy(planetMesh);
-
+        {
+            DestroyImmediate(planetMesh);
+        }
         planetMesh = new GameObject("Planet Mesh");
+
+        // set all Settings 
+        shapeGenerator.UpdateSettings(shapeSettings);
+        colorGenerator.UpdateSettings(colorSettings);
 
         // add necessary components
         MeshRenderer surfaceRenderer = planetMesh.AddComponent<MeshRenderer>();
@@ -213,10 +211,6 @@ public class IcoPlanet : MonoBehaviour
 
         Vector3[] vertices = new Vector3[vertexCount];
         Vector3[] normals  = new Vector3[vertexCount];
-        Color32[] colors   = new Color32[vertexCount];
-
-        Color32 green = new Color32(20,  255, 30, 255);
-        Color32 brown = new Color32(220, 150, 70, 255);
 
         // loop through all Polygons
         for (int i = 0; i < polygons.Count; i++)
@@ -232,13 +226,14 @@ public class IcoPlanet : MonoBehaviour
             vertices[i * 3 + 0] = this.vertices[poly.vertices[0]];
             vertices[i * 3 + 1] = this.vertices[poly.vertices[1]];
             vertices[i * 3 + 2] = this.vertices[poly.vertices[2]];
-
-            // setting rnd color for now to debug
-            Color32 polyColor = Color32.Lerp(green, brown, Random.Range(0.0f, 1.0f)); 
-
-            colors[i * 3 + 0] = polyColor;
-            colors[i * 3 + 1] = polyColor;
-            colors[i * 3 + 2] = polyColor;
+            // use noise on vertices
+            vertices[i] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
+            //for (int j = 0; j < vertexCount; j++)
+            //{
+            //    vertices[j] = shapeGenerator.CalculatePointOnPlanet(vertices[j]);
+            //}
+            //vertices[i * 3 + 1] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
+            //vertices[i * 3 + 2] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
 
             // setting normal vectors
             normals[i * 3 + 0] = this.vertices[poly.vertices[0]];
@@ -247,13 +242,49 @@ public class IcoPlanet : MonoBehaviour
         }
 
         // apply all saves to the mesh
+        terrainMesh.Clear();
         terrainMesh.vertices = vertices;
         terrainMesh.normals  = normals;
-        terrainMesh.colors32 = colors;
 
         terrainMesh.SetTriangles(indices, 0);
 
-        MeshFilter terrainFilter = planetMesh.AddComponent<MeshFilter>();
+        terrainFilter = planetMesh.AddComponent<MeshFilter>();
+        terrainFilter.GetComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Standard"));
         terrainFilter.mesh = terrainMesh;
+    }
+
+    public void GeneratePlanet()
+    {
+        CreateIcosahedron();
+        Subdivide(subdivitions);
+        GenerateMesh();
+        GenerateColor();
+    }
+
+    void GenerateColor()
+    {
+        colorGenerator.UpdateColors();
+    }
+
+    public void OnShapeSettingsUpdated()
+    {
+        if(autoUpdate)
+        {
+            CreateIcosahedron();
+            Subdivide(subdivitions);
+            GenerateMesh();
+            GenerateColor();                // unneccesary right now because the method is doing the same as GeneratePlanet()
+        }
+
+    }
+
+    public void OnColorSettingsUpdate()
+    {
+        if (autoUpdate)
+        {
+            //CreateIcosahedron();
+            //Subdivide(subdivitions);
+            GenerateColor();
+        }
     }
 }
