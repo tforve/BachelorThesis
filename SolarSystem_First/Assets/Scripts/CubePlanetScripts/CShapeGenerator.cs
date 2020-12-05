@@ -5,9 +5,11 @@ using UnityEngine;
 public class CShapeGenerator
 {
     CShapeSettings settings;                
-    CNoiseFilter[] noiseFilters;            
+    CNoiseFilter[] noiseFilters;
 
-    public CShapeGenerator(CShapeSettings settings)
+    public CMinMax elavationMinMax;            // height to calculate hightest point of Planet and set Colors right
+
+    public void UpdateSettings(CShapeSettings settings)
     {
         this.settings = settings;
         noiseFilters = new CNoiseFilter[settings.noiseLayers.Length];
@@ -16,6 +18,8 @@ public class CShapeGenerator
         {
             noiseFilters[i] = new CNoiseFilter(settings.noiseLayers[i].noiseSettings);
         }
+
+        elavationMinMax = new CMinMax();
     }
 
 
@@ -48,6 +52,9 @@ public class CShapeGenerator
             }
         }
 
-        return pointOnUnitSphere * settings.planetRadius * (1+noise);
+        noise = settings.planetRadius * (1 + noise);
+        //storing lowest and highest elevation of all vertices
+        elavationMinMax.AddValue(noise);
+        return pointOnUnitSphere * noise;
     }
 }

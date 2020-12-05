@@ -12,7 +12,8 @@ public class CPlanet : MonoBehaviour
     public CShapeSettings shapeSettings;
     public CColorSettings colorSettings;
 
-    CShapeGenerator shapeGenerator;
+    CShapeGenerator shapeGenerator = new CShapeGenerator();
+    CColorGenerator colorGenerator = new CColorGenerator();
 
     [SerializeField, HideInInspector]
     private MeshFilter[] meshFilters;           // array of all 6 meshes
@@ -20,8 +21,9 @@ public class CPlanet : MonoBehaviour
 
     void Initialize()
     {
-        // set all Shapesettings 
-        shapeGenerator = new CShapeGenerator(shapeSettings);
+        // set all settings
+        shapeGenerator.UpdateSettings(shapeSettings);
+        colorGenerator.UpdateSettings(colorSettings);
 
         // check if null
         if (meshFilters == null || meshFilters.Length == 0)
@@ -41,10 +43,12 @@ public class CPlanet : MonoBehaviour
                 GameObject meshObject = new GameObject("mesh");
                 meshObject.transform.parent = transform;
 
-                meshObject.AddComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Standard"));
+                meshObject.AddComponent<MeshRenderer>();
                 meshFilters[i] = meshObject.AddComponent<MeshFilter>();
                 meshFilters[i].sharedMesh = new Mesh();
             }
+            // set material to MeshRenderer ( in this case right now its an PBR Shader)
+            meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = colorSettings.planetMaterial;
 
             faces[i] = new CFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
         }
@@ -82,10 +86,7 @@ public class CPlanet : MonoBehaviour
     // loop through meshes and set colors
     void GenerateColors()
     {
-        foreach (MeshFilter mesh in meshFilters)
-        {
-            mesh.GetComponent<MeshRenderer>().sharedMaterial.color = colorSettings.planetColor;
-        }
+        colorGenerator.UpdateColors();
     }
 
     void GenerateMesh()
@@ -94,5 +95,6 @@ public class CPlanet : MonoBehaviour
         {
             face.ConstructMesh();
         }
+        colorGenerator.UpdateElevation(shapeGenerator.elavationMinMax);
     }
 }

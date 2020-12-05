@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class IcoPlanet : MonoBehaviour
 {
-
+    public bool autoUpdate = true;
     private Material material;                  // material to apply
     private GameObject planetMesh;              // mesh holder
 
@@ -20,9 +20,10 @@ public class IcoPlanet : MonoBehaviour
 
     // --------------------
     [Header("ScriptableObject")]
-    public CShapeSettings shapeSettings;
-    public CColorSettings colorSettings;
+    public CShapeSettings shapeSettings = new CShapeSettings();
+    public CColorSettings colorSettings = new CColorSettings();
     CShapeGenerator shapeGenerator;
+    CColorGenerator colorGenerator;
 
     MeshFilter terrainFilter;
 
@@ -194,8 +195,9 @@ public class IcoPlanet : MonoBehaviour
         }
         planetMesh = new GameObject("Planet Mesh");
 
-        // set all Shapesettings 
-        shapeGenerator = new CShapeGenerator(shapeSettings);
+        // set all Settings 
+        shapeGenerator.UpdateSettings(shapeSettings);
+        colorGenerator.UpdateSettings(colorSettings);
 
         // add necessary components
         MeshRenderer surfaceRenderer = planetMesh.AddComponent<MeshRenderer>();
@@ -226,6 +228,10 @@ public class IcoPlanet : MonoBehaviour
             vertices[i * 3 + 2] = this.vertices[poly.vertices[2]];
             // use noise on vertices
             vertices[i] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
+            //for (int j = 0; j < vertexCount; j++)
+            //{
+            //    vertices[j] = shapeGenerator.CalculatePointOnPlanet(vertices[j]);
+            //}
             //vertices[i * 3 + 1] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
             //vertices[i * 3 + 2] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
 
@@ -249,28 +255,36 @@ public class IcoPlanet : MonoBehaviour
 
     public void GeneratePlanet()
     {
+        CreateIcosahedron();
+        Subdivide(subdivitions);
         GenerateMesh();
         GenerateColor();
     }
 
     void GenerateColor()
     {
-        terrainFilter.GetComponent<MeshRenderer>().sharedMaterial.color = colorSettings.planetColor;
+        colorGenerator.UpdateColors();
     }
 
     public void OnShapeSettingsUpdated()
     {
-        CreateIcosahedron();
-        Subdivide(subdivitions);
-        GenerateMesh();
-        GenerateColor();
+        if(autoUpdate)
+        {
+            CreateIcosahedron();
+            Subdivide(subdivitions);
+            GenerateMesh();
+            GenerateColor();                // unneccesary right now because the method is doing the same as GeneratePlanet()
+        }
+
     }
 
     public void OnColorSettingsUpdate()
     {
-        CreateIcosahedron();
-        Subdivide(subdivitions);
-        GenerateMesh();
-        GenerateColor();
+        if (autoUpdate)
+        {
+            //CreateIcosahedron();
+            //Subdivide(subdivitions);
+            GenerateColor();
+        }
     }
 }
