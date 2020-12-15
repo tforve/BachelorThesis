@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class CNoiseSettings
 {
-    public enum FilterType { Simple, Ridgid};   // types of Filters to specify how to calculate the Noise
+    public enum FilterType { Simple, Ridgid, Hilly, Brain};   // types of Filters to specify how to calculate the Noise
     public FilterType filterType;
 
     public StdNoiseSettings stdNoiseSettings;
-    public RidgidNoiseSettings ridgidNoiseSettings;
+    public RidgidNoiseSettings ridgidNoiseSettings;    
 
     // Settings used by all Filters
     [System.Serializable]
@@ -33,4 +33,6 @@ public class CNoiseSettings
     {
         public float weightMultiplier = 0.5f;
     }
+
+    // add more addition Settings
 }

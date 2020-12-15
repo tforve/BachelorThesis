@@ -12,6 +12,10 @@ public static class CNoiseFilterFactory
                 return new CSimpleNoiseFilter(settings.stdNoiseSettings);
             case CNoiseSettings.FilterType.Ridgid:
                 return new CRidgidNoiseFilter(settings.ridgidNoiseSettings);
+            case CNoiseSettings.FilterType.Hilly:
+                return new CHillyNoiseFilter(settings.stdNoiseSettings);
+            case CNoiseSettings.FilterType.Brain:
+                return new CBrainNoiseFilter(settings.stdNoiseSettings);
             default:
                 break;
         }
