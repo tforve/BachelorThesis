@@ -87,6 +87,10 @@ public class CPlanet : MonoBehaviour
     void GenerateColors()
     {
         colorGenerator.UpdateColors();
+        foreach (CFace face in faces)
+        {
+            face.UpdateUVs(colorGenerator);
+        }
     }
 
     void GenerateMesh()

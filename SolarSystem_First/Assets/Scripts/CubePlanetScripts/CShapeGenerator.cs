@@ -23,7 +23,7 @@ public class CShapeGenerator
     }
 
 
-    public Vector3 CalculatePointOnPlanet(Vector3 pointOnUnitSphere)
+    public float CalculateUnscaledElevation(Vector3 pointOnUnitSphere)
     {
         //float noise = Mathf.PerlinNoise(pointOnUnitSphere.x * settings.noiseRroughness + settings.noiseCentre.x, pointOnUnitSphere.x * settings.noiseRroughness + settings.noiseCentre.y);
         //noise = noise *settings.noiseStrengh;
@@ -52,9 +52,21 @@ public class CShapeGenerator
             }
         }
 
-        noise = settings.planetRadius * (1 + noise);
+        //noise = settings.planetRadius * (1 + noise);
         //storing lowest and highest elevation of all vertices
         elavationMinMax.AddValue(noise);
-        return pointOnUnitSphere * noise;
+        return noise;
+    }
+
+    /// <summary>
+    /// get back correct elevation with clamp and * by PlanetRadius
+    /// </summary>
+    /// <param name="unscaledElevation"></param>
+    /// <returns></returns>
+    public float GetScaledElevation(float unscaledElevation)
+    {
+        float elevtaion = Mathf.Max(0, unscaledElevation);
+        elevtaion = settings.planetRadius * (1 + elevtaion);
+        return elevtaion;
     }
 }

@@ -227,7 +227,7 @@ public class IcoPlanet : MonoBehaviour
             vertices[i * 3 + 1] = this.vertices[poly.vertices[1]];
             vertices[i * 3 + 2] = this.vertices[poly.vertices[2]];
             // use noise on vertices
-            vertices[i] = shapeGenerator.CalculatePointOnPlanet(vertices[i]);
+            //vertices[i] = shapeGenerator.CalculateUnscaledElevation(vertices[i]);
             //for (int j = 0; j < vertexCount; j++)
             //{
             //    vertices[j] = shapeGenerator.CalculatePointOnPlanet(vertices[j]);

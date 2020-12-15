@@ -35,7 +35,7 @@ public class CHillyNoiseFilter : CINoiseFilter
             frequency *= settings.roughness;    // roughness > 1 = frequency will increase with each layer
             amplitude *= settings.persistence;  // persistence < 1 = amplitude will decrease with each layer
         }
-        noiseValue = Mathf.Max(0, noiseValue - settings.minValue);
+        noiseValue = noiseValue - settings.seaLevel;
         return noiseValue * settings.strength;
     }
 }

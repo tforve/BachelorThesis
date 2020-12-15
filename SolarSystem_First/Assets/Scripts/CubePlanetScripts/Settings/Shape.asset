@@ -20,12 +20,12 @@ MonoBehaviour:
       filterType: 0
       stdNoiseSettings:
         numberOfLayers: 5
-        strength: 0.06
-        baseRoughness: 0.97
+        strength: 0.08
+        baseRoughness: 1.09
         roughness: 1.74
-        persistence: 0.62
+        persistence: 0.53
         centre: {x: 0, y: 0, z: 0}
-        minValue: 1.18
+        seaLevel: 0.98
       ridgidNoiseSettings:
         numberOfLayers: 1
         strength: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
         roughness: 0
         persistence: 0
         centre: {x: 0, y: 0, z: 0}
-        minValue: 0
+        seaLevel: 0
         weightMultiplier: 0
   - enabled: 1
     useFirstLayerAsMask: 1
@@ -46,7 +46,7 @@ MonoBehaviour:
         roughness: 0.98
         persistence: 0.8
         centre: {x: 0, y: 0, z: 0}
-        minValue: 0
+        seaLevel: 0
       ridgidNoiseSettings:
         numberOfLayers: 1
         strength: 1
@@ -54,7 +54,7 @@ MonoBehaviour:
         roughness: 2
         persistence: 0.5
         centre: {x: 0, y: 0, z: 0}
-        minValue: 0
+        seaLevel: 0
         weightMultiplier: 0.5
   - enabled: 1
     useFirstLayerAsMask: 1
@@ -67,7 +67,7 @@ MonoBehaviour:
         roughness: 0
         persistence: 0
         centre: {x: 0, y: 0, z: 0}
-        minValue: 0
+        seaLevel: 0
       ridgidNoiseSettings:
         numberOfLayers: 3
         strength: 1
@@ -75,5 +75,5 @@ MonoBehaviour:
         roughness: 1.5
         persistence: 0.3
         centre: {x: 0, y: 0, z: 0}
-        minValue: 0.51
+        seaLevel: 0
         weightMultiplier: -1.11

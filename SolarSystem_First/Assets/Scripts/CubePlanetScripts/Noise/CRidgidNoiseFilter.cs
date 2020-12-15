@@ -34,7 +34,7 @@ public class CRidgidNoiseFilter : CINoiseFilter
             frequency *= settings.roughness;    
             amplitude *= settings.persistence;  
         }
-        noiseValue = Mathf.Max(0, noiseValue - settings.minValue);
+        noiseValue = noiseValue - settings.seaLevel;
         return noiseValue * settings.strength;
     }
 }
