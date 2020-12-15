@@ -6,7 +6,7 @@ public class CPlanet : MonoBehaviour
 {
     [Range(2, 256)]
     public int resolution = 10;                 // resolution of each face, 256 is max for mesh in unity
-    public bool autoUpdate = true;              // to set autoUpdate 
+    public bool autoUpdate = true;              // to set autoUpdate    
 
     [Header("ScriptableObject")]
     public CShapeSettings shapeSettings;

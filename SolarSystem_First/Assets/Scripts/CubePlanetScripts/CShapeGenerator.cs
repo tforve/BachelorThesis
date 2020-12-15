@@ -5,18 +5,18 @@ using UnityEngine;
 public class CShapeGenerator
 {
     CShapeSettings settings;                
-    CNoiseFilter[] noiseFilters;
+    CINoiseFilter[] noiseFilters;
 
     public CMinMax elavationMinMax;            // height to calculate hightest point of Planet and set Colors right
 
     public void UpdateSettings(CShapeSettings settings)
     {
         this.settings = settings;
-        noiseFilters = new CNoiseFilter[settings.noiseLayers.Length];
+        noiseFilters = new CINoiseFilter[settings.noiseLayers.Length];
 
         for (int i = 0; i < noiseFilters.Length; i++)
         {
-            noiseFilters[i] = new CNoiseFilter(settings.noiseLayers[i].noiseSettings);
+            noiseFilters[i] = CNoiseFilterFactory.CreateNoiseFilter(settings.noiseLayers[i].noiseSettings);
         }
 
         elavationMinMax = new CMinMax();

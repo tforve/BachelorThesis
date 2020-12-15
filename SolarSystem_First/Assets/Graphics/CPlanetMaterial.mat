@@ -91,5 +91,5 @@ Material:
     - _Color: {r: 0.3371553, g: 0.6509434, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _elevationMinMax: {r: 5, g: 6.691485, b: 0, a: 0}
+    - _elevationMinMax: {r: 15, g: 18.17486, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -12,25 +12,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6456885c29055894194d92a3e9fbc95e, type: 3}
   m_Name: Shape
   m_EditorClassIdentifier: 
-  planetRadius: 5
+  planetRadius: 15
   noiseLayers:
   - enabled: 1
     useFirstLayerAsMask: 0
     noiseSettings:
-      numberOfLayers: 4
-      strength: 0.17
-      baseRoughness: 0.52
-      roughness: 1.81
-      persistence: 0.76
-      centre: {x: 0, y: 0, z: 0}
-      minValue: 1.4
+      filterType: 0
+      stdNoiseSettings:
+        numberOfLayers: 5
+        strength: 0.05
+        baseRoughness: 0.97
+        roughness: 1.74
+        persistence: 0.62
+        centre: {x: 0, y: 0, z: 0}
+        minValue: 1.18
+      ridgidNoiseSettings:
+        numberOfLayers: 1
+        strength: 0
+        baseRoughness: 0
+        roughness: 0
+        persistence: 0
+        centre: {x: 0, y: 0, z: 0}
+        minValue: 0
+        weightMultiplier: 0
   - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
-      numberOfLayers: 5
-      strength: 4.92
-      baseRoughness: 0.32
-      roughness: 2.75
-      persistence: 0.49
-      centre: {x: 0, y: 0, z: 0}
-      minValue: 1.26
+      filterType: 0
+      stdNoiseSettings:
+        numberOfLayers: 4
+        strength: 1.01
+        baseRoughness: 0.81
+        roughness: 0.98
+        persistence: 0.8
+        centre: {x: 0, y: 0, z: 0}
+        minValue: 0
+      ridgidNoiseSettings:
+        numberOfLayers: 1
+        strength: 1
+        baseRoughness: 1
+        roughness: 2
+        persistence: 0.5
+        centre: {x: 0, y: 0, z: 0}
+        minValue: 0
+        weightMultiplier: 0.5
+  - enabled: 1
+    useFirstLayerAsMask: 1
+    noiseSettings:
+      filterType: 1
+      stdNoiseSettings:
+        numberOfLayers: 1
+        strength: 1
+        baseRoughness: 1
+        roughness: 2
+        persistence: 0.5
+        centre: {x: 0, y: 0, z: 0}
+        minValue: 0
+      ridgidNoiseSettings:
+        numberOfLayers: 4
+        strength: 1.31
+        baseRoughness: 3.48
+        roughness: 0
+        persistence: 0.33
+        centre: {x: 0, y: 0, z: 0}
+        minValue: 0
+        weightMultiplier: 0.8
