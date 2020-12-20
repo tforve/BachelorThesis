@@ -21,7 +21,8 @@ public class CharacterController: MonoBehaviour
     private float rotationY = 0;
 
     private Rigidbody rb;
-    
+    private DebugOrbit debugOrbit;
+
     // ---- ADD Gravitation to Player later --------
 
     void Start()
@@ -30,6 +31,8 @@ public class CharacterController: MonoBehaviour
         characterController = GetComponent<CharacterController>();
         //characterCamera = GetComponentInChildren<Camera>();
         Cursor.visible = false;
+
+        debugOrbit = FindObjectOfType<DebugOrbit>();
     }
 
     void Update()
@@ -47,6 +50,17 @@ public class CharacterController: MonoBehaviour
         rotationY += Input.GetAxis("Mouse X") * lookSpeed;
         this.transform.localRotation = Quaternion.Euler(rotationX, rotationY, 0);
         //transform.rotation *= Quaternion.Euler(rotationX, rotationY, 0);
+
+        // --- Controlls ---
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+           debugOrbit.ShowOrbit();
+        }
+        
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
     }
     private void FixedUpdate()

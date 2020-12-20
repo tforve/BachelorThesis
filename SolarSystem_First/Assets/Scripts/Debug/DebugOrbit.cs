@@ -5,17 +5,21 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class DebugOrbit : MonoBehaviour
 {
-    public int numSteps = 1000;
+    public int numSteps = 1500;
     public float timeStep = 0.1f;
-    public bool usePhysicsTimeStep;
+    public bool usePhysicsTimeStep = false;
 
     [Header("Relative to Body")]
-    public PlanetBody centralBody;
+    public SolarsystemBody centralBody;
     public bool relativeToCentralBody = true;
-    public bool useThickLines = true;
-    public float width = 100;
 
+    [Header("Drawing")]
     public bool drawInPlayMode = false;
+    public bool useThickLines = true;
+    public float width = 50;
+
+    private SolarsystemBody[] bodies;
+
 
     void Start()
     {
@@ -23,14 +27,18 @@ public class DebugOrbit : MonoBehaviour
         {
             HideOrbits();
         }
+
+        
     }
 
     void Update()
     {
+        
         if (drawInPlayMode || !Application.isPlaying)
         {
-            DrawOrbits();
+            DrawOrbits();            
         }
+        
     }
 
     /// <summary>
@@ -39,7 +47,7 @@ public class DebugOrbit : MonoBehaviour
     void DrawOrbits()
     {
         // all bodies
-        PlanetBody[] bodies = FindObjectsOfType<PlanetBody>();
+        //SimulateBody[] bodies = FindObjectsOfType<SimulateBody>();
         var simulatedBodies = new SimulatedBody[bodies.Length];
         var drawPoints = new Vector3[bodies.Length][];
         int referenceFrameIndex = 0;
@@ -99,13 +107,13 @@ public class DebugOrbit : MonoBehaviour
             if (useThickLines)
             {
                 var lineRenderer = bodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer>();
-
+      
                 lineRenderer.enabled = true;
                 lineRenderer.positionCount = drawPoints[bodyIndex].Length;
                 lineRenderer.SetPositions(drawPoints[bodyIndex]);
                 lineRenderer.startColor = pathColour;
                 lineRenderer.endColor = pathColour;
-                lineRenderer.widthMultiplier = width;
+                lineRenderer.widthMultiplier = width;                
             }
             else
             {
@@ -130,7 +138,7 @@ public class DebugOrbit : MonoBehaviour
     /// </summary>
     void HideOrbits()
     {
-        PlanetBody[] bodies = FindObjectsOfType<PlanetBody>();
+        SolarsystemBody[] bodies = FindObjectsOfType<SolarsystemBody>();
 
         // Draw paths
         for (int bodyIndex = 0; bodyIndex < bodies.Length; bodyIndex++)
@@ -166,9 +174,29 @@ public class DebugOrbit : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Turn on and off Orbits of celectial Bodies
+    /// </summary>
+    public void ShowOrbit()
+    {
+        ResetOrbit();
+        drawInPlayMode = drawInPlayMode ? false : true;
+        useThickLines = useThickLines ? false : true;
+    }
+
+    void ResetOrbit()
+    {
+        for (int i = 0; i < bodies.Length; i++)
+        {
+            var lineRenderer = bodies[i].gameObject.GetComponentInChildren<LineRenderer>();
+            lineRenderer.enabled = false;
+        }
+    }
+
 
     void OnValidate()
     {
+        bodies = FindObjectsOfType<SolarsystemBody>();
         if (usePhysicsTimeStep)
         {
             timeStep = Universe.timeSteps;
@@ -182,7 +210,7 @@ public class DebugOrbit : MonoBehaviour
         public Vector3 velocity;
         public float mass;
 
-        public SimulatedBody(PlanetBody body)
+        public SimulatedBody(SolarsystemBody body)
         {
             position = body.transform.position;
             velocity = body.startVelocity;
