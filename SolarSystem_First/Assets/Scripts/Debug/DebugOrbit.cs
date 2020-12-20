@@ -10,7 +10,7 @@ public class DebugOrbit : MonoBehaviour
     public bool usePhysicsTimeStep = false;
 
     [Header("Relative to Body")]
-    public PlanetBody centralBody;
+    public SolarsystemBody centralBody;
     public bool relativeToCentralBody = true;
 
     [Header("Drawing")]
@@ -18,7 +18,7 @@ public class DebugOrbit : MonoBehaviour
     public bool useThickLines = true;
     public float width = 50;
 
-    private PlanetBody[] bodies;
+    private SolarsystemBody[] bodies;
 
 
     void Start()
@@ -47,7 +47,7 @@ public class DebugOrbit : MonoBehaviour
     void DrawOrbits()
     {
         // all bodies
-        //PlanetBody[] bodies = FindObjectsOfType<PlanetBody>();
+        //SimulateBody[] bodies = FindObjectsOfType<SimulateBody>();
         var simulatedBodies = new SimulatedBody[bodies.Length];
         var drawPoints = new Vector3[bodies.Length][];
         int referenceFrameIndex = 0;
@@ -138,7 +138,7 @@ public class DebugOrbit : MonoBehaviour
     /// </summary>
     void HideOrbits()
     {
-        PlanetBody[] bodies = FindObjectsOfType<PlanetBody>();
+        SolarsystemBody[] bodies = FindObjectsOfType<SolarsystemBody>();
 
         // Draw paths
         for (int bodyIndex = 0; bodyIndex < bodies.Length; bodyIndex++)
@@ -196,7 +196,7 @@ public class DebugOrbit : MonoBehaviour
 
     void OnValidate()
     {
-        bodies = FindObjectsOfType<PlanetBody>();
+        bodies = FindObjectsOfType<SolarsystemBody>();
         if (usePhysicsTimeStep)
         {
             timeStep = Universe.timeSteps;
@@ -210,7 +210,7 @@ public class DebugOrbit : MonoBehaviour
         public Vector3 velocity;
         public float mass;
 
-        public SimulatedBody(PlanetBody body)
+        public SimulatedBody(SolarsystemBody body)
         {
             position = body.transform.position;
             velocity = body.startVelocity;
