@@ -23,8 +23,8 @@ public class CColorSettings : ScriptableObject
         [Range(0, 1)]
         public float blendStrength;             // blend NoiseBiomes in eachother 
 
-        [System.Serializable]
 
+        [System.Serializable]
         public class Biome
         {
             public Gradient gradient;           // set colors

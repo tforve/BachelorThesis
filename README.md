@@ -1,2 +1,3 @@
 # BachelorThesis
-Thesis Solar System
+Procedural generated Solar Systems
+Procedural generated Planets
