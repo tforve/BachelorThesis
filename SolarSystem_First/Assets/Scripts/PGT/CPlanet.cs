@@ -101,4 +101,19 @@ public class CPlanet : MonoBehaviour
         }
         colorGenerator.UpdateElevation(shapeGenerator.elavationMinMax);
     }
+
+    private void OnValidate()
+    {
+        GeneratePlanet();
+    }
+
+    // -------- GETTER ---------
+
+    public string GetPlanetName { get { return GetComponent<CPlanet>().name; } }
+    public CFace[] GetFaces { get { return faces; } }
+    // get resolution - public 
+    // get color settings - public
+    // get shape settings - public 
+
+    // -------- Randomize Values ---------
 }

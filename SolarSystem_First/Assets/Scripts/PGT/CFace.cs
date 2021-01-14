@@ -61,7 +61,7 @@ public class CFace
                     triangles[triangleIndex] = i;
                     triangles[triangleIndex + 1] = i + resolution + 1;
                     triangles[triangleIndex + 2] = i + resolution;
-                    // second tringale, clockwise
+                    // second triangle, clockwise
                     triangles[triangleIndex + 3] = i;
                     triangles[triangleIndex + 4] = i + 1;
                     triangles[triangleIndex + 5] = i + resolution + 1;
