@@ -12,38 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6456885c29055894194d92a3e9fbc95e, type: 3}
   m_Name: Shape
   m_EditorClassIdentifier: 
-  planetRadius: 15
+  planetRadius: 10.24
   noiseLayers:
-  - enabled: 0
+  - enabled: 1
     useFirstLayerAsMask: 0
     noiseSettings:
-      filterType: 0
+      filterType: 1
       stdNoiseSettings:
         numberOfLayers: 5
-        strength: 0.08
-        baseRoughness: 1.09
-        roughness: 1.74
+        strength: 0.05
+        baseRoughness: 0.58
+        roughness: 2.04
         persistence: 0.53
-        centre: {x: 0, y: 0, z: 0}
-        seaLevel: 0.98
+        centre: {x: -2.51, y: 1.73, z: -1.51}
+        seaLevel: 1.28
       ridgidNoiseSettings:
-        numberOfLayers: 1
-        strength: 0
-        baseRoughness: 0
-        roughness: 0
+        numberOfLayers: 2
+        strength: 0.006
+        baseRoughness: -1.77
+        roughness: -0.03
         persistence: 0
         centre: {x: 0, y: 0, z: 0}
-        seaLevel: 0
+        seaLevel: 0.35
         weightMultiplier: 0
-  - enabled: 0
+  - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 0
       stdNoiseSettings:
-        numberOfLayers: 4
-        strength: 1.01
-        baseRoughness: 0.81
-        roughness: 0.98
+        numberOfLayers: 3
+        strength: 10.81
+        baseRoughness: -2.51
+        roughness: -0.04
         persistence: 0.8
         centre: {x: 0, y: 0, z: 0}
         seaLevel: 0
@@ -57,9 +57,9 @@ MonoBehaviour:
         seaLevel: 0
         weightMultiplier: 0.5
   - enabled: 1
-    useFirstLayerAsMask: 0
+    useFirstLayerAsMask: 1
     noiseSettings:
-      filterType: 0
+      filterType: 1
       stdNoiseSettings:
         numberOfLayers: 2
         strength: 0.02

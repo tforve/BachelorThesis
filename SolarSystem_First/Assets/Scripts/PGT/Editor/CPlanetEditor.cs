@@ -12,18 +12,29 @@ public class CPlanetEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        using (var check = new EditorGUI.ChangeCheckScope())
-        {
-            base.OnInspectorGUI();
-            if(check.changed)
-            {
-                planet.GeneratePlanet();
-            }
-        }
+        base.OnInspectorGUI();
+
+        //using (var check = new EditorGUI.ChangeCheckScope())
+        //{
+        //    if(check.changed)
+        //    {
+        //        planet.GeneratePlanet();
+        //    }
+        //}
         // generate Planet button
         if(GUILayout.Button("Generate Planet"))
         {
             planet.GeneratePlanet();
+        }
+
+        if (GUILayout.Button("Create Copy of Planet"))
+        {
+            // tranfer all values to a Copyfactory
+        }
+
+        if (GUILayout.Button("Randomize Planet"))
+        {
+            // randomize Shape, Color etc.
         }
 
         // add all Settings to Observers
