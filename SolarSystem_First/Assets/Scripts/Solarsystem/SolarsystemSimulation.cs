@@ -5,17 +5,17 @@ using UnityEngine;
 public class SolarsystemSimulation : MonoBehaviour
 {
     #region SINGLETON PATTERN
-    private static SolarsystemSimulation instance;
+    private static SolarsystemSimulation _instance;
     public static SolarsystemSimulation Instance
     {
         get
         {
-            if(instance == null)
+            if(_instance == null)
             {
-                instance = GameObject.FindObjectOfType<SolarsystemSimulation>();
+                _instance = GameObject.FindObjectOfType<SolarsystemSimulation>();
             }
 
-            return instance;
+            return _instance;
         }
         
     }
@@ -29,7 +29,14 @@ public class SolarsystemSimulation : MonoBehaviour
     private void Awake()
     {
         // populate array of planets
+        //GameObject[] tmp = GameObject.FindGameObjectsWithTag("Planet");
+        //planets = new SolarsystemBody[tmp.Length];
+        //for (int i = 0; i < tmp.Length; i++)
+        //{
+        //    planets[i] = tmp[i].gameObject.GetComponent<SolarsystemBody>();
+        //}
         planets = FindObjectsOfType<SolarsystemBody>();
+
         // set fixedDeltaTime to own Universe time for more controll
         Time.fixedDeltaTime = Universe.timeSteps;
 
@@ -61,6 +68,13 @@ public class SolarsystemSimulation : MonoBehaviour
         if(recalculateStartvelocity)
         {
             // populate planets array
+
+            //GameObject[] tmp = GameObject.FindGameObjectsWithTag("Planet");
+            //planets = new SolarsystemBody[tmp.Length];
+            //for (int i = 0; i < tmp.Length; i++)
+            //{
+            //    planets[i] = tmp[i].gameObject.GetComponent<SolarsystemBody>();
+            //}
             planets = FindObjectsOfType<SolarsystemBody>();
             // set fixedDeltaTime to own Universe time for more controll
             Time.fixedDeltaTime = Universe.timeSteps;

@@ -35,17 +35,19 @@ public class CopyFactory : MonoBehaviour
     private CPlanet planetToCopy;
     private FinalPlanet[] finalPlanet;
 
-    // values to copy
+    // --- values to copy ---
+    // Color and Shape
     private CFace[] faces;
     private string originName;
     private int originResolution;
     private CColorSettings originColSettings;
     private CShapeSettings originShapeSettings;
+    // gravity Simulation related
+    private SolarsystemBody solarsystemBody;
 
 
     private void Awake()
     {
-
         planetToCopy = FindObjectOfType<CPlanet>();
         StoreParameters();
 

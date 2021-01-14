@@ -17,7 +17,7 @@ MonoBehaviour:
   - enabled: 1
     useFirstLayerAsMask: 0
     noiseSettings:
-      filterType: 1
+      filterType: 0
       stdNoiseSettings:
         numberOfLayers: 5
         strength: 0.05

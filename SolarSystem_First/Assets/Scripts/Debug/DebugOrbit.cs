@@ -18,6 +18,7 @@ public class DebugOrbit : MonoBehaviour
     public bool useThickLines = true;
     public float width = 50;
 
+    [SerializeField]
     private SolarsystemBody[] bodies;
 
 
@@ -26,19 +27,15 @@ public class DebugOrbit : MonoBehaviour
         if (Application.isPlaying)
         {
             HideOrbits();
-        }
-
-        
+        }        
     }
 
     void Update()
-    {
-        
+    {        
         if (drawInPlayMode || !Application.isPlaying)
         {
             DrawOrbits();            
-        }
-        
+        }        
     }
 
     /// <summary>
@@ -194,9 +191,30 @@ public class DebugOrbit : MonoBehaviour
     }
 
 
+    public bool calculate = false;
     void OnValidate()
     {
-        bodies = FindObjectsOfType<SolarsystemBody>();
+        if(calculate)
+        {            
+            SetBodies();
+        }
+    }
+
+    void SetBodies()
+    {
+        if (GameObject.FindGameObjectsWithTag("Planet") != null)
+        {
+            GameObject[] tmp = GameObject.FindGameObjectsWithTag("Planet");
+
+            bodies = new SolarsystemBody[tmp.Length];
+            for (int i = 0; i < tmp.Length; i++)
+            {
+                bodies[i] = tmp[i].gameObject.GetComponent<SolarsystemBody>();
+            }
+
+            //bodies = FindObjectsOfType<SolarsystemBody>();
+        }
+
         if (usePhysicsTimeStep)
         {
             timeStep = Universe.timeSteps;
