@@ -6,7 +6,7 @@ using UnityEngine;
 public class SolarsystemBody : MonoBehaviour
 {
     [HideInInspector]
-    public float mass;                             // mass of planet
+    public float mass;                      // mass of planet
 
     [Header("Values of Celestial Body")]
     public float radius;                    // radius of planet

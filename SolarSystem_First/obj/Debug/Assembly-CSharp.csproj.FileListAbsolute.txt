@@ -1,0 +1,2 @@
+F:\WorkSpace\Unity\BachelorThesis\SolarSystem_First\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+F:\WorkSpace\Unity\BachelorThesis\SolarSystem_First\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

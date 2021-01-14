@@ -38,7 +38,6 @@ public class CopyFactory : MonoBehaviour
     // --- values to copy ---
     // Color and Shape
     private CFace[] faces;
-    private string originName;
     private int originResolution;
     private CColorSettings originColSettings;
     private CShapeSettings originShapeSettings;
@@ -59,7 +58,6 @@ public class CopyFactory : MonoBehaviour
     void StoreParameters()
     {
         faces = planetToCopy.GetFaces;
-        originName = planetToCopy.name;
         originResolution = planetToCopy.resolution;
         originColSettings = planetToCopy.colorSettings;
         originShapeSettings = planetToCopy.shapeSettings;
@@ -74,7 +72,6 @@ public class CopyFactory : MonoBehaviour
         for (int i = 0; i < finalPlanet.Length; i++)
         {
             finalPlanet[i].faces = faces;
-            finalPlanet[i].name = originName;
             finalPlanet[i].resolution = originResolution;
             finalPlanet[i].colorSettings = originColSettings;
             finalPlanet[i].shapeSettings = originShapeSettings;

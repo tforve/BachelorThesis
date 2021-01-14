@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d17b0939f246ee438846133fa17504b, type: 3}
   m_Name: BlankColorSettings
   m_EditorClassIdentifier: 
-  planetMaterial: {fileID: 0}
+  planetMaterial: {fileID: 2100000, guid: 2ebb6b45ff1a6e5439b8959c000629bb, type: 2}
   biomeColorSettings:
     biomes: []
     noise:

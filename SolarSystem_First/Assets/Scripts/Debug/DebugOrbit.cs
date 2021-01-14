@@ -202,18 +202,18 @@ public class DebugOrbit : MonoBehaviour
 
     void SetBodies()
     {
-        if (GameObject.FindGameObjectsWithTag("Planet") != null)
-        {
-            GameObject[] tmp = GameObject.FindGameObjectsWithTag("Planet");
+        //if (GameObject.FindGameObjectsWithTag("Planet") != null)
+        //{
+        //    GameObject[] tmp = GameObject.FindGameObjectsWithTag("Planet");
 
-            bodies = new SolarsystemBody[tmp.Length];
-            for (int i = 0; i < tmp.Length; i++)
-            {
-                bodies[i] = tmp[i].gameObject.GetComponent<SolarsystemBody>();
-            }
+        //    bodies = new SolarsystemBody[tmp.Length];
+        //    for (int i = 0; i < tmp.Length; i++)
+        //    {
+        //        bodies[i] = tmp[i].gameObject.GetComponent<SolarsystemBody>();
+        //    }
 
-            //bodies = FindObjectsOfType<SolarsystemBody>();
-        }
+        //}
+            bodies = FindObjectsOfType<SolarsystemBody>();
 
         if (usePhysicsTimeStep)
         {
