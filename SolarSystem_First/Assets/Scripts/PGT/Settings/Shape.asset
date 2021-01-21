@@ -15,18 +15,20 @@ MonoBehaviour:
   planetRadius: 100
   noiseLayers:
   - enabled: 1
-    useFirstLayerAsMask: 0
+    useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 0
       stdNoiseSettings:
-        numberOfLayers: 5
-        strength: 0.01
-        baseRoughness: 1.04
-        roughness: 2.02
-        persistence: 0.53
-        centre: {x: -2.51, y: 1.73, z: -1.51}
-        seaLevel: 1.01
+        seed: 0
+        numberOfLayers: 2
+        strength: 0.013404036
+        baseRoughness: 1.2839055
+        roughness: 3.0148187
+        persistence: 0.5
+        centre: {x: 8.1283455, y: 9.13678, z: 5.098825}
+        seaLevel: 0.59851265
       ridgidNoiseSettings:
+        seed: 0
         numberOfLayers: 2
         strength: 0.006
         baseRoughness: -1.77
@@ -40,14 +42,16 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       stdNoiseSettings:
+        seed: 0
         numberOfLayers: 3
-        strength: 4
-        baseRoughness: 5
-        roughness: -0.03
-        persistence: 0.8
-        centre: {x: 0, y: 0, z: 0}
-        seaLevel: 0
+        strength: 14.172762
+        baseRoughness: 1.2079587
+        roughness: 2.924311
+        persistence: 0.5
+        centre: {x: 2.3349297, y: 6.9496813, z: 3.5012336}
+        seaLevel: 0.8148114
       ridgidNoiseSettings:
+        seed: 0
         numberOfLayers: 1
         strength: 1
         baseRoughness: 1
@@ -59,16 +63,18 @@ MonoBehaviour:
   - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
-      filterType: 1
+      filterType: 0
       stdNoiseSettings:
+        seed: 0
         numberOfLayers: 2
-        strength: 5
-        baseRoughness: 2
-        roughness: 1.35
-        persistence: 2.95
-        centre: {x: 0.15, y: 0, z: 0}
-        seaLevel: 0.91
+        strength: 28.331366
+        baseRoughness: 1.2079587
+        roughness: 2.924311
+        persistence: 0.5
+        centre: {x: 2.3349297, y: 6.9496813, z: 3.5012336}
+        seaLevel: 0.8148114
       ridgidNoiseSettings:
+        seed: 0
         numberOfLayers: 2
         strength: 8
         baseRoughness: 2

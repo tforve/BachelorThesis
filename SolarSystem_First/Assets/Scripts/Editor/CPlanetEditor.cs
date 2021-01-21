@@ -14,27 +14,24 @@ public class CPlanetEditor : Editor
     {
         base.OnInspectorGUI();
 
-        //using (var check = new EditorGUI.ChangeCheckScope())
-        //{
-        //    if(check.changed)
-        //    {
-        //        planet.GeneratePlanet();
-        //    }
-        //}
         // generate Planet button
         if(GUILayout.Button("Generate Planet"))
         {
             planet.GeneratePlanet();
         }
 
-        if (GUILayout.Button("Create Copy of Planet"))
+        if (GUILayout.Button("Randomize Shape"))
         {
-            // tranfer all values to a Copyfactory
+            // randomize Shape
+            planet.RandomizePlanetShape();
+            // give new rnd settings to planet.Generate
+            planet.GeneratePlanet();
         }
 
-        if (GUILayout.Button("Randomize Planet"))
+        if (GUILayout.Button("Reset Shape"))
         {
-            // randomize Shape, Color etc.
+            planet.ResetShape();
+            planet.GeneratePlanet();
         }
 
         // add all Settings to Observers

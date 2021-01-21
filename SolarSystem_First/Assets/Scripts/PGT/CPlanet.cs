@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class CPlanet : MonoBehaviour
     public bool autoUpdate = true;              // to set autoUpdate   --- DELETE LATER 
 
     [Header("ScriptableObject")]
-    public CShapeSettings shapeSettings;
+    public CShapeSettings shapeSettings;        
     public CColorSettings colorSettings;
 
     CShapeGenerator shapeGenerator = new CShapeGenerator();
@@ -53,6 +54,7 @@ public class CPlanet : MonoBehaviour
             faces[i] = new CFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
         }
     }
+
 
 
 
@@ -115,6 +117,32 @@ public class CPlanet : MonoBehaviour
     // get resolution - public 
     // get color settings - public
     // get shape settings - public 
+    public CShapeSettings GetSetShapeSettings { get { return shapeSettings; } set { shapeSettings = value; } }
 
     // -------- Randomize Values ---------
+
+    public void RandomizePlanetShape()
+    {
+        // set planetRadius to mesh in solarsystem.radius
+        shapeSettings.planetRadius = 100;
+
+        // randomize shapesettings in noiseLayers[0].noiseSettings.stdNoiseSettings
+        int multiplier = 1;
+
+        for (int i = 0; i < shapeSettings.noiseLayers.Length; i++)
+        {
+            shapeSettings.noiseLayers[i].noiseSettings.stdNoiseSettings.RandomValue(multiplier);
+            multiplier += 1000;
+        }
+    }
+
+    public void ResetShape()
+    {
+
+        for (int i = 0; i < shapeSettings.noiseLayers.Length; i++)
+        {
+            shapeSettings.noiseLayers[i].noiseSettings.stdNoiseSettings.ResetValues();
+        }
+    }
+
 }
