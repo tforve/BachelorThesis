@@ -5,14 +5,14 @@ using UnityEngine;
 public class SeedGenerator : MonoBehaviour
 {
     public string stringSeed = "";
-    public int seed;
     public bool useStringSeed;
+    public int seed;
     public bool randomizeSeed;
 
-    private void Awake()
-    {
-        Random.InitState(seed);
-    }
+    //private void Awake()
+    //{
+    //    Random.InitState(seed);
+    //}
 
     private void OnValidate()
     {
@@ -23,7 +23,8 @@ public class SeedGenerator : MonoBehaviour
 
         if (randomizeSeed)
         {
-            seed = Random.Range(0, 9999);
+            seed = Random.Range(0, 99999);
         }
     }
+
 }

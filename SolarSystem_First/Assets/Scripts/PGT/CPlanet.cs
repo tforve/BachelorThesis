@@ -8,6 +8,7 @@ public class CPlanet : MonoBehaviour
     [Range(2, 256)]
     public int resolution = 10;                 // resolution of each face, 256 is max for mesh in unity
     public bool autoUpdate = true;              // to set autoUpdate   --- DELETE LATER 
+    
 
     [Header("ScriptableObject")]
     public CShapeSettings shapeSettings;        
@@ -15,6 +16,9 @@ public class CPlanet : MonoBehaviour
 
     CShapeGenerator shapeGenerator = new CShapeGenerator();
     CColorGenerator colorGenerator = new CColorGenerator();
+    // --- Seed ----
+    public bool useSeed = true;
+    SeedGenerator seedGenerator;
 
     [SerializeField, HideInInspector]
     private MeshFilter[] meshFilters;           // array of all 6 meshes
@@ -22,6 +26,14 @@ public class CPlanet : MonoBehaviour
 
     void Initialize()
     {
+        // set seed for generating planetshape
+        seedGenerator = GetComponent<SeedGenerator>();
+        if (useSeed)
+        {
+            int seed = seedGenerator.seed;
+            UnityEngine.Random.InitState(seed);
+        }
+
         // set all settings
         shapeGenerator.UpdateSettings(shapeSettings);
         colorGenerator.UpdateSettings(colorSettings);
@@ -124,7 +136,7 @@ public class CPlanet : MonoBehaviour
     public void RandomizePlanetShape()
     {
         // set planetRadius to mesh in solarsystem.radius
-        shapeSettings.planetRadius = 100;
+        //shapeSettings.planetRadius = 100;
 
         // randomize shapesettings in noiseLayers[0].noiseSettings.stdNoiseSettings
         int multiplier = 1;
@@ -135,14 +147,4 @@ public class CPlanet : MonoBehaviour
             multiplier += 1000;
         }
     }
-
-    public void ResetShape()
-    {
-
-        for (int i = 0; i < shapeSettings.noiseLayers.Length; i++)
-        {
-            shapeSettings.noiseLayers[i].noiseSettings.stdNoiseSettings.ResetValues();
-        }
-    }
-
 }

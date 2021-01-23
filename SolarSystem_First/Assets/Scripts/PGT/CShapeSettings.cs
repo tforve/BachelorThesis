@@ -6,7 +6,6 @@ using UnityEngine;
 public class CShapeSettings : ScriptableObject
 {
     public float planetRadius = 1.0f;
-    //public SeedGenerator seedGenerator;             // to get seed 
     public CNoiseLayer[] noiseLayers;
 
     /// <summary>

@@ -16,7 +16,12 @@ public class CPlanetEditor : Editor
 
         // generate Planet button
         if(GUILayout.Button("Generate Planet"))
-        {
+        {            
+            if(planet.useSeed)
+            {
+                // change methode 
+                planet.RandomizePlanetShape();
+            }
             planet.GeneratePlanet();
         }
 
@@ -26,12 +31,15 @@ public class CPlanetEditor : Editor
             planet.RandomizePlanetShape();
             // give new rnd settings to planet.Generate
             planet.GeneratePlanet();
-        }
+        }        
 
-        if (GUILayout.Button("Reset Shape"))
+        if (GUILayout.Button("Randomize Color"))
         {
-            planet.ResetShape();
-            planet.GeneratePlanet();
+           //Color
+        }
+        if (GUILayout.Button("Randomize Both"))
+        {
+            //Color
         }
 
         // add all Settings to Observers

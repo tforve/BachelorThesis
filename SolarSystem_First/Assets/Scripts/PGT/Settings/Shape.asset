@@ -19,16 +19,14 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       stdNoiseSettings:
-        seed: 0
         numberOfLayers: 2
-        strength: 0.013404036
-        baseRoughness: 1.2839055
-        roughness: 3.0148187
+        strength: 0.013037956
+        baseRoughness: 1.1162837
+        roughness: 3.013286
         persistence: 0.5
-        centre: {x: 8.1283455, y: 9.13678, z: 5.098825}
-        seaLevel: 0.59851265
+        centre: {x: 9.651855, y: 8.195685, z: 1.8781412}
+        seaLevel: 0.89852214
       ridgidNoiseSettings:
-        seed: 0
         numberOfLayers: 2
         strength: 0.006
         baseRoughness: -1.77
@@ -42,16 +40,14 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       stdNoiseSettings:
-        seed: 0
         numberOfLayers: 3
-        strength: 14.172762
-        baseRoughness: 1.2079587
-        roughness: 2.924311
+        strength: 19.794468
+        baseRoughness: 1.4701362
+        roughness: 2.9860754
         persistence: 0.5
-        centre: {x: 2.3349297, y: 6.9496813, z: 3.5012336}
-        seaLevel: 0.8148114
+        centre: {x: 5.6887717, y: 6.8676414, z: 1.0254407}
+        seaLevel: 0.63938355
       ridgidNoiseSettings:
-        seed: 0
         numberOfLayers: 1
         strength: 1
         baseRoughness: 1
@@ -65,16 +61,14 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       stdNoiseSettings:
-        seed: 0
         numberOfLayers: 2
-        strength: 28.331366
-        baseRoughness: 1.2079587
-        roughness: 2.924311
+        strength: 22.314915
+        baseRoughness: 1.2761917
+        roughness: 3.2398655
         persistence: 0.5
-        centre: {x: 2.3349297, y: 6.9496813, z: 3.5012336}
-        seaLevel: 0.8148114
+        centre: {x: 8.1472645, y: 0.6623411, z: 1.308986}
+        seaLevel: 0.69469976
       ridgidNoiseSettings:
-        seed: 0
         numberOfLayers: 2
         strength: 8
         baseRoughness: 2
