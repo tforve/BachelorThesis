@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CColorGenerator
 {
-    CColorSettings settings;
-    Texture2D texture;
-    const int textureResolution = 50;
+    private CColorSettings settings;
+    private Texture2D texture;
+    private const int textureResolution = 50;
     // Biomes
-    INoiseFilter biomeNoiseFilter;
+    private INoiseFilter biomeNoiseFilter;
 
     /// <summary>
     /// Update Colorsettings if texture is null or the number of biomes change
@@ -86,7 +86,7 @@ public class CColorGenerator
                 // ocean Gradient
                 if (i < textureResolution)
                 {
-                    gradientColor = settings.oceanColor.Evaluate(i / (textureResolution - 1.0f));
+                    gradientColor = settings.biomeColorSettings.oceanColor.Evaluate(i / (textureResolution - 1.0f));
                 }
                 // else biome gradients
                 else

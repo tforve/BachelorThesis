@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-
 /// <summary>
 /// To Customize planets in the Editor, created a customEditor
 /// </summary>
@@ -35,11 +34,15 @@ public class CPlanetEditor : Editor
 
         if (GUILayout.Button("Randomize Color"))
         {
-           //Color
+            planet.RandomizePlanetColor();
+            planet.GeneratePlanet();
+
         }
         if (GUILayout.Button("Randomize Both"))
         {
-            //Color
+            planet.RandomizePlanetShape();
+            planet.RandomizePlanetColor();
+            planet.GeneratePlanet();
         }
 
         // add all Settings to Observers
