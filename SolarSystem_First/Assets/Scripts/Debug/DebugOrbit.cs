@@ -15,9 +15,10 @@ public class DebugOrbit : MonoBehaviour
 
     [Header("Drawing")]
     public bool drawInPlayMode = false;
-    public bool useThickLines = true;
+    public bool useThickLines = false;
     public float width = 50;
 
+    [SerializeField]
     private SolarsystemBody[] bodies;
 
 
@@ -26,19 +27,15 @@ public class DebugOrbit : MonoBehaviour
         if (Application.isPlaying)
         {
             HideOrbits();
-        }
-
-        
+        }        
     }
 
     void Update()
-    {
-        
+    {        
         if (drawInPlayMode || !Application.isPlaying)
         {
             DrawOrbits();            
-        }
-        
+        }        
     }
 
     /// <summary>
@@ -102,7 +99,7 @@ public class DebugOrbit : MonoBehaviour
         for (int bodyIndex = 0; bodyIndex < simulatedBodies.Length; bodyIndex++)
         {
             // set pathColor to material color
-            var pathColour = bodies[bodyIndex].gameObject.GetComponentInChildren<MeshRenderer>().sharedMaterial.color;
+            var pathColor = bodies[bodyIndex].gameObject.GetComponentInChildren<MeshRenderer>().sharedMaterial.color;
 
             if (useThickLines)
             {
@@ -111,15 +108,15 @@ public class DebugOrbit : MonoBehaviour
                 lineRenderer.enabled = true;
                 lineRenderer.positionCount = drawPoints[bodyIndex].Length;
                 lineRenderer.SetPositions(drawPoints[bodyIndex]);
-                lineRenderer.startColor = pathColour;
-                lineRenderer.endColor = pathColour;
+                lineRenderer.startColor = pathColor;
+                lineRenderer.endColor = pathColor;
                 lineRenderer.widthMultiplier = width;                
             }
             else
             {
                 for (int i = 0; i < drawPoints[bodyIndex].Length - 1; i++)
                 {
-                    Debug.DrawLine(drawPoints[bodyIndex][i], drawPoints[bodyIndex][i + 1], pathColour);
+                    Debug.DrawLine(drawPoints[bodyIndex][i], drawPoints[bodyIndex][i + 1], pathColor);
                 }
 
                 // Hide renderer
@@ -194,9 +191,30 @@ public class DebugOrbit : MonoBehaviour
     }
 
 
+    public bool calculate = false;
     void OnValidate()
     {
-        bodies = FindObjectsOfType<SolarsystemBody>();
+        if(calculate)
+        {            
+            SetBodies();
+        }
+    }
+
+    void SetBodies()
+    {
+        //if (GameObject.FindGameObjectsWithTag("Planet") != null)
+        //{
+        //    GameObject[] tmp = GameObject.FindGameObjectsWithTag("Planet");
+
+        //    bodies = new SolarsystemBody[tmp.Length];
+        //    for (int i = 0; i < tmp.Length; i++)
+        //    {
+        //        bodies[i] = tmp[i].gameObject.GetComponent<SolarsystemBody>();
+        //    }
+
+        //}
+            bodies = FindObjectsOfType<SolarsystemBody>();
+
         if (usePhysicsTimeStep)
         {
             timeStep = Universe.timeSteps;

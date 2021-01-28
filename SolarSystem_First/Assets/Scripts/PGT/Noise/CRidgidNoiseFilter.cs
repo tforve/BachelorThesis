@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CRidgidNoiseFilter : INoiseFilter
 {
-    CNoiseSettings.RidgidNoiseSettings settings;
+    CNoiseSettings.StdNoiseSettings settings;
     Noise noise = new Noise();
 
-    public CRidgidNoiseFilter(CNoiseSettings.RidgidNoiseSettings settings)
+    public CRidgidNoiseFilter(CNoiseSettings.StdNoiseSettings settings)
     {
         this.settings = settings;
     }
@@ -19,16 +19,11 @@ public class CRidgidNoiseFilter : INoiseFilter
         // setting frequency and amplitude to define layers of noise
         float frequency = settings.baseRoughness;
         float amplitude = 1;
-        float weight = 1;
 
         for (int i = 0; i < settings.numberOfLayers; i++)
         {
             // get inverted absolut value of noise for hilly mountains
             float v = 1 - Mathf.Abs(noise.Evaluate(point * frequency + settings.centre));
-            v = v * v;
-            v *= weight;
-            weight = Mathf.Clamp01(v * settings.weightMultiplier);
-
 
             noiseValue += v * amplitude;
             frequency *= settings.roughness;    

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,14 +7,18 @@ public class CPlanet : MonoBehaviour
 {
     [Range(2, 256)]
     public int resolution = 10;                 // resolution of each face, 256 is max for mesh in unity
-    public bool autoUpdate = true;              // to set autoUpdate    
+    public bool autoUpdate = true;              // to set autoUpdate   --- DELETE LATER 
+    
 
     [Header("ScriptableObject")]
-    public CShapeSettings shapeSettings;
+    public CShapeSettings shapeSettings;        
     public CColorSettings colorSettings;
 
     CShapeGenerator shapeGenerator = new CShapeGenerator();
     CColorGenerator colorGenerator = new CColorGenerator();
+    // --- Seed ----
+    public SeedGenerator seedGenerator; //GetComponent<SeedGenerator>();
+    public bool useSeed = true;
 
     [SerializeField, HideInInspector]
     private MeshFilter[] meshFilters;           // array of all 6 meshes
@@ -55,9 +60,12 @@ public class CPlanet : MonoBehaviour
     }
 
 
+
+
     //called to Generate whole Planet
     public void GeneratePlanet()
     {
+        SetSeed();
         Initialize();
         GenerateMesh();
         GenerateColors();
@@ -107,6 +115,50 @@ public class CPlanet : MonoBehaviour
         GeneratePlanet();
     }
 
+    // ------ Randomize Values ---------
+
+    public void RandomizePlanetShape()
+    {
+        // set planetRadius to mesh in solarsystem.radius
+        //shapeSettings.planetRadius = 100;
+
+        // randomize shapesettings in noiseLayers[0].noiseSettings.stdNoiseSettings
+        int multiplier = 1;
+
+        for (int i = 0; i < shapeSettings.noiseLayers.Length; i++)
+        {
+            shapeSettings.noiseLayers[i].enabled = true;
+            shapeSettings.noiseLayers[i].useFirstLayerAsMask = true;
+            // set rnd NoiseFilterType but keep first at simpleNoise
+            for (int j = 1; j < shapeSettings.noiseLayers.Length-1; j++)
+            {
+                shapeSettings.noiseLayers[j].noiseSettings.filterType = (CNoiseSettings.FilterType)UnityEngine.Random.Range(0, 3);
+            }
+            shapeSettings.noiseLayers[i].noiseSettings.stdNoiseSettings.RandomValue(multiplier);
+            multiplier += 125;
+        }
+    }
+
+    public void RandomizePlanetColor()
+    {
+        for (int i = 0; i < colorSettings.biomeColorSettings.biomes.Length; i++)
+        {
+            colorSettings.biomeColorSettings.biomes[i].RandomValue();
+        }
+        colorSettings.biomeColorSettings.RandomOceanColor();
+
+    }
+
+    private void SetSeed()
+    {
+        // set seed for generating planetshape        
+        if (useSeed)
+        {
+            int seed = seedGenerator.seed;
+            UnityEngine.Random.InitState(seed);
+        }
+    }
+
     // -------- GETTER ---------
 
     public string GetPlanetName { get { return GetComponent<CPlanet>().name; } }
@@ -114,6 +166,5 @@ public class CPlanet : MonoBehaviour
     // get resolution - public 
     // get color settings - public
     // get shape settings - public 
-
-    // -------- Randomize Values ---------
+    // public CShapeSettings GetSetShapeSettings { get { return shapeSettings; } set { shapeSettings = value; } }
 }

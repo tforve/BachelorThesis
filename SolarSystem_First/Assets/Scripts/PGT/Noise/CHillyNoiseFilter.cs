@@ -21,15 +21,12 @@ public class CHillyNoiseFilter : INoiseFilter
         float frequency = settings.baseRoughness;
         float amplitude = 1;
         // make it more details based on layers. heigher layers have higher weight -------- NO NEED MAYBE
-        //float weight = 1;
 
         for (int i = 0; i < settings.numberOfLayers; i++)
         {
             // get inverted absolut value of noise for nice spikes
             float v = 1 + Mathf.Abs(noise.Evaluate(point * frequency + settings.centre));
             v = (v * v)-1;
-            //v *= weight;
-            //weight = v;
 
             noiseValue += v * amplitude;
             frequency *= settings.roughness;    // roughness > 1 = frequency will increase with each layer

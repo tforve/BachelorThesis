@@ -19,15 +19,12 @@ public class CBrainNoiseFilter : INoiseFilter
         // setting frequency and amplitude to define layers of noise
         float frequency = settings.baseRoughness;
         float amplitude = 1;
-        //float weight = 1;       // only needed if other settings are used
 
         for (int i = 0; i < settings.numberOfLayers; i++)
         {
             // get inverted absolut value of noise for hilly mountains
             float v = 0.5f - Mathf.Abs(noise.Evaluate(point * frequency + settings.centre));
             v = v * v;
-            //v *= weight;
-            //weight = v;
 
             noiseValue += v * amplitude;
             frequency *= settings.roughness;
