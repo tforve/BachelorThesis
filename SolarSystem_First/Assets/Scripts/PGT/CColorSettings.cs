@@ -64,18 +64,14 @@ public class CColorSettings : ScriptableObject
                     colorKey[i].color = Random.ColorHSV();
                     colorKey[i].time = Random.Range(0.0f, 1.0f);
                 }
-
                 alphaKey[0].alpha = 1.0f;
-                //alphaKey[0].time = 0.0f;
-                //alphaKey[1].alpha = 1.0f;
-                //alphaKey[1].time = 1.0f;
 
                 tmpGradient.SetKeys(colorKey, alphaKey);
                 gradient = tmpGradient;
 
                 // randomize tint
                 tint = new Color(Random.Range(0.3f, 1.0f), Random.Range(0.3f, 1.0f), Random.Range(0.3f, 1.0f));
-                tintPercent = Random.Range(0.0f, 0.7f);
+                tintPercent = Random.Range(0.0f, 0.5f);
             }
         }
     }

@@ -121,6 +121,7 @@ public class CPlanet : MonoBehaviour
     {
         // set planetRadius to mesh in solarsystem.radius
         //shapeSettings.planetRadius = 100;
+        Debug.Log("Randomize Planet Shape");
 
         // randomize shapesettings in noiseLayers[0].noiseSettings.stdNoiseSettings
         int multiplier = 1;
@@ -141,12 +142,12 @@ public class CPlanet : MonoBehaviour
 
     public void RandomizePlanetColor()
     {
+        Debug.Log("Randomize Planet Color");
         for (int i = 0; i < colorSettings.biomeColorSettings.biomes.Length; i++)
         {
             colorSettings.biomeColorSettings.biomes[i].RandomValue();
         }
         colorSettings.biomeColorSettings.RandomOceanColor();
-
     }
 
     private void SetSeed()

@@ -33,7 +33,7 @@ public class CopyFactory : MonoBehaviour
      */
 
     private CPlanet planetToCopy;
-    private FinalPlanet[] finalPlanet;
+    private FinalPlanet[] finalPlanets;
 
     // --- values to copy ---
     // Color and Shape
@@ -41,19 +41,34 @@ public class CopyFactory : MonoBehaviour
     private int originResolution;
     private CColorSettings originColSettings;
     private CShapeSettings originShapeSettings;
+
     // gravity Simulation related
     private SolarsystemBody solarsystemBody;
 
 
     private void Awake()
     {
+        // get values from Blueprintplanet
         planetToCopy = FindObjectOfType<CPlanet>();
-        StoreParameters();
+        finalPlanets = FindObjectsOfType<FinalPlanet>();
 
-        finalPlanet = FindObjectsOfType<FinalPlanet>();
-        ApplyParameters();
+        // must apply parameters to first planet then randomize blueprint planet again then apply on next FinalPlanet
+        SetRandomPlanets();
     }
 
+    void SetRandomPlanets()
+    {
+        for (int i = 0; i < finalPlanets.Length; i++)
+        {
+            // get first planet
+            StoreParameters();
+            // apply to finalPlanet
+            ApplyParameters(finalPlanets[i]);
+            // randomize originPlanet
+            //planetToCopy.RandomizePlanetColor();
+            //planetToCopy.RandomizePlanetShape();
+        }
+    }
 
     void StoreParameters()
     {
@@ -66,16 +81,21 @@ public class CopyFactory : MonoBehaviour
     /// <summary>
     /// apply values to final planet object
     /// </summary>
-    void ApplyParameters()
+    void ApplyParameters(FinalPlanet planet)
     {
+        planet.faces = faces;
+        planet.resolution = originResolution;
+        planet.colorSettings = originColSettings;
+        planet.shapeSettings = originShapeSettings;
+
         // now go through all planets - later one by one with different settings !!!!!!!!!!
-        for (int i = 0; i < finalPlanet.Length; i++)
-        {
-            finalPlanet[i].faces = faces;
-            finalPlanet[i].resolution = originResolution;
-            finalPlanet[i].colorSettings = originColSettings;
-            finalPlanet[i].shapeSettings = originShapeSettings;
-        }
+        //for (int i = 0; i < finalPlanets.Length; i++)
+        //{
+        //    finalPlanets[i].faces = faces;
+        //    finalPlanets[i].resolution = originResolution;
+        //    finalPlanets[i].colorSettings = originColSettings;
+        //    finalPlanets[i].shapeSettings = originShapeSettings;
+        //}
     }
 
     /// <summary>

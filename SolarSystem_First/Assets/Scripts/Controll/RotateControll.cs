@@ -13,8 +13,10 @@ public class RotateControll : MonoBehaviour
 
     private void RotatePlanet()
     {
-        this.transform.Rotate(Vector3.up * (planetSpeed * Time.deltaTime));
+        this.transform.Rotate(Vector3.down * (planetSpeed * Time.deltaTime));
         sun.transform.Rotate(Vector3.up * (sunSpeed * Time.deltaTime));
+        //sun.transform.Rotate(Vector3.left * ((sunSpeed) * Time.deltaTime));
+
     }
     private void FixedUpdate()
     {
