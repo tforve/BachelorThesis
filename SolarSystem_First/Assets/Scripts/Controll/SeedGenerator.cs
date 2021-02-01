@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SeedGenerator : MonoBehaviour
 {
@@ -14,7 +12,7 @@ public class SeedGenerator : MonoBehaviour
     //    Random.InitState(seed);
     //}
 
-    private void OnValidate()
+    public void GenerateSeed()
     {
         if (useStringSeed)
         {
@@ -25,6 +23,11 @@ public class SeedGenerator : MonoBehaviour
         {
             seed = Random.Range(0, 99999);
         }
+    }
+
+    private void OnValidate()
+    {
+        GenerateSeed();
     }
 
 }

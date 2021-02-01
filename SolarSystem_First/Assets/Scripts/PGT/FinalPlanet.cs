@@ -61,7 +61,6 @@ public class FinalPlanet : MonoBehaviour
         // all cardinal directions
         Vector3[] directions = { Vector3.up, Vector3.down, Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
 
-
         for (int i = 0; i < 6; i++)
         {
             if (meshFilters[i] == null)
@@ -77,8 +76,9 @@ public class FinalPlanet : MonoBehaviour
             meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = colorSettings.planetMaterial;
             // generate Faces
             faces[i] = new CFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
-
         }
+
+        shapeSettings.planetRadius = placeHolder.GetComponent<SolarsystemBody>().radius;
     }
 
     void GeneratePlanet()
@@ -90,7 +90,7 @@ public class FinalPlanet : MonoBehaviour
         UpdateColors();
     }
 
-    public void UpdateColors()
+    void UpdateColors()
     {
         colorGenerator.UpdateColors();
         foreach (CFace face in faces)
@@ -100,7 +100,7 @@ public class FinalPlanet : MonoBehaviour
     }
 
     /// <summary>
-    /// Need to be changed later. Not Call the Copyfactory 
+    /// Need to be changed later. Not Call the Copyfactory - NOT NEEDED AT ALL?
     /// </summary>
     void UpdatePlanet()
     {

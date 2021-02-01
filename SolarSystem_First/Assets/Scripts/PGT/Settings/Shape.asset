@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6456885c29055894194d92a3e9fbc95e, type: 3}
   m_Name: Shape
   m_EditorClassIdentifier: 
-  planetRadius: 80
+  planetRadius: 176.3
   noiseLayers:
   - enabled: 1
     useFirstLayerAsMask: 1
@@ -20,33 +20,33 @@ MonoBehaviour:
       filterType: 0
       stdNoiseSettings:
         numberOfLayers: 3
-        strength: 0.016853081
-        baseRoughness: 1.4585874
-        roughness: 2.5496173
-        persistence: 0.5919311
-        centre: {x: 2.233839, y: 6.131089, z: 2.5227637}
-        seaLevel: 1.0200688
-  - enabled: 1
-    useFirstLayerAsMask: 1
-    noiseSettings:
-      filterType: 0
-      stdNoiseSettings:
-        numberOfLayers: 2
-        strength: 2.2512712
-        baseRoughness: 1.450148
-        roughness: 3.7908638
-        persistence: 0.56793195
-        centre: {x: 9.877855, y: 2.3807561, z: 0.2693677}
-        seaLevel: 0.7507915
+        strength: 0.010314423
+        baseRoughness: 1.374657
+        roughness: 2.732474
+        persistence: 0.50902784
+        centre: {x: 4.499963, y: 1.1560798, z: 0.042920113}
+        seaLevel: 1.250505
   - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 1
       stdNoiseSettings:
         numberOfLayers: 2
-        strength: 2.59705
-        baseRoughness: 1.3799915
-        roughness: 2.7933884
-        persistence: 0.5820482
-        centre: {x: 6.240452, y: 3.792849, z: 8.785563}
-        seaLevel: 0.65850425
+        strength: 2.2294345
+        baseRoughness: 1.3485318
+        roughness: 2.7914844
+        persistence: 0.50157857
+        centre: {x: 4.050546, y: 3.623691, z: 0.22351027}
+        seaLevel: 1.1869867
+  - enabled: 1
+    useFirstLayerAsMask: 1
+    noiseSettings:
+      filterType: 1
+      stdNoiseSettings:
+        numberOfLayers: 2
+        strength: 4.7158246
+        baseRoughness: 1.4275149
+        roughness: 3.5065985
+        persistence: 0.56378436
+        centre: {x: 9.671381, y: 5.837862, z: 0.18725753}
+        seaLevel: 0.8354802
