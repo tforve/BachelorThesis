@@ -18,7 +18,6 @@ public class FinalPlanet : MonoBehaviour
     // necessaries
     [SerializeField, HideInInspector]
     private MeshFilter[] meshFilters;
-    private CopyFactory copyFactory;
 
     // Scriptable Objects
     [Header("Settings")]
@@ -28,29 +27,11 @@ public class FinalPlanet : MonoBehaviour
     CShapeGenerator shapeGenerator = new CShapeGenerator();
     CColorGenerator colorGenerator = new CColorGenerator();
 
-    // debug Only
-    public bool copyPlanet = false;             // update Planet Values to check if different variants are possible
-
     public Material fpMaterial;
 
-    private void Start()
-    {
-        copyFactory = FindObjectOfType<CopyFactory>();
-        Initialize();
-        GeneratePlanet();
-        this.transform.position = placeHolder.position;        
-    }
 
-    private void Update()
-    {
-        if (copyPlanet)
-        {
-            UpdatePlanet();
-            copyPlanet = false;
-        }
-    }
 
-    void Initialize()
+    public void Initialize()
     {
         shapeGenerator.UpdateSettings(shapeSettings);
         colorGenerator.UpdateSettings(colorSettings);
@@ -75,15 +56,14 @@ public class FinalPlanet : MonoBehaviour
                 meshFilters[i].sharedMesh = new Mesh();
             }
 
-            //fpMaterial = colorSettings.planetMaterial;
-            //fpMaterial.name = "FPlanetMat";
-            //meshFilters[i].GetComponent<Renderer>().material.CopyPropertiesFromMaterial(fpMaterial);
-            meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = new Material(fpMaterial);//fpMaterial; //colorSettings.planetMaterial;
+            meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = new Material(fpMaterial);
             // generate Faces
             faces[i] = new CFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
         }
 
         shapeSettings.planetRadius = placeHolder.GetComponent<SolarsystemBody>().radius;
+        this.transform.position = placeHolder.position;
+
     }
 
     public void GeneratePlanet()
@@ -95,9 +75,10 @@ public class FinalPlanet : MonoBehaviour
         UpdateColors();
     }
 
-    void UpdateColors()
+    public void UpdateColors()
     {
         colorGenerator.UpdateColors();
+
         foreach (CFace face in faces)
         {
             face.UpdateUVs(colorGenerator);
@@ -107,17 +88,17 @@ public class FinalPlanet : MonoBehaviour
     /// <summary>
     /// Need to be changed later. Not Call the Copyfactory - NOT NEEDED AT ALL?
     /// </summary>
-    void UpdatePlanet()
-    {
-        // ask CopyFactory for updated Values and apply them to finalPlanet
-        copyFactory.UpdateParameters(this);
-        // Update Shape based on ShapeSettings
-        // Update Color based on ColorSettings
-        UpdateColors();
-        // reinitialize finalPlanet
-        Initialize();
-        GeneratePlanet();
-    }
+    //public void UpdatePlanet()
+    //{
+    //    // ask CopyFactory for updated Values and apply them to finalPlanet
+    //    copyFactory.UpdateParameters(this);
+    //    // Update Shape based on ShapeSettings
+    //    // Update Color based on ColorSettings
+    //    UpdateColors();
+    //    // reinitialize finalPlanet
+    //    Initialize();
+    //    GeneratePlanet();
+    //}
 
 
 }

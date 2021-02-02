@@ -76,6 +76,7 @@ public class CColorGenerator
     public void UpdateColors()
     {
         Color[] colors = new Color[texture.width * texture.height];
+
         int colorIndex = 0;
 
         foreach (var b in settings.biomeColorSettings.biomes)

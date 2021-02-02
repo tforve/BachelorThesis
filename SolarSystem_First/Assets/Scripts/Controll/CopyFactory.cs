@@ -41,34 +41,44 @@ public class CopyFactory : MonoBehaviour
     private int originResolution;
     private CColorSettings originColSettings;
     private CShapeSettings originShapeSettings;
+    private Material originMaterial;
 
     // gravity Simulation related
-    //private SolarsystemBody solarsystemBody;
+    // private SolarsystemBody solarsystemBody;
 
 
     private void Awake()
     {
-        // get values from Blueprintplanet
         planetToCopy = FindObjectOfType<CPlanet>();
         finalPlanets = FindObjectsOfType<FinalPlanet>();
 
-        // must apply parameters to first planet then randomize blueprint planet again then apply on next FinalPlanet
-        SetRandomPlanets();
+        InitPlanets();
+        RandomizePlanets();
+
     }
 
-    void SetRandomPlanets()
+    void InitPlanets()
     {
         for (int i = 0; i < finalPlanets.Length; i++)
         {
-            Debug.Log(finalPlanets[i].name);
-            // randomize Blueprintplanet  
-            //planetToCopy.RandomizePlanetColor();
-            //planetToCopy.RandomizePlanetShape();
             StoreParameters();
-
-            // apply to first finalPlanet
             ApplyParameters(finalPlanets[i]);
-           // finalPlanets[i].GeneratePlanet();
+            finalPlanets[i].Initialize();
+            finalPlanets[i].GeneratePlanet();
+        }
+    }
+
+    void RandomizePlanets()
+    {
+        for (int i = 0; i < finalPlanets.Length; i++)
+        {
+            // randomize Blueprintplanet  
+            planetToCopy.RandomizePlanetColor();
+            planetToCopy.RandomizePlanetShape();
+
+            StoreParameters();
+            ApplyParameters(finalPlanets[i]);
+            UpdateParameters(finalPlanets[i]);
         }
     }
 
@@ -78,6 +88,7 @@ public class CopyFactory : MonoBehaviour
         originResolution = planetToCopy.resolution;
         originColSettings = planetToCopy.colorSettings;
         originShapeSettings = planetToCopy.shapeSettings;
+        originMaterial = planetToCopy.colorSettings.planetMaterial;
     }
 
     /// <summary>
@@ -89,8 +100,7 @@ public class CopyFactory : MonoBehaviour
         planet.resolution = originResolution;
         planet.colorSettings = originColSettings;
         planet.shapeSettings = originShapeSettings;
-
-        planet.fpMaterial = originColSettings.planetMaterial; //debug
+        planet.fpMaterial = originMaterial;
     }
 
     /// <summary>
@@ -104,6 +114,9 @@ public class CopyFactory : MonoBehaviour
         // redundante if not having own Settings - because we already give planetToCopySettings
         //planetWhoAsk.shapeSettings = planetToCopy.shapeSettings;
         //planetWhoAsk.colorSettings = planetToCopy.colorSettings;
-    }
 
+        planetWhoAsk.UpdateColors();
+        planetWhoAsk.Initialize();
+        planetWhoAsk.GeneratePlanet();
+    }
 }
