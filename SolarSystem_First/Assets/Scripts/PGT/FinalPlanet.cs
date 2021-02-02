@@ -29,22 +29,24 @@ public class FinalPlanet : MonoBehaviour
     CColorGenerator colorGenerator = new CColorGenerator();
 
     // debug Only
-    public bool isUpdated = false;             // update Planet Values to check if different variants are possible
+    public bool copyPlanet = false;             // update Planet Values to check if different variants are possible
+
+    public Material fpMaterial;
 
     private void Start()
     {
         copyFactory = FindObjectOfType<CopyFactory>();
         Initialize();
         GeneratePlanet();
-        this.transform.position = placeHolder.position;
+        this.transform.position = placeHolder.position;        
     }
 
     private void Update()
     {
-        if (isUpdated)
+        if (copyPlanet)
         {
             UpdatePlanet();
-            isUpdated = false;
+            copyPlanet = false;
         }
     }
 
@@ -73,7 +75,10 @@ public class FinalPlanet : MonoBehaviour
                 meshFilters[i].sharedMesh = new Mesh();
             }
 
-            meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = colorSettings.planetMaterial;
+            //fpMaterial = colorSettings.planetMaterial;
+            //fpMaterial.name = "FPlanetMat";
+            //meshFilters[i].GetComponent<Renderer>().material.CopyPropertiesFromMaterial(fpMaterial);
+            meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = new Material(fpMaterial);//fpMaterial; //colorSettings.planetMaterial;
             // generate Faces
             faces[i] = new CFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
         }
@@ -81,7 +86,7 @@ public class FinalPlanet : MonoBehaviour
         shapeSettings.planetRadius = placeHolder.GetComponent<SolarsystemBody>().radius;
     }
 
-    void GeneratePlanet()
+    public void GeneratePlanet()
     {
         foreach (CFace f in faces)
         {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6456885c29055894194d92a3e9fbc95e, type: 3}
   m_Name: Shape
   m_EditorClassIdentifier: 
-  planetRadius: 176.3
+  planetRadius: 143.25
   noiseLayers:
   - enabled: 1
     useFirstLayerAsMask: 1
@@ -20,33 +20,33 @@ MonoBehaviour:
       filterType: 0
       stdNoiseSettings:
         numberOfLayers: 3
-        strength: 0.010314423
-        baseRoughness: 1.374657
-        roughness: 2.732474
-        persistence: 0.50902784
-        centre: {x: 4.499963, y: 1.1560798, z: 0.042920113}
-        seaLevel: 1.250505
+        strength: 0.017696775
+        baseRoughness: 1.3714927
+        roughness: 2.9794512
+        persistence: 0.51226366
+        centre: {x: 2.2904217, y: 0.5781853, z: 6.966873}
+        seaLevel: 0.8018273
+  - enabled: 1
+    useFirstLayerAsMask: 1
+    noiseSettings:
+      filterType: 0
+      stdNoiseSettings:
+        numberOfLayers: 2
+        strength: 3.5868425
+        baseRoughness: 1.1262096
+        roughness: 3.6082137
+        persistence: 0.5765455
+        centre: {x: 9.603206, y: 1.2729669, z: 4.003399}
+        seaLevel: 1.3825136
   - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 1
       stdNoiseSettings:
         numberOfLayers: 2
-        strength: 2.2294345
-        baseRoughness: 1.3485318
-        roughness: 2.7914844
-        persistence: 0.50157857
-        centre: {x: 4.050546, y: 3.623691, z: 0.22351027}
-        seaLevel: 1.1869867
-  - enabled: 1
-    useFirstLayerAsMask: 1
-    noiseSettings:
-      filterType: 1
-      stdNoiseSettings:
-        numberOfLayers: 2
-        strength: 4.7158246
-        baseRoughness: 1.4275149
-        roughness: 3.5065985
-        persistence: 0.56378436
-        centre: {x: 9.671381, y: 5.837862, z: 0.18725753}
-        seaLevel: 0.8354802
+        strength: 8.814738
+        baseRoughness: 1.124803
+        roughness: 2.9265602
+        persistence: 0.62875086
+        centre: {x: 7.451209, y: 5.0156302, z: 1.6841972}
+        seaLevel: 0.5300592

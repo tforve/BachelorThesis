@@ -43,7 +43,7 @@ public class CopyFactory : MonoBehaviour
     private CShapeSettings originShapeSettings;
 
     // gravity Simulation related
-    private SolarsystemBody solarsystemBody;
+    //private SolarsystemBody solarsystemBody;
 
 
     private void Awake()
@@ -60,13 +60,15 @@ public class CopyFactory : MonoBehaviour
     {
         for (int i = 0; i < finalPlanets.Length; i++)
         {
-            // get first planet
-            StoreParameters();
-            // apply to finalPlanet
-            ApplyParameters(finalPlanets[i]);
-            // randomize originPlanet
+            Debug.Log(finalPlanets[i].name);
+            // randomize Blueprintplanet  
             //planetToCopy.RandomizePlanetColor();
             //planetToCopy.RandomizePlanetShape();
+            StoreParameters();
+
+            // apply to first finalPlanet
+            ApplyParameters(finalPlanets[i]);
+           // finalPlanets[i].GeneratePlanet();
         }
     }
 
@@ -88,14 +90,7 @@ public class CopyFactory : MonoBehaviour
         planet.colorSettings = originColSettings;
         planet.shapeSettings = originShapeSettings;
 
-        // now go through all planets - later one by one with different settings !!!!!!!!!!
-        //for (int i = 0; i < finalPlanets.Length; i++)
-        //{
-        //    finalPlanets[i].faces = faces;
-        //    finalPlanets[i].resolution = originResolution;
-        //    finalPlanets[i].colorSettings = originColSettings;
-        //    finalPlanets[i].shapeSettings = originShapeSettings;
-        //}
+        planet.fpMaterial = originColSettings.planetMaterial; //debug
     }
 
     /// <summary>
