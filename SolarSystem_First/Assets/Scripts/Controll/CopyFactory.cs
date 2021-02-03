@@ -46,7 +46,6 @@ public class CopyFactory : MonoBehaviour
     // gravity Simulation related
     // private SolarsystemBody solarsystemBody;
 
-
     private void Awake()
     {
         planetToCopy = FindObjectOfType<CPlanet>();
@@ -54,7 +53,6 @@ public class CopyFactory : MonoBehaviour
 
         InitPlanets();
         RandomizePlanets();
-
     }
 
     void InitPlanets()
@@ -88,7 +86,6 @@ public class CopyFactory : MonoBehaviour
         originResolution = planetToCopy.resolution;
         originColSettings = planetToCopy.colorSettings;
         originShapeSettings = planetToCopy.shapeSettings;
-        originMaterial = planetToCopy.colorSettings.planetMaterial;
     }
 
     /// <summary>
@@ -100,23 +97,18 @@ public class CopyFactory : MonoBehaviour
         planet.resolution = originResolution;
         planet.colorSettings = originColSettings;
         planet.shapeSettings = originShapeSettings;
-        planet.fpMaterial = originMaterial;
     }
 
     /// <summary>
     /// if FinalPlanet calls for an Update, called by FinalPlanet itself
     /// </summary>
-    /// <param name="planetWhoAsk"></param>
-    public void UpdateParameters(FinalPlanet planetWhoAsk)
+    /// <param name="planet"></param>
+    public void UpdateParameters(FinalPlanet planet)
     {
-        planetWhoAsk.faces = planetToCopy.GetFaces;
-        planetWhoAsk.resolution = planetToCopy.resolution;
-        // redundante if not having own Settings - because we already give planetToCopySettings
-        //planetWhoAsk.shapeSettings = planetToCopy.shapeSettings;
-        //planetWhoAsk.colorSettings = planetToCopy.colorSettings;
-
-        planetWhoAsk.UpdateColors();
-        planetWhoAsk.Initialize();
-        planetWhoAsk.GeneratePlanet();
+        planet.faces = planetToCopy.GetFaces;
+        planet.resolution = planetToCopy.resolution;
+        planet.UpdateColors();
+        planet.Initialize();
+        planet.GeneratePlanet();
     }
 }

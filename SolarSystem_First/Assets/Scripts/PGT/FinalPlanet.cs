@@ -27,10 +27,6 @@ public class FinalPlanet : MonoBehaviour
     CShapeGenerator shapeGenerator = new CShapeGenerator();
     CColorGenerator colorGenerator = new CColorGenerator();
 
-    public Material fpMaterial;
-
-
-
     public void Initialize()
     {
         shapeGenerator.UpdateSettings(shapeSettings);
@@ -55,8 +51,8 @@ public class FinalPlanet : MonoBehaviour
                 meshFilters[i] = meshObj.AddComponent<MeshFilter>();
                 meshFilters[i].sharedMesh = new Mesh();
             }
-
-            meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = new Material(fpMaterial);
+            // generate new Material based on colorSettings.planetMaterial
+            meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = new Material(colorSettings.planetMaterial);
             // generate Faces
             faces[i] = new CFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
         }
@@ -84,21 +80,4 @@ public class FinalPlanet : MonoBehaviour
             face.UpdateUVs(colorGenerator);
         }
     }
-
-    /// <summary>
-    /// Need to be changed later. Not Call the Copyfactory - NOT NEEDED AT ALL?
-    /// </summary>
-    //public void UpdatePlanet()
-    //{
-    //    // ask CopyFactory for updated Values and apply them to finalPlanet
-    //    copyFactory.UpdateParameters(this);
-    //    // Update Shape based on ShapeSettings
-    //    // Update Color based on ColorSettings
-    //    UpdateColors();
-    //    // reinitialize finalPlanet
-    //    Initialize();
-    //    GeneratePlanet();
-    //}
-
-
 }

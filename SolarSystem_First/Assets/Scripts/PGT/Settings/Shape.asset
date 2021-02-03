@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6456885c29055894194d92a3e9fbc95e, type: 3}
   m_Name: Shape
   m_EditorClassIdentifier: 
-  planetRadius: 143.25
+  planetRadius: 80
   noiseLayers:
   - enabled: 1
     useFirstLayerAsMask: 1
@@ -20,33 +20,33 @@ MonoBehaviour:
       filterType: 0
       stdNoiseSettings:
         numberOfLayers: 3
-        strength: 0.017696775
-        baseRoughness: 1.3714927
-        roughness: 2.9794512
-        persistence: 0.51226366
-        centre: {x: 2.2904217, y: 0.5781853, z: 6.966873}
-        seaLevel: 0.8018273
+        strength: 0.010883466
+        baseRoughness: 1.1171297
+        roughness: 3.4208179
+        persistence: 0.6518021
+        centre: {x: 9.889783, y: 2.5175338, z: 2.3950768}
+        seaLevel: 0.5915392
   - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
-      filterType: 0
+      filterType: 2
       stdNoiseSettings:
         numberOfLayers: 2
-        strength: 3.5868425
-        baseRoughness: 1.1262096
-        roughness: 3.6082137
-        persistence: 0.5765455
-        centre: {x: 9.603206, y: 1.2729669, z: 4.003399}
-        seaLevel: 1.3825136
+        strength: 4.047995
+        baseRoughness: 1.3954843
+        roughness: 2.5825276
+        persistence: 0.68629485
+        centre: {x: 3.9883037, y: 9.539076, z: 3.791037}
+        seaLevel: 0.4990172
   - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 1
       stdNoiseSettings:
         numberOfLayers: 2
-        strength: 8.814738
-        baseRoughness: 1.124803
-        roughness: 2.9265602
-        persistence: 0.62875086
-        centre: {x: 7.451209, y: 5.0156302, z: 1.6841972}
-        seaLevel: 0.5300592
+        strength: 8.465134
+        baseRoughness: 1.2794731
+        roughness: 2.5661287
+        persistence: 0.6817963
+        centre: {x: 4.028997, y: 1.3485885, z: 4.494584}
+        seaLevel: 0.67966557

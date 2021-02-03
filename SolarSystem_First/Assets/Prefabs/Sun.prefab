@@ -111,7 +111,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562972708363828222}
-  serializedVersion: 6
+  serializedVersion: 7
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
@@ -3683,19 +3683,20 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 3
+    serializedVersion: 4
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
-    plane1: {fileID: 0}
-    plane2: {fileID: 0}
-    plane3: {fileID: 0}
-    plane4: {fileID: 0}
-    plane5: {fileID: 0}
+    m_Planes:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -3869,17 +3870,20 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 0
-    collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
-    collisionShape3: {fileID: 0}
-    collisionShape4: {fileID: 0}
-    collisionShape5: {fileID: 0}
+    serializedVersion: 2
     inside: 1
     outside: 0
     enter: 0
     exit: 0
+    colliderQueryMode: 0
     radiusScale: 1
+    primitives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -4838,7 +4842,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 769e887b9a056b84d952ae0977dfc93d, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4923,7 +4927,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562972709171846671}
-  serializedVersion: 6
+  serializedVersion: 7
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
@@ -8495,19 +8499,20 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 3
+    serializedVersion: 4
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
-    plane1: {fileID: 0}
-    plane2: {fileID: 0}
-    plane3: {fileID: 0}
-    plane4: {fileID: 0}
-    plane5: {fileID: 0}
+    m_Planes:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -8681,17 +8686,20 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 0
-    collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
-    collisionShape3: {fileID: 0}
-    collisionShape4: {fileID: 0}
-    collisionShape5: {fileID: 0}
+    serializedVersion: 2
     inside: 1
     outside: 0
     enter: 0
     exit: 0
+    colliderQueryMode: 0
     radiusScale: 1
+    primitives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -9650,7 +9658,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d301e31b5c6f5cf4783dee71d19a9588, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9734,7 +9742,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562972709187747177}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -9768,6 +9776,96 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
+  - {x: -374.94, y: 0, z: 0}
   - {x: -374.94, y: 0, z: 0}
   - {x: -374.94, y: 0, z: 0}
   - {x: -374.94, y: 0, z: 0}
@@ -11888,7 +11986,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562972709646844813}
-  serializedVersion: 6
+  serializedVersion: 7
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
@@ -15460,19 +15558,20 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 3
+    serializedVersion: 4
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
-    plane1: {fileID: 0}
-    plane2: {fileID: 0}
-    plane3: {fileID: 0}
-    plane4: {fileID: 0}
-    plane5: {fileID: 0}
+    m_Planes:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -15646,17 +15745,20 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 0
-    collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
-    collisionShape3: {fileID: 0}
-    collisionShape4: {fileID: 0}
-    collisionShape5: {fileID: 0}
+    serializedVersion: 2
     inside: 1
     outside: 0
     enter: 0
     exit: 0
+    colliderQueryMode: 0
     radiusScale: 1
+    primitives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -16615,7 +16717,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ee18a78c197d3b24f82bce0b48dc9b75, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16767,7 +16869,7 @@ GameObject:
   - component: {fileID: 562972710300057323}
   - component: {fileID: 562972710300057322}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: PointLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16846,5 +16948,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
