@@ -6,8 +6,6 @@ using UnityEngine;
 public class RotateControll : MonoBehaviour
 {
     public float planetSpeed = 5f;
-    public float sunSpeed = 5f;
-
     public int layerIndex;
     [SerializeField]
     private Light sun;

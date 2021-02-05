@@ -8,11 +8,14 @@ public class ThirdPersonCamera : MonoBehaviour
     public float mouseSensitivity = 10.0f;
     public SolarsystemBody[] targets;
     public float distanceFromTarget = 200.0f;
-    public float scrollspeed = 25.0f;
 
     public Vector2 pitchMinMax = new Vector2(-40.0f, 85.0f);        // to clamp Rotation in y
 
     public float rotationSmoothTime = 0.12f;                        // smoothing out the Camera
+    public float scrollspeed = 25.0f;
+    public float minDistance = 25.0f;
+    public float maxDistance = 1500.0f;
+
     Vector3 rotationSmoothVelocity;
     Vector3 currentRotation;
 
@@ -44,16 +47,16 @@ public class ThirdPersonCamera : MonoBehaviour
 
         // Zoom
         distanceFromTarget -= Input.mouseScrollDelta.y * scrollspeed;
-        distanceFromTarget = Mathf.Clamp(distanceFromTarget, targets[index].radius + 20, 1500);
+        distanceFromTarget = Mathf.Clamp(distanceFromTarget, targets[index].radius + minDistance, maxDistance);
 
         // Switch Target
         if(Input.GetMouseButtonDown(0))
         {
-            index = mod(index+1, 3);
+            index = mod(index+1, targets.Length-1);
         }
         if (Input.GetMouseButtonDown(1))
         {
-            index = mod(index-1, 3);
+            index = mod(index-1, targets.Length-1);
         }
 
     }

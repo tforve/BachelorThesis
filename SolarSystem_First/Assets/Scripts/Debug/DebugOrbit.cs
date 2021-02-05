@@ -21,6 +21,7 @@ public class DebugOrbit : MonoBehaviour
     [SerializeField]
     private SolarsystemBody[] bodies;
 
+    public bool addBodiesToDebug = false;
 
     void Start()
     {
@@ -191,12 +192,12 @@ public class DebugOrbit : MonoBehaviour
     }
 
 
-    public bool calculate = false;
     void OnValidate()
     {
-        if(calculate)
+        if(addBodiesToDebug)
         {            
             SetBodies();
+            addBodiesToDebug = false;
         }
     }
 

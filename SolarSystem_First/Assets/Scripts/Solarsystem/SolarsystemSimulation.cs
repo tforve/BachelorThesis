@@ -10,21 +10,25 @@ public class SolarsystemSimulation : MonoBehaviour
     {
         get
         {
-            if(_instance == null)
+            if (_instance == null)
             {
                 _instance = GameObject.FindObjectOfType<SolarsystemSimulation>();
             }
 
             return _instance;
         }
-        
+
     }
     #endregion
 
 
-    public SolarsystemBody[] planets;            // array to store all celestial bodies
+    public SolarsystemBody[] planets;               // array to store all celestial bodies
 
     public bool recalculateStartvelocity = false;
+    public bool useFixStartvelocity = false;
+
+    [SerializeField]
+    private GameObject blueprintPlanet;             // just for deactivating the Blueprintplanet after he did his job 
 
     private void Awake()
     {
@@ -41,10 +45,19 @@ public class SolarsystemSimulation : MonoBehaviour
         Time.fixedDeltaTime = Universe.timeSteps;
 
         // calculate StartVelocity
-        for (int i = 0; i < planets.Length; i++)
+        if (useFixStartvelocity)
         {
-            planets[i].CalculateStartVelocity(planets);
+            for (int i = 0; i < planets.Length; i++)
+            {
+                planets[i].CalculateStartVelocity(planets);
+            }
         }
+
+    }
+
+    void Start()
+    {
+        if(blueprintPlanet != null) { Destroy(blueprintPlanet); }        
     }
 
     private void FixedUpdate()
@@ -61,11 +74,11 @@ public class SolarsystemSimulation : MonoBehaviour
         }
     }
 
-    
+
     void OnValidate()
     {
         // calculate Startvelocity for debugging in Editor 
-        if(recalculateStartvelocity)
+        if (recalculateStartvelocity && useFixStartvelocity)
         {
             // populate planets array
 

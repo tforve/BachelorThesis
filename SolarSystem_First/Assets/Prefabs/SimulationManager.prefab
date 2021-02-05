@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7549268204566238083}
   - component: {fileID: 7549268204566238082}
   - component: {fileID: 7549268204566238084}
+  - component: {fileID: 964187872}
   m_Layer: 0
   m_Name: SimulationManager
   m_TagString: Untagged
@@ -45,11 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numSteps: 2116
-  timeStep: 0.21
+  timeStep: 0.27
   usePhysicsTimeStep: 0
   centralBody: {fileID: 0}
   relativeToCentralBody: 1
-  drawInPlayMode: 1
+  drawInPlayMode: 0
   useThickLines: 0
   width: 50
   bodies:
@@ -57,7 +58,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  calculate: 1
+  - {fileID: 0}
+  - {fileID: 0}
+  addBodiesToDebug: 0
 --- !u!114 &7549268204566238084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,4 +78,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   recalculateStartvelocity: 0
+  useFixStartvelocity: 0
+  blueprintPlanet: {fileID: 0}
+--- !u!114 &964187872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7549268204566238085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfecb7420142f2548901ead21b6f0fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
