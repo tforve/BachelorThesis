@@ -11,7 +11,7 @@ public class FinalPlanet : MonoBehaviour
     */
 
     // copied parameters
-    public CFace[] faces;
+    public Face[] faces;
     public int resolution = 2;
     public Transform placeHolder;
 
@@ -21,11 +21,11 @@ public class FinalPlanet : MonoBehaviour
 
     // Scriptable Objects
     [Header("Settings")]
-    public CShapeSettings shapeSettings;
-    public CColorSettings colorSettings;
+    public ShapeSettings shapeSettings;
+    public ColorSettings colorSettings;
 
-    CShapeGenerator shapeGenerator = new CShapeGenerator();
-    CColorGenerator colorGenerator = new CColorGenerator();
+    ShapeGenerator shapeGenerator = new ShapeGenerator();
+    ColorGenerator colorGenerator = new ColorGenerator();
 
     public void Initialize()
     {
@@ -54,7 +54,7 @@ public class FinalPlanet : MonoBehaviour
             // generate new Material based on colorSettings.planetMaterial
             meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = new Material(colorSettings.planetMaterial);
             // generate Faces
-            faces[i] = new CFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
+            faces[i] = new Face(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
         }
 
         shapeSettings.planetRadius = placeHolder.GetComponent<SolarsystemBody>().radius;
@@ -64,7 +64,7 @@ public class FinalPlanet : MonoBehaviour
 
     public void GeneratePlanet()
     {
-        foreach (CFace f in faces)
+        foreach (Face f in faces)
         {
             f.ConstructMesh();
         }
@@ -75,7 +75,7 @@ public class FinalPlanet : MonoBehaviour
     {
         colorGenerator.UpdateColors();
 
-        foreach (CFace face in faces)
+        foreach (Face face in faces)
         {
             face.UpdateUVs(colorGenerator);
         }

@@ -32,15 +32,15 @@ public class CopyFactory : MonoBehaviour
      * Do it One by One - in between randomize Planet to get n variants of planets
      */
 
-    private CPlanet planetToCopy;
+    private Planet planetToCopy;
     private FinalPlanet[] finalPlanets;
 
     // --- values to copy ---
     // Color and Shape
-    private CFace[] faces;
+    private Face[] faces;
     private int originResolution;
-    private CColorSettings originColSettings;
-    private CShapeSettings originShapeSettings;
+    private ColorSettings originColSettings;
+    private ShapeSettings originShapeSettings;
     private Material originMaterial;
 
     // gravity Simulation related
@@ -48,7 +48,7 @@ public class CopyFactory : MonoBehaviour
 
     private void Awake()
     {
-        planetToCopy = FindObjectOfType<CPlanet>();
+        planetToCopy = FindObjectOfType<Planet>();
         finalPlanets = FindObjectsOfType<FinalPlanet>();
 
         InitPlanets();
