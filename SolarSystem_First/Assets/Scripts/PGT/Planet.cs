@@ -8,10 +8,10 @@ public class Planet : MonoBehaviour
     [Range(2, 256)]
     public int resolution = 10;                 // resolution of each face, 256 is max for mesh in unity
     public bool autoUpdate = true;              // to set autoUpdate   --- DELETE LATER 
-    
+
 
     [Header("ScriptableObject")]
-    public ShapeSettings shapeSettings;        
+    public ShapeSettings shapeSettings;
     public ColorSettings colorSettings;
 
     ShapeGenerator shapeGenerator = new ShapeGenerator();
@@ -59,13 +59,13 @@ public class Planet : MonoBehaviour
         }
     }
 
-
-
-
     //called to Generate whole Planet
     public void GeneratePlanet()
     {
-        SetSeed();
+        if (useSeed)
+        {
+            SetSeed();
+        }
         Initialize();
         GenerateMesh();
         GenerateColors();
@@ -129,7 +129,7 @@ public class Planet : MonoBehaviour
             shapeSettings.noiseLayers[i].enabled = true;
             shapeSettings.noiseLayers[i].useFirstLayerAsMask = true;
             // set rnd NoiseFilterType but keep first at simpleNoise
-            for (int j = 1; j < shapeSettings.noiseLayers.Length-1; j++)
+            for (int j = 1; j < shapeSettings.noiseLayers.Length - 1; j++)
             {
                 shapeSettings.noiseLayers[j].noiseSettings.filterType = (CNoiseSettings.FilterType)UnityEngine.Random.Range(0, 3);
             }
@@ -149,12 +149,9 @@ public class Planet : MonoBehaviour
 
     private void SetSeed()
     {
-        // set seed for generating planetshape        
-        if (useSeed)
-        {
-            int seed = seedGenerator.seed;
-            UnityEngine.Random.InitState(seed);
-        }
+        // set seed for generating planetshape
+        int seed = seedGenerator.seed;
+        UnityEngine.Random.InitState(seed);
     }
 
     // -------- GETTER ---------
