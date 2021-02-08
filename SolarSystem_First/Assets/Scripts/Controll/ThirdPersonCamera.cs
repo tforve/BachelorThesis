@@ -6,7 +6,9 @@ public class ThirdPersonCamera : MonoBehaviour
 {
     public bool lockCursor;
     public float mouseSensitivity = 10.0f;
+
     public SolarsystemBody[] targets;
+    public int index = 0;                                           // Planet Index
     public float distanceFromTarget = 200.0f;
 
     public Vector2 pitchMinMax = new Vector2(-40.0f, 85.0f);        // to clamp Rotation in y
@@ -22,7 +24,6 @@ public class ThirdPersonCamera : MonoBehaviour
     private float yaw;
     private float pitch;
 
-    private int index = 0;
 
     void Start()
     {

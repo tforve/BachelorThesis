@@ -5,6 +5,30 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class DebugOrbit : MonoBehaviour
 {
+    #region SINGLETON PATTERN
+    private static DebugOrbit _instance;
+    public static DebugOrbit Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<DebugOrbit>();
+
+                if (_instance == null)
+                {
+                    GameObject container = new GameObject("DebugOrbit");
+                    _instance = container.AddComponent<DebugOrbit>();
+                }
+            }
+
+
+            return _instance;
+        }
+
+    }
+    #endregion
+
     public int numSteps = 1500;
     public float timeStep = 0.1f;
     public bool usePhysicsTimeStep = false;

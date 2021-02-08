@@ -32,7 +32,7 @@ public class CopyFactory : MonoBehaviour
      * Do it One by One - in between randomize Planet to get n variants of planets
      */
 
-    private Planet planetToCopy;
+    private BlueprintPlanet planetToCopy;
     private FinalPlanet[] finalPlanets;
 
     // --- values to copy ---
@@ -41,14 +41,14 @@ public class CopyFactory : MonoBehaviour
     private int originResolution;
     private ColorSettings originColSettings;
     private ShapeSettings originShapeSettings;
-    private Material originMaterial;
+    //private Material originMaterial;
 
     // gravity Simulation related
     // private SolarsystemBody solarsystemBody;
 
     private void Awake()
     {
-        planetToCopy = FindObjectOfType<Planet>();
+        planetToCopy = FindObjectOfType<BlueprintPlanet>();
         finalPlanets = FindObjectsOfType<FinalPlanet>();
 
         InitPlanets();
@@ -111,4 +111,5 @@ public class CopyFactory : MonoBehaviour
         planet.Initialize();
         planet.GeneratePlanet();
     }
+
 }

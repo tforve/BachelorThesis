@@ -4,10 +4,10 @@ using UnityEditor;
 /// <summary>
 /// To Customize planets in the Editor, created a customEditor
 /// </summary>
-[CustomEditor(typeof(Planet))]
+[CustomEditor(typeof(BlueprintPlanet))]
 public class CPlanetEditor : Editor
 {
-    Planet planet;
+    BlueprintPlanet planet;
 
     public override void OnInspectorGUI()
     {
@@ -70,6 +70,6 @@ public class CPlanetEditor : Editor
 
     private void OnEnable()
     {
-        planet = (Planet)target;
+        planet = (BlueprintPlanet)target;
     }
 }

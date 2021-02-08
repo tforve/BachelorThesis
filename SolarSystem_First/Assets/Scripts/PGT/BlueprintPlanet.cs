@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet : MonoBehaviour
+public class BlueprintPlanet : MonoBehaviour
 {
     [Range(2, 256)]
     public int resolution = 10;                 // resolution of each face, 256 is max for mesh in unity
@@ -17,7 +17,7 @@ public class Planet : MonoBehaviour
     ShapeGenerator shapeGenerator = new ShapeGenerator();
     ColorGenerator colorGenerator = new ColorGenerator();
     // --- Seed ----
-    public SeedGenerator seedGenerator; //GetComponent<SeedGenerator>();
+    public SeedGenerator seedGenerator;
     public bool useSeed = true;
 
     [SerializeField, HideInInspector]
@@ -119,8 +119,6 @@ public class Planet : MonoBehaviour
 
     public void RandomizePlanetShape()
     {
-        // set planetRadius to mesh in solarsystem.radius
-        //shapeSettings.planetRadius = 100;
         // randomize shapesettings in noiseLayers[0].noiseSettings.stdNoiseSettings
         int multiplier = 1;
 
@@ -156,7 +154,7 @@ public class Planet : MonoBehaviour
 
     // -------- GETTER ---------
 
-    public string GetPlanetName { get { return GetComponent<Planet>().name; } }
+    public string GetPlanetName { get { return GetComponent<BlueprintPlanet>().name; } }
     public Face[] GetFaces { get { return faces; } }
     // get resolution - public 
     // get color settings - public

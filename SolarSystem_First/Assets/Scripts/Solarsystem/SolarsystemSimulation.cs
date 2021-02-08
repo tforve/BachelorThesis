@@ -13,7 +13,14 @@ public class SolarsystemSimulation : MonoBehaviour
             if (_instance == null)
             {
                 _instance = GameObject.FindObjectOfType<SolarsystemSimulation>();
+
+                if (_instance == null)
+                {
+                    GameObject container = new GameObject("SolarsystemSimulation");
+                    _instance = container.AddComponent<SolarsystemSimulation>();
+                }
             }
+
 
             return _instance;
         }
@@ -26,9 +33,6 @@ public class SolarsystemSimulation : MonoBehaviour
 
     public bool recalculateStartvelocity = false;
     public bool useFixStartvelocity = false;
-
-    [SerializeField]
-    private GameObject blueprintPlanet;             // just for deactivating the Blueprintplanet after he did his job 
 
     private void Awake()
     {
@@ -55,10 +59,7 @@ public class SolarsystemSimulation : MonoBehaviour
 
     }
 
-    void Start()
-    {
-        if(blueprintPlanet != null) { Destroy(blueprintPlanet); }        
-    }
+
 
     private void FixedUpdate()
     {
