@@ -10,41 +10,21 @@ public class ColorGenerator
     // Biomes
     private INoiseFilter biomeNoiseFilter;
 
-    /// <summary>
-    /// Update Colorsettings if texture is null or the number of biomes change
-    /// </summary>
-    /// <param name="settings"></param>
-    public void UpdateSettings(ColorSettings settings)
+    public void UpdateElevation(Elevation elevation)
     {
-        this.settings = settings;
-
-        if (texture == null || texture.height != settings.biomeColorSettings.biomes.Length)
-        {
-            texture = new Texture2D(textureResolution * 2, settings.biomeColorSettings.biomes.Length, TextureFormat.RGBA32, false);
-            // set different Texture to water create it here and change some stuff
-        }
-        // set biome Noise
-        biomeNoiseFilter = CNoiseFilterFactory.CreateNoiseFilter(settings.biomeColorSettings.noise);
+        settings.planetMaterial.SetVector("_elevation", new Vector4(elevation.minElevation, elevation.maxElevation));
     }
 
-    public void UpdateElevation(CMinMax elevationMinMax)
-    {
-        settings.planetMaterial.SetVector("_elevationMinMax", new Vector4(elevationMinMax.Min, elevationMinMax.Max));
-    }
-
-
     /// <summary>
-    /// calculate and set the Biomes, strength, height and
+    /// calculate and set the Biomes, strength, height
     /// 0 for Southpole, 1 for northpole, 
     /// </summary>
-    /// <param name="pointOnUnitSphere"></param>
-    /// <returns></returns>
-    public float BiomePercentFromtPoint(Vector3 pointOnUnitSphere)
+    public float BiomePercentFromtPoint(Vector3 pointOnSphere)
     {
         // set between 0, 1
-        float heightPercent = (pointOnUnitSphere.y + 1) / 2.0f;
+        float heightPercent = (pointOnSphere.y + 1) / 2.0f;
         // give controll for the noise by using the offset and multipling the strength
-        heightPercent += (biomeNoiseFilter.Evaluate(pointOnUnitSphere) - settings.biomeColorSettings.noiseOffset) * settings.biomeColorSettings.noiseStrength;
+        heightPercent += (biomeNoiseFilter.Evaluate(pointOnSphere) - settings.biomeColorSettings.noiseOffset) * settings.biomeColorSettings.noiseStrength;
 
         float biomeIndex = 0;
         int numberOfBiomes = settings.biomeColorSettings.biomes.Length;
@@ -52,15 +32,6 @@ public class ColorGenerator
 
         for (int i = 0; i < numberOfBiomes; i++)
         {
-            //// return 0 if in first biome
-            //// between for other biomes
-            //// return 1 if in last biome
-            //if (settings.biomeColorSettings.biomes[i].startHeight < heightPercent)
-            //{
-            //    biomeIndex = i;
-            //}
-            //else { break; }
-
             float distanceFromPole = heightPercent - settings.biomeColorSettings.biomes[i].startHeight;
             float weight = Mathf.InverseLerp(-blendRange, blendRange, distanceFromPole);
             // clamp index 
@@ -72,6 +43,20 @@ public class ColorGenerator
         return biomeIndex;
     }
 
+    /// <summary>
+    /// Update Colorsettings if texture is null or the number of biomes change
+    /// </summary>
+    public void UpdateSettings(ColorSettings settings)
+    {
+        this.settings = settings;
+
+        if (texture == null || texture.height != settings.biomeColorSettings.biomes.Length)
+        {
+            texture = new Texture2D(textureResolution * 2, settings.biomeColorSettings.biomes.Length, TextureFormat.RGBA32, false);
+        }
+        // set biome Noise
+        biomeNoiseFilter = CNoiseFilterFactory.CreateNoiseFilter(settings.biomeColorSettings.noise);
+    }
 
     public void UpdateColors()
     {

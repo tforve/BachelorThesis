@@ -10,8 +10,6 @@ public class CNoiseSettings
     public FilterType filterType;
 
     public StdNoiseSettings stdNoiseSettings;
-    //public RidgidNoiseSettings ridgidNoiseSettings;
-
 
     // Settings used by all Filters
     [System.Serializable]
@@ -36,16 +34,6 @@ public class CNoiseSettings
             persistence = UnityEngine.Random.Range(0.5f, 0.7f);
             centre = new Vector3(UnityEngine.Random.Range(0f, 10f), UnityEngine.Random.Range(0f, 10f), UnityEngine.Random.Range(0f, 10f));
             seaLevel = UnityEngine.Random.Range(0.45f, 1.5f);
-            // need to change Random Settings to Rigid, or other noise FilterType
         }
     }
-
-    // additional settings for ridgid Noise
-    //[System.Serializable]
-    //public class RidgidNoiseSettings : StdNoiseSettings
-    //{
-    //    public float weightMultiplier = 0.5f;
-    //}
-
-    // add more addition Settings
 }

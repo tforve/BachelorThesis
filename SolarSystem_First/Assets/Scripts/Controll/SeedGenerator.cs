@@ -7,11 +7,6 @@ public class SeedGenerator : MonoBehaviour
     public int seed;
     public bool randomizeSeed;
 
-    //private void Awake()
-    //{
-    //    Random.InitState(seed);
-    //}
-
     public void GenerateSeed()
     {
         if (useStringSeed)

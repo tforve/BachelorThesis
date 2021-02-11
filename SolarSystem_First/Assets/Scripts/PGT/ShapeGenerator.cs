@@ -7,7 +7,7 @@ public class ShapeGenerator
     ShapeSettings settings;                
     INoiseFilter[] noiseFilters;
 
-    public CMinMax elavationMinMax;            // height to calculate hightest point of Planet and set Colors right
+    public Elevation elavationMinMax;            // height to calculate hightest point of Planet and set Colors right
 
     public void UpdateSettings(ShapeSettings settings)
     {
@@ -19,15 +19,12 @@ public class ShapeGenerator
             noiseFilters[i] = CNoiseFilterFactory.CreateNoiseFilter(settings.noiseLayers[i].noiseSettings);
         }
 
-        elavationMinMax = new CMinMax();
+        elavationMinMax = new Elevation();
     }
 
 
     public float CalculateUnscaledElevation(Vector3 pointOnSphere)
     {
-        //float noise = Mathf.PerlinNoise(pointOnUnitSphere.x * settings.noiseRroughness + settings.noiseCentre.x, pointOnUnitSphere.x * settings.noiseRroughness + settings.noiseCentre.y);
-        //noise = noise *settings.noiseStrengh;
-
         float firstLayerValyue = 0;         // used to set noise Value of first layer to the rest
         float noise = 0;
 
@@ -65,7 +62,7 @@ public class ShapeGenerator
     public float GetScaledElevation(float unscaledElevation)
     {
         float elevtaion = Mathf.Max(0, unscaledElevation);
-        elevtaion = settings.planetRadius * (1 + elevtaion);
+        elevtaion = settings.planetRadius * ( 1+elevtaion);
         return elevtaion;
     }
 }

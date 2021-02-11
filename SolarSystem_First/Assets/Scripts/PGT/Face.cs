@@ -56,7 +56,7 @@ public class Face
                 // set UVs
                 uv[i].y = unscaledElevation;
 
-                // check if index is not outside the face
+                // check if index is not outside the face on rightside or bottom
                 if (x != resolution - 1 && y != resolution - 1)
                 {
                     // first triangle, clockwise

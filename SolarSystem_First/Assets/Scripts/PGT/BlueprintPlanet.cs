@@ -52,7 +52,7 @@ public class BlueprintPlanet : MonoBehaviour
                 meshFilters[i] = meshObject.AddComponent<MeshFilter>();
                 meshFilters[i].sharedMesh = new Mesh();
             }
-            // set material to MeshRenderer ( in this case right now its an PBR Shader)
+            // set material to MeshRenderer
             meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = colorSettings.planetMaterial;
 
             faces[i] = new Face(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
@@ -81,7 +81,7 @@ public class BlueprintPlanet : MonoBehaviour
         }
     }
 
-    // called wenn Colorsettings changed
+    // called if Colorsettings changed
     public void OnColorSettingsUpdate()
     {
         if (autoUpdate)
@@ -109,6 +109,8 @@ public class BlueprintPlanet : MonoBehaviour
         }
         colorGenerator.UpdateElevation(shapeGenerator.elavationMinMax);
     }
+
+    // --- Debug Purpose in Editor ---
 
     private void OnValidate()
     {
@@ -145,9 +147,11 @@ public class BlueprintPlanet : MonoBehaviour
         colorSettings.biomeColorSettings.RandomOceanColor();
     }
 
+    /// <summary>
+    /// set seed for generating planetshape 
+    /// </summary>
     private void SetSeed()
     {
-        // set seed for generating planetshape
         int seed = seedGenerator.seed;
         UnityEngine.Random.InitState(seed);
     }
