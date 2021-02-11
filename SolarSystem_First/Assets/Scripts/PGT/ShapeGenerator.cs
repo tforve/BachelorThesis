@@ -23,7 +23,7 @@ public class ShapeGenerator
     }
 
 
-    public float CalculateUnscaledElevation(Vector3 pointOnUnitSphere)
+    public float CalculateUnscaledElevation(Vector3 pointOnSphere)
     {
         //float noise = Mathf.PerlinNoise(pointOnUnitSphere.x * settings.noiseRroughness + settings.noiseCentre.x, pointOnUnitSphere.x * settings.noiseRroughness + settings.noiseCentre.y);
         //noise = noise *settings.noiseStrengh;
@@ -34,21 +34,20 @@ public class ShapeGenerator
         if (noiseFilters.Length > 0)
         {
             // set value to first Layer value
-            firstLayerValyue = noiseFilters[0].Evaluate(pointOnUnitSphere);
+            firstLayerValyue = noiseFilters[0].Evaluate(pointOnSphere);
             if(settings.noiseLayers[0].enabled)
             {
                 noise = firstLayerValyue;
             }
         }
-
-
+         
         for (int i = 1; i < noiseFilters.Length; i++)
         {
             if(settings.noiseLayers[i].enabled)
             {
                 // check if firstLayer is used as mask if so, set value if not set to 1
                 float mask = (settings.noiseLayers[i].useFirstLayerAsMask) ? firstLayerValyue : 1;
-                noise += noiseFilters[i].Evaluate(pointOnUnitSphere) * mask;
+                noise += noiseFilters[i].Evaluate(pointOnSphere) * mask;
             }
         }
 

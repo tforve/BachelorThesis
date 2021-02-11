@@ -7,21 +7,22 @@ using UnityEngine;
 /// </summary>
 public class Face
 {
-    private ShapeGenerator shapeGenerator;     // shapesettings 
+    private ShapeGenerator shapeGenerator;     
     private Mesh mesh;
-    private int resolution;                     // LOD of the Face
-    private Vector3 localUp;                    // facing direction, normal vector
-    private Vector3 axisA, axisB;               // other 2 dir vectors
+    private int resolution;                    
+    private Vector3 normalVector;               // facing up/ used as local up
+    private Vector3 axisX, axisY;               // other 2 dir vectors
 
-    public Face(ShapeGenerator shapeGenerator, Mesh mesh, int resolution, Vector3 localUp)
+    public Face(ShapeGenerator shapeGenerator, Mesh mesh, int resolution, Vector3 normalVec)
     {
         this.shapeGenerator = shapeGenerator;
         this.mesh = mesh;
         this.resolution = resolution;
-        this.localUp = localUp;
+        this.normalVector = normalVec;
 
-        axisA = new Vector3(localUp.y, localUp.z, localUp.x);
-        axisB = Vector3.Cross(localUp, axisA);
+        //flip normalVector aside and then use crossproduct to get third vector
+        axisX = new Vector3(normalVec.y, normalVec.z, normalVec.x); 
+        axisY = Vector3.Cross(normalVec, axisX);
     }
 
     public void ConstructMesh()
@@ -44,13 +45,14 @@ public class Face
             {
                 // index of vertices
                 int i = x + y * resolution;
-                Vector2 percent = new Vector2(x, y) / (resolution - 1); // why -1
-                Vector3 pointOnUnitCube = localUp + (percent.x - 0.5f) * 2 * axisA + (percent.y - 0.5f) * 2 * axisB;
+                // calculate how complete every loop/face is 
+                Vector2 percent = new Vector2(x, y) / (resolution-1);
+                Vector3 pointOnCube = normalVector + (percent.x - 0.5f) * 2 * axisX + (percent.y - 0.5f) * 2 * axisY;
                 // get vertices same distance to center of cube
-                Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;
+                Vector3 pointOnSphere = pointOnCube.normalized;
                 // calculate elevation and set them to the vertices
-                float unscaledElevation = shapeGenerator.CalculateUnscaledElevation(pointOnUnitSphere);
-                vertices[i] = pointOnUnitSphere * shapeGenerator.GetScaledElevation(unscaledElevation);
+                float unscaledElevation = shapeGenerator.CalculateUnscaledElevation(pointOnSphere);
+                vertices[i] = pointOnSphere * shapeGenerator.GetScaledElevation(unscaledElevation);
                 // set UVs
                 uv[i].y = unscaledElevation;
 
@@ -89,7 +91,7 @@ public class Face
                 // index of vertices
                 int i = x + y * resolution;
                 Vector2 percent = new Vector2(x, y) / (resolution - 1); // why -1
-                Vector3 pointOnUnitCube = localUp + (percent.x - 0.5f) * 2 * axisA + (percent.y - 0.5f) * 2 * axisB;
+                Vector3 pointOnUnitCube = normalVector + (percent.x - 0.5f) * 2 * axisX + (percent.y - 0.5f) * 2 * axisY;
                 // get vertices same distance to center of cube
                 Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;
                 //store uvs , x coords are used for biomes, y for water
