@@ -121,14 +121,14 @@
         },
         {
             "m_Id": "e8c8be479e784a29ad08b3316a310e7b"
+        },
+        {
+            "m_Id": "3149c2d1f6a0470a82e9a5048818aefb"
         }
     ],
     "m_StickyNoteDatas": [
         {
             "m_Id": "28e4ce629eba4a889819650f1bc23ceb"
-        },
-        {
-            "m_Id": "53867e16585549949453d0cf8bafb162"
         }
     ],
     "m_Edges": [
@@ -499,8 +499,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 1538.0,
-            "y": -171.00001525878907
+            "x": 1465.358642578125,
+            "y": -171.16983032226563
         },
         "m_Blocks": [
             {
@@ -516,8 +516,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 1538.0,
-            "y": 28.999984741210939
+            "x": 1465.358642578125,
+            "y": 28.981151580810548
         },
         "m_Blocks": [
             {
@@ -798,10 +798,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -135.00003051757813,
-            "y": -278.0,
-            "width": 126.0,
-            "height": 142.00001525878907
+            "x": -132.22642517089845,
+            "y": -211.92453002929688,
+            "width": 124.98114013671875,
+            "height": 141.2830352783203
         }
     },
     "m_Slots": [
@@ -1187,6 +1187,17 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.GroupData",
+    "m_ObjectId": "3149c2d1f6a0470a82e9a5048818aefb",
+    "m_Title": "Weighting Gradients by rounding down",
+    "m_Position": {
+        "x": 10.0,
+        "y": 10.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SampleTexture2DNode",
     "m_ObjectId": "31a1d4c3fe1e7e8bbf2c9d07f25cee61",
     "m_Group": {
@@ -1197,10 +1208,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1267.0,
-            "y": 46.000003814697269,
-            "width": 182.0,
-            "height": 251.0
+            "x": 1171.924560546875,
+            "y": 56.15095520019531,
+            "width": 184.75477600097657,
+            "height": 251.77362060546876
         }
     },
     "m_Slots": [
@@ -1366,10 +1377,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1167.0001220703125,
-            "y": -210.00003051757813,
-            "width": 126.00000762939453,
-            "height": 118.00000762939453
+            "x": 1138.4151611328125,
+            "y": -142.18869018554688,
+            "width": 125.88671875,
+            "height": 117.73585510253906
         }
     },
     "m_Slots": [
@@ -1528,40 +1539,20 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
-    "m_ObjectId": "53867e16585549949453d0cf8bafb162",
-    "m_Title": "OceanValue",
-    "m_Content": "used as mask for ocean\n",
-    "m_TextSize": 0,
-    "m_Theme": 0,
-    "m_Position": {
-        "serializedVersion": "2",
-        "x": 214.0,
-        "y": -140.0,
-        "width": 150.0,
-        "height": 100.0
-    },
-    "m_Group": {
-        "m_Id": ""
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "56693d2ce66f20889bf6ff857a971892",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "3149c2d1f6a0470a82e9a5048818aefb"
     },
     "m_Name": "Multiply",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 470.0,
-            "y": 146.0,
-            "width": 126.0,
-            "height": 118.0
+            "x": 324.2264099121094,
+            "y": 143.09437561035157,
+            "width": 124.98111724853516,
+            "height": 117.73584747314453
         }
     },
     "m_Slots": [
@@ -1588,17 +1579,17 @@
     "m_Type": "UnityEditor.ShaderGraph.AddNode",
     "m_ObjectId": "5d0f02d045eacd80a6a39aea0026ba2e",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "3149c2d1f6a0470a82e9a5048818aefb"
     },
     "m_Name": "Add",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 661.0,
-            "y": 24.999963760375978,
-            "width": 126.0,
-            "height": 118.0
+            "x": 596.8302001953125,
+            "y": 80.603759765625,
+            "width": 125.88677978515625,
+            "height": 117.7358627319336
         }
     },
     "m_Slots": [
@@ -1911,8 +1902,8 @@
     "m_ObjectId": "77705fdc91be4d1f9e8133c32fab2970",
     "m_Title": "Ocean Gradiant",
     "m_Position": {
-        "x": -101.99996948242188,
-        "y": -325.0
+        "x": -322.41510009765627,
+        "y": -270.79248046875
     }
 }
 
@@ -1953,17 +1944,17 @@
     "m_Type": "UnityEditor.ShaderGraph.OneMinusNode",
     "m_ObjectId": "7df1eeaec29ae080831b91a8780cbd6b",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "3149c2d1f6a0470a82e9a5048818aefb"
     },
     "m_Name": "One Minus",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 319.0000305175781,
-            "y": -24.999963760375978,
-            "width": 128.0,
-            "height": 94.0
+            "x": 297.0566101074219,
+            "y": -13.58492660522461,
+            "width": 126.7924575805664,
+            "height": 94.18868255615235
         }
     },
     "m_Slots": [
@@ -1994,10 +1985,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -306.0,
-            "y": 238.00001525878907,
-            "width": 126.0,
-            "height": 142.00001525878907
+            "x": -302.4905700683594,
+            "y": 152.1509552001953,
+            "width": 124.98113250732422,
+            "height": 142.1886749267578
         }
     },
     "m_Slots": [
@@ -2163,10 +2154,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 723.0,
-            "y": 397.0000305175781,
-            "width": 120.00000762939453,
-            "height": 149.0
+            "x": 761.6605224609375,
+            "y": 398.49066162109377,
+            "width": 119.54718017578125,
+            "height": 149.43394470214845
         }
     },
     "m_Slots": [
@@ -2279,10 +2270,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 536.0,
-            "y": 395.99993896484377,
-            "width": 145.00001525878907,
-            "height": 130.0
+            "x": 575.0943603515625,
+            "y": 396.67926025390627,
+            "width": 144.9056396484375,
+            "height": 129.50942993164063
         }
     },
     "m_Slots": [
@@ -2304,17 +2295,17 @@
     "m_Type": "UnityEditor.ShaderGraph.FloorNode",
     "m_ObjectId": "a0612f0550454f8bb3dd9cea012c4aef",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "3149c2d1f6a0470a82e9a5048818aefb"
     },
     "m_Name": "Floor",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 103.00003051757813,
-            "y": 30.999967575073243,
-            "width": 128.0,
-            "height": 94.0
+            "x": 130.4150848388672,
+            "y": 16.3018798828125,
+            "width": 126.7924575805664,
+            "height": 94.1886978149414
         }
     },
     "m_Slots": [
@@ -2401,10 +2392,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -300.0000305175781,
-            "y": -181.0,
-            "width": 126.0,
-            "height": 142.00001525878907
+            "x": -297.05657958984377,
+            "y": -115.01887512207031,
+            "width": 124.98113250732422,
+            "height": 141.2830352783203
         }
     },
     "m_Slots": [
@@ -2512,10 +2503,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -138.0000457763672,
-            "y": 339.0,
-            "width": 126.0,
-            "height": 142.00001525878907
+            "x": -134.03773498535157,
+            "y": 253.58489990234376,
+            "width": 124.98114013671875,
+            "height": 142.18869018554688
         }
     },
     "m_Slots": [
@@ -2703,10 +2694,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1045.0,
-            "y": 20.9999942779541,
-            "width": 156.00001525878907,
-            "height": 34.0
+            "x": 979.0189819335938,
+            "y": 28.981151580810548,
+            "width": 156.67921447753907,
+            "height": 34.41510009765625
         }
     },
     "m_Slots": [
@@ -2761,10 +2752,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 915.9999389648438,
-            "y": 79.99999237060547,
-            "width": 125.99999237060547,
-            "height": 100.99999237060547
+            "x": 929.2076416015625,
+            "y": 80.60379791259766,
+            "width": 127.69806671142578,
+            "height": 101.43396759033203
         }
     },
     "m_Slots": [
@@ -2899,17 +2890,17 @@
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "b72a99ae2ce97f83be35ba59712cf53c",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "3149c2d1f6a0470a82e9a5048818aefb"
     },
     "m_Name": "Multiply",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 511.0,
-            "y": -136.99998474121095,
-            "width": 126.0,
-            "height": 118.0
+            "x": 449.20758056640627,
+            "y": -117.73584747314453,
+            "width": 125.8868179321289,
+            "height": 117.73585510253906
         }
     },
     "m_Slots": [
@@ -3031,8 +3022,8 @@
     "m_ObjectId": "bedaa3a3cf59432bb4c5d39a79e2d734",
     "m_Title": "Land Gradiant",
     "m_Position": {
-        "x": -331.0,
-        "y": 179.00006103515626
+        "x": -327.84906005859377,
+        "y": 93.28302001953125
     }
 }
 
@@ -3437,8 +3428,8 @@
     "m_ObjectId": "e8c8be479e784a29ad08b3316a310e7b",
     "m_Title": "Ocean Reflection",
     "m_Position": {
-        "x": 935.0000610351563,
-        "y": -314.00006103515627
+        "x": 905.6605224609375,
+        "y": -245.43392944335938
     }
 }
 
@@ -3502,10 +3493,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1055.0001220703125,
-            "y": 209.00003051757813,
-            "width": 145.0,
-            "height": 140.00001525878907
+            "x": 990.7925415039063,
+            "y": 198.33961486816407,
+            "width": 144.9056396484375,
+            "height": 139.47171020507813
         }
     },
     "m_Slots": [
@@ -3610,10 +3601,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 960.0000610351563,
-            "y": -255.00003051757813,
-            "width": 142.0,
-            "height": 34.0
+            "x": 979.0189819335938,
+            "y": -102.33963775634766,
+            "width": 142.18873596191407,
+            "height": 33.509437561035159
         }
     },
     "m_Slots": [

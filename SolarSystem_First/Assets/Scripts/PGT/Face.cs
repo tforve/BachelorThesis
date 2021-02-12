@@ -90,7 +90,7 @@ public class Face
             {
                 // index of vertices
                 int i = x + y * resolution;
-                Vector2 percent = new Vector2(x, y) / (resolution - 1); // why -1
+                Vector2 percent = new Vector2(x, y) / (resolution - 1);
                 Vector3 pointOnUnitCube = normalVector + (percent.x - 0.5f) * 2 * axisX + (percent.y - 0.5f) * 2 * axisY;
                 // get vertices same distance to center of cube
                 Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;

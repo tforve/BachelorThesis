@@ -41,10 +41,6 @@ public class CopyFactory : MonoBehaviour
     private int originResolution;
     private ColorSettings originColSettings;
     private ShapeSettings originShapeSettings;
-    //private Material originMaterial;
-
-    // gravity Simulation related
-    // private SolarsystemBody solarsystemBody;
 
     private void Awake()
     {
@@ -100,9 +96,8 @@ public class CopyFactory : MonoBehaviour
     }
 
     /// <summary>
-    /// if FinalPlanet calls for an Update, called by FinalPlanet itself
+    /// Update Parameters by use Planet.UpdateColors, Initialize and Regenerate
     /// </summary>
-    /// <param name="planet"></param>
     public void UpdateParameters(FinalPlanet planet)
     {
         planet.faces = planetToCopy.GetFaces;

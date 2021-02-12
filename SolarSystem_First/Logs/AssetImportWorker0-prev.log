@@ -15,11 +15,11 @@ F:/WorkSpace/Unity/BachelorThesis/SolarSystem_First
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52668
+54042
 Successfully changed project path to: F:/WorkSpace/Unity/BachelorThesis/SolarSystem_First
 F:/WorkSpace/Unity/BachelorThesis/SolarSystem_First
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 52.55 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 52.41 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path F:/IDEs/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
@@ -36,28 +36,28 @@ Initialize mono
 Mono path[0] = 'F:/IDEs/2020.2.2f1/Editor/Data/Managed'
 Mono path[1] = 'F:/IDEs/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'F:/IDEs/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56876
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56300
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: F:/IDEs/2020.2.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: F:/IDEs/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001620 seconds.
+Registered in 0.001590 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 53.01 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 54.00 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.450 seconds
+- Completed reload, in  1.433 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001475 seconds.
+Registered in 0.001416 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 53.99 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 56.57 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -69,103 +69,100 @@ Platform modules already initialized, skipping
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2522 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 211.7 MB.
-System memory in use after: 212.0 MB.
+Unloading 2523 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 212.3 MB.
+System memory in use after: 212.6 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3000.
-Total: 2.523500 ms (FindLiveObjects: 0.321300 ms CreateObjectMapping: 0.080800 ms MarkObjects: 2.093900 ms  DeleteObjects: 0.026300 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3001.
+Total: 2.494000 ms (FindLiveObjects: 0.290700 ms CreateObjectMapping: 0.075800 ms MarkObjects: 2.099800 ms  DeleteObjects: 0.026200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Materials/Shader/CPBRPlanet.shadergraph
-  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Shader/CPBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e112bd188cc4983e63889b5651ba37c') in 0.054076 seconds
-  Import took 0.058338 seconds .
+  path: Assets/Materials/Shader/CPBRPlanet 1.shadergraph
+  artifactKey: Guid(e4bd9716000783c45ae93a774b3427ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/CPBRPlanet 1.shadergraph using Guid(e4bd9716000783c45ae93a774b3427ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f070453accb22b168fee461a6513e71') in 0.052960 seconds
+  Import took 0.057476 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.436524 seconds.
-  path: Assets/Materials/Shader/CPBRPlanet.shadergraph
+  Time since last request: 2.368916 seconds.
+  path: Assets/Materials/Shader/TestShader.shadergraph
+  artifactKey: Guid(e4bd9716000783c45ae93a774b3427ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/TestShader.shadergraph using Guid(e4bd9716000783c45ae93a774b3427ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edb026c7c2eace8f51c3a003b8e8cfae') in 0.003732 seconds
+  Import took 0.008025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.713259 seconds.
+  path: Assets/Materials/Shader/TestShader.shadergraph
+  artifactKey: Guid(e4bd9716000783c45ae93a774b3427ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/TestShader.shadergraph using Guid(e4bd9716000783c45ae93a774b3427ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52fb6312b50daec9526ff645325279e6') in 0.003704 seconds
+  Import took 0.008248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.787296 seconds.
+  path: Assets/Materials/Shader/TestShader.shadergraph
+  artifactKey: Guid(e4bd9716000783c45ae93a774b3427ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/TestShader.shadergraph using Guid(e4bd9716000783c45ae93a774b3427ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a09ee8c3aede76d2e8aef885cc75f8e') in 0.003525 seconds
+  Import took 0.007907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 300.782889 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
   artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Shader/CPBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b470af74009e3301512640c50b7bb173') in 0.003770 seconds
-  Import took 0.008074 seconds .
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2193715d918defb2cb2ec0f694aa0a57') in 0.007276 seconds
+  Import took 0.011620 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001518 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.012 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 204.7 MB.
-System memory in use after: 205.0 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3002.
-Total: 2.516600 ms (FindLiveObjects: 0.318300 ms CreateObjectMapping: 0.072900 ms MarkObjects: 2.102200 ms  DeleteObjects: 0.021900 ms)
+Received Import Request.
+  Time since last request: 619.268214 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ba77282b5bb8078c85c9d914457da3e') in 0.003824 seconds
+  Import took 0.008328 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001499 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.999 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 204.8 MB.
-System memory in use after: 205.0 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3004.
-Total: 2.705900 ms (FindLiveObjects: 0.321500 ms CreateObjectMapping: 0.075100 ms MarkObjects: 2.283600 ms  DeleteObjects: 0.023600 ms)
+Received Import Request.
+  Time since last request: 35.371305 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '841e52b9dc7ef81060c2dfd6705c6f1e') in 0.003527 seconds
+  Import took 0.007736 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001497 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.999 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 204.8 MB.
-System memory in use after: 205.0 MB.
+Received Import Request.
+  Time since last request: 298.287055 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7c257b4ca6e739ed82b608a19d8ec1') in 0.003672 seconds
+  Import took 0.008212 seconds .
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3006.
-Total: 2.612900 ms (FindLiveObjects: 0.339000 ms CreateObjectMapping: 0.076500 ms MarkObjects: 2.173000 ms  DeleteObjects: 0.022200 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.005370 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7c257b4ca6e739ed82b608a19d8ec1') in 0.003846 seconds
+  Import took 0.008538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2124.205620 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ef074a80ffb65a32d3990f4811b454') in 0.004076 seconds
+  Import took 0.008928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001672 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ef074a80ffb65a32d3990f4811b454') in 0.006490 seconds
+  Import took 0.010910 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

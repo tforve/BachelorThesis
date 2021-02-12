@@ -37,12 +37,6 @@ public class SolarsystemSimulation : MonoBehaviour
     private void Awake()
     {
         // populate array of planets
-        //GameObject[] tmp = GameObject.FindGameObjectsWithTag("Planet");
-        //planets = new SolarsystemBody[tmp.Length];
-        //for (int i = 0; i < tmp.Length; i++)
-        //{
-        //    planets[i] = tmp[i].gameObject.GetComponent<SolarsystemBody>();
-        //}
         planets = FindObjectsOfType<SolarsystemBody>();
 
         // set fixedDeltaTime to own Universe time for more controll
@@ -59,8 +53,6 @@ public class SolarsystemSimulation : MonoBehaviour
 
     }
 
-
-
     private void FixedUpdate()
     {
         // recalculate velocity every timeStep
@@ -75,25 +67,15 @@ public class SolarsystemSimulation : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// calculate Startvelocity for debugging by using recalculateStartvelocity boolean 
+    /// </summary>
     void OnValidate()
     {
-        // calculate Startvelocity for debugging in Editor 
         if (recalculateStartvelocity && useFixStartvelocity)
         {
-            // populate planets array
-
-            //GameObject[] tmp = GameObject.FindGameObjectsWithTag("Planet");
-            //planets = new SolarsystemBody[tmp.Length];
-            //for (int i = 0; i < tmp.Length; i++)
-            //{
-            //    planets[i] = tmp[i].gameObject.GetComponent<SolarsystemBody>();
-            //}
             planets = FindObjectsOfType<SolarsystemBody>();
-            // set fixedDeltaTime to own Universe time for more controll
             Time.fixedDeltaTime = Universe.timeSteps;
-
-            // calculate StartVelocity
             for (int i = 0; i < planets.Length; i++)
             {
                 planets[i].CalculateStartVelocity(planets);

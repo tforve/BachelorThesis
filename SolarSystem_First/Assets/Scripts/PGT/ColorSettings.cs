@@ -19,8 +19,8 @@ public class ColorSettings : ScriptableObject
         public CNoiseSettings noise;
         public float noiseOffset;
         public float noiseStrength;
-        [Range(0, 1)]
-        public float blendStrength;             // blend NoiseBiomes in eachother 
+        [Range(0.001f, 1)]
+        public float blendStrength;             // how far the NoiseBiomes blend in eachother 
         public Gradient oceanColor;
 
         internal void RandomOceanColor()

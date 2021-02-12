@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7549268204566238082}
   - component: {fileID: 7549268204566238084}
   - component: {fileID: 964187872}
+  - component: {fileID: 760525957}
   m_Layer: 0
   m_Name: SimulationManager
   m_TagString: Untagged
@@ -82,7 +83,6 @@ MonoBehaviour:
   - {fileID: 0}
   recalculateStartvelocity: 0
   useFixStartvelocity: 0
-  blueprintPlanet: {fileID: 0}
 --- !u!114 &964187872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,3 +95,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfecb7420142f2548901ead21b6f0fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &760525957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7549268204566238085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca7e4f9f27c5c240879994b198577d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text1: {fileID: 0}
+  text2: {fileID: 0}
+  observerCamera: {fileID: 0}
+  mainCam: {fileID: 0}

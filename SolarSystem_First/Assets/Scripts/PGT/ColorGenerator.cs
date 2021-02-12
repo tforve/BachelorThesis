@@ -16,31 +16,32 @@ public class ColorGenerator
     }
 
     /// <summary>
-    /// calculate and set the Biomes, strength, height
-    /// 0 for Southpole, 1 for northpole, 
+    /// calculate and set the Biomes strength, height and how much they blend in each other. 
+    /// 0 for Southpole, 1 for Northpole, or first and last biome
     /// </summary>
     public float BiomePercentFromtPoint(Vector3 pointOnSphere)
     {
         // set between 0, 1
         float heightPercent = (pointOnSphere.y + 1) / 2.0f;
-        // give controll for the noise by using the offset and multipling the strength
+        // use noise on heightPercent to disturb the boundries
         heightPercent += (biomeNoiseFilter.Evaluate(pointOnSphere) - settings.biomeColorSettings.noiseOffset) * settings.biomeColorSettings.noiseStrength;
 
-        float biomeIndex = 0;
+        float biomeLevel = 0;
         int numberOfBiomes = settings.biomeColorSettings.biomes.Length;
-        float blendRange = settings.biomeColorSettings.blendStrength / 2.0f + 0.001f;
+        float blendStrength = settings.biomeColorSettings.blendStrength / 2.0f; 
 
         for (int i = 0; i < numberOfBiomes; i++)
         {
             float distanceFromPole = heightPercent - settings.biomeColorSettings.biomes[i].startHeight;
-            float weight = Mathf.InverseLerp(-blendRange, blendRange, distanceFromPole);
-            // clamp index 
-            biomeIndex *= (1 - weight);
-            biomeIndex += i * weight;
+            // get if the distanceFromPole is within the range of the blendRange
+            float weight = Mathf.InverseLerp(-blendStrength, blendStrength, distanceFromPole);
+            // clamp index so he didnt get too large
+            biomeLevel *= (1 - weight);
+            biomeLevel += i * weight;
         }
-        // return in in between 0 and 1 - if its 0 its 1 instead
-        biomeIndex = biomeIndex / Mathf.Max(1, numberOfBiomes - 1);
-        return biomeIndex;
+        // return in between 0 and 1. use Max to not divice by 0 - its 0 instead
+        biomeLevel = biomeLevel / Mathf.Max(1, numberOfBiomes - 1);
+        return biomeLevel;
     }
 
     /// <summary>
@@ -74,13 +75,14 @@ public class ColorGenerator
                 {
                     gradientColor = settings.biomeColorSettings.oceanColor.Evaluate(i / (textureResolution - 1.0f));
                 }
-                // else biome gradients
+                // biome gradients
                 else
                 {
                     gradientColor = b.gradient.Evaluate((i - textureResolution) / (textureResolution - 1.0f));
                 }
                 Color tintColor = b.tint;
-                colors[colorIndex] = gradientColor * (1 - b.tintPercent) + tintColor * b.tintPercent;            // -1?
+                // if no tintpercent just based on gradientColor
+                colors[colorIndex] = gradientColor * (1 - b.tintPercent) + tintColor * b.tintPercent;            
                 colorIndex++;
             }
         }

@@ -1,0 +1,1341 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 18363.1316; Version 1909; 64bit' Language: 'de' Physical Memory: 16286 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\MEINS\IDEs\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/MEINS/Workspace/Unity/00Thesis/BachelorThesis/SolarSystem_First
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+53027
+Successfully changed project path to: C:/MEINS/Workspace/Unity/00Thesis/BachelorThesis/SolarSystem_First
+C:/MEINS/Workspace/Unity/00Thesis/BachelorThesis/SolarSystem_First
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 79.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path C:/MEINS/IDEs/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/MEINS/Workspace/Unity/00Thesis/BachelorThesis/SolarSystem_First/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 940MX (ID=0x134d)
+    Vendor:   
+    VRAM:     2010 MB
+    Driver:   26.21.14.4318
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/MEINS/IDEs/Editor/Data/Managed'
+Mono path[1] = 'C:/MEINS/IDEs/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/MEINS/IDEs/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56252
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/MEINS/IDEs/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002145 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 84.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.477 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001675 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022C037C77C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2223D020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C036A6620 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2224D630 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2221D240 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2224D630 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C03285220 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C02D2BA20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C036A6620 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C03516020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 58.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.044 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.18 seconds
+Refreshing native plugins compatible for Editor in 1.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2523 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 212.3 MB.
+System memory in use after: 212.5 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3001.
+Total: 4.720600 ms (FindLiveObjects: 0.719300 ms CreateObjectMapping: 0.314200 ms MarkObjects: 3.653600 ms  DeleteObjects: 0.030900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ea29f674e48080b26603cee5a728cc4') in 0.114396 seconds
+  Import took 0.126275 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002936 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022C0379BE40 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22059060 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C03617230 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E47FBD080 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0329BDD0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2202D010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E47FBD080 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0329BDD0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BE7A30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C03617230 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2223D020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.218 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.2 MB.
+System memory in use after: 205.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3003.
+Total: 4.373600 ms (FindLiveObjects: 0.947800 ms CreateObjectMapping: 0.559300 ms MarkObjects: 2.837600 ms  DeleteObjects: 0.026800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003867 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022C02C00610 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E21C24020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C031A2560 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C03792010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23F84030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E241D6030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22D85010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C03792010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E21C24020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22EE4010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2234E040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E481BA020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.274 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.3 MB.
+System memory in use after: 205.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3005.
+Total: 4.551700 ms (FindLiveObjects: 0.311000 ms CreateObjectMapping: 0.172500 ms MarkObjects: 4.038100 ms  DeleteObjects: 0.027600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002605 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E24BE6D10 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27396470 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22B6E030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C037A1A40 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24C22C70 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2480B320 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C037AB680 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B6D220 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E275F2FA0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24AEE0C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.232 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.3 MB.
+System memory in use after: 205.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3007.
+Total: 3.840400 ms (FindLiveObjects: 0.414800 ms CreateObjectMapping: 0.210700 ms MarkObjects: 3.186500 ms  DeleteObjects: 0.026400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 11710.086498 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '897beb8f5eab24b090dac0f0a6d41bab') in 0.036977 seconds
+  Import took 0.050781 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001962 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022C02A6A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B5E010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E247C1970 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C037A1A40 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23F80020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27087010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2202D010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A4A29C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221DF030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2461B020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22CD4020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.453 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.3 MB.
+System memory in use after: 205.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3009.
+Total: 3.549200 ms (FindLiveObjects: 0.553800 ms CreateObjectMapping: 0.225200 ms MarkObjects: 2.746300 ms  DeleteObjects: 0.022300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001570 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B5E010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22B6E030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C02D29020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27087010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27D2B020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C02D29020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A4A29C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22E13020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C03154D40 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E48D2D1E0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.313 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.2 MB.
+System memory in use after: 205.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3011.
+Total: 3.485000 ms (FindLiveObjects: 0.390400 ms CreateObjectMapping: 0.178500 ms MarkObjects: 2.891400 ms  DeleteObjects: 0.023000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001634 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E27211D90 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23FB0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C3A4ACD10 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C037A1A40 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E4805A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24C22C70 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E695F0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A4A29C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A338020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23F6A230 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E226E8020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.274 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.3 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3013.
+Total: 2.638500 ms (FindLiveObjects: 0.286900 ms CreateObjectMapping: 0.145600 ms MarkObjects: 2.182900 ms  DeleteObjects: 0.021400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001585 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23FB0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27C1DBA0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24BD2020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E4805A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C02DFD010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E695F0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A4A29C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22225040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BE3230 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0368B020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.341 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.3 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3015.
+Total: 3.044900 ms (FindLiveObjects: 0.391500 ms CreateObjectMapping: 0.175600 ms MarkObjects: 2.453900 ms  DeleteObjects: 0.021800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002494 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23FB0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22B6E030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24BD2020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E4805A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24C22C70 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E695F0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A4A29C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22431040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22F40020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0368B020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.306 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3017.
+Total: 2.899300 ms (FindLiveObjects: 0.401100 ms CreateObjectMapping: 0.153700 ms MarkObjects: 2.322300 ms  DeleteObjects: 0.020500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002421 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022C02A6A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23FB0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27C1DBA0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E4805A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27087010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A4A29C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22225040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C03154D40 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2722A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.161 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3019.
+Total: 3.626300 ms (FindLiveObjects: 0.364400 ms CreateObjectMapping: 0.154800 ms MarkObjects: 3.080800 ms  DeleteObjects: 0.024400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002375 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23FB0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2291E010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2723A040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E4805A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27087010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E695E8040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A4A29C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22431040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E2291E010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E243E6020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.298 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.3 MB.
+System memory in use after: 205.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3021.
+Total: 2.625700 ms (FindLiveObjects: 0.288800 ms CreateObjectMapping: 0.125800 ms MarkObjects: 2.188600 ms  DeleteObjects: 0.020900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001645 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E698AD0F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23FB0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E247C9980 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B6D220 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E4805A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C03526030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24B9C040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E239CA050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A4A29C0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E249DE020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E247C9980 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E48D2D1F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.167 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3023.
+Total: 3.256400 ms (FindLiveObjects: 0.301000 ms CreateObjectMapping: 0.165500 ms MarkObjects: 2.764200 ms  DeleteObjects: 0.024200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001674 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022C032ABDF0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22344020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E277BF250 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B6D220 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B5E010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E239CA050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22006050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22431040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E277BF250 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A456020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.219 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3025.
+Total: 4.419700 ms (FindLiveObjects: 0.324700 ms CreateObjectMapping: 0.173500 ms MarkObjects: 3.894800 ms  DeleteObjects: 0.024600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001669 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E24BE6D10 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23FB0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27C1DB20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B6D220 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24B09100 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24C22C70 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E239CA050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22006050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6AAE0020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E4808E230 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A456020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.254 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3027.
+Total: 2.737600 ms (FindLiveObjects: 0.304100 ms CreateObjectMapping: 0.167100 ms MarkObjects: 2.240700 ms  DeleteObjects: 0.023600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002389 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022C032ABDF0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23FB0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22F40020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B6D220 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E47FB9050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E239CA050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22006050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22431040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22F40020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A456020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.286 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3029.
+Total: 3.514600 ms (FindLiveObjects: 0.416100 ms CreateObjectMapping: 0.199500 ms MarkObjects: 2.851100 ms  DeleteObjects: 0.046300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002595 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E23FB0050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C02D716D0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E243B9010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E279A8040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E243B9010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27695030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E249DE020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E48CA0E40 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A456020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.247 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.3 MB.
+System memory in use after: 205.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3031.
+Total: 4.947500 ms (FindLiveObjects: 1.658200 ms CreateObjectMapping: 0.460100 ms MarkObjects: 2.805100 ms  DeleteObjects: 0.022300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002503 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022C032ABDF0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E480E0020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A9D64F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E47FB9050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E480E0020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6AAE0020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A9D64F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A456020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.463 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3033.
+Total: 3.856000 ms (FindLiveObjects: 0.473700 ms CreateObjectMapping: 0.245400 ms MarkObjects: 3.112800 ms  DeleteObjects: 0.022700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002703 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27E92B90 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22065050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C037A1A40 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E242D4070 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E21CFA030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27E92B90 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E249DE020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E69765030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22D95020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.884 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3035.
+Total: 4.844400 ms (FindLiveObjects: 1.325500 ms CreateObjectMapping: 0.264000 ms MarkObjects: 3.230300 ms  DeleteObjects: 0.022700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001788 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E225A6010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E69EA7F70 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E243B9010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27E92B90 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E243B9010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E225A6010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C02D2D030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E69EA7F70 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A456020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.208 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3037.
+Total: 3.040700 ms (FindLiveObjects: 0.337600 ms CreateObjectMapping: 0.171200 ms MarkObjects: 2.504600 ms  DeleteObjects: 0.025700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001752 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E480E0020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22065050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0319D0A0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E47FB9050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0319D0A0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E480E0020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22163050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E273CF940 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E4868D050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.260 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3039.
+Total: 4.325500 ms (FindLiveObjects: 0.430800 ms CreateObjectMapping: 0.185200 ms MarkObjects: 3.683500 ms  DeleteObjects: 0.024600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001636 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022C02A6A020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E239AA040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E243F8010 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0319D0A0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E47FB9050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0319D0A0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E239AA040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22163050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E69765030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A456020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.300 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.3 MB.
+System memory in use after: 205.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3041.
+Total: 4.715800 ms (FindLiveObjects: 0.726000 ms CreateObjectMapping: 0.452100 ms MarkObjects: 3.464200 ms  DeleteObjects: 0.070800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 8540.440849 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaa7772f2c30dc97b859fdf0c3c1976b') in 0.040422 seconds
+  Import took 0.049838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 405.079505 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c993a531bbc19c3d8005d8ce317005d1') in 0.005650 seconds
+  Import took 0.012584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1079.545268 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd536ead9083ec5885cd7b16ea645e3d9') in 0.010104 seconds
+  Import took 0.018292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 160.332086 seconds.
+  path: Assets/Materials/Shader/PBRPlanet.shadergraph
+  artifactKey: Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shader/PBRPlanet.shadergraph using Guid(e5a989bd86b09b34a9b3978316c4b9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77128e08ad4309b8342d7f976ed83ebb') in 0.011820 seconds
+  Import took 0.017690 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002678 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E244B3040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0369B040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E47FB9050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E244B3040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C02D2D030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0369B040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A456020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.294 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3043.
+Total: 3.807800 ms (FindLiveObjects: 0.462200 ms CreateObjectMapping: 0.229800 ms MarkObjects: 3.081300 ms  DeleteObjects: 0.033400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002603 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E270EA5F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22065050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B6D220 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E47FB9050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0361AC30 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E270EA5F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6AAE0020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22555030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22D95020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.291 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3045.
+Total: 3.124200 ms (FindLiveObjects: 0.425200 ms CreateObjectMapping: 0.262200 ms MarkObjects: 2.406800 ms  DeleteObjects: 0.028000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 7672.064680 seconds.
+  path: Assets/Scenes/Solarsystem01.unity
+  artifactKey: Guid(da3a8eaf4a18899459686671c681146f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Solarsystem01.unity using Guid(da3a8eaf4a18899459686671c681146f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4587160e786b2127b3f32b67326be5aa') in 0.050360 seconds
+  Import took 0.066467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.721720 seconds.
+  path: Assets/Scenes/PlanetFactory.unity
+  artifactKey: Guid(fe822b007155e58499eefd61ead99264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/PlanetFactory.unity using Guid(fe822b007155e58499eefd61ead99264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70bb3f639e469338491f66619c98f7ed') in 0.034038 seconds
+  Import took 0.039676 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.136541 seconds.
+  path: Assets/Scenes/PlanetFactory.unity
+  artifactKey: Guid(fe822b007155e58499eefd61ead99264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/PlanetFactory.unity using Guid(fe822b007155e58499eefd61ead99264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '079aab63339d3dbb250b2c1dde257169') in 0.026645 seconds
+  Import took 0.034744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019120 seconds.
+  path: Assets/Scenes/PlanetFactory.unity
+  artifactKey: Guid(fe822b007155e58499eefd61ead99264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/PlanetFactory.unity using Guid(fe822b007155e58499eefd61ead99264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '079aab63339d3dbb250b2c1dde257169') in 0.010067 seconds
+  Import took 0.061952 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.798940 seconds.
+  path: Assets/Scenes/GravitationTest.unity
+  artifactKey: Guid(78cd5fd5050d1744387dd4fb367cd6c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GravitationTest.unity using Guid(78cd5fd5050d1744387dd4fb367cd6c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d07f1279bca8b11b2ce10b781767f66') in 0.033106 seconds
+  Import took 0.039669 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002227 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E47F84E20 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E270EA5F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0369B040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B6D220 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E47FB9050 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E221BF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6AF29030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E270EA5F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6AAE0020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022C0369B040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22D95020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.328 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.4 MB.
+System memory in use after: 205.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3047.
+Total: 5.650400 ms (FindLiveObjects: 0.535800 ms CreateObjectMapping: 0.244100 ms MarkObjects: 4.834100 ms  DeleteObjects: 0.034000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002379 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022E2709B710 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E270EA5F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6B1993D0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E27B6D220 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E22BAF020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E242D4070 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E24B9C040 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6AF29030 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E270EA5F0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6AAE0020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6B1993D0 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022E6A456020 doesn't match image C:\MEINS\Workspace\Unity\00Thesis\BachelorThesis\SolarSystem_First\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.518 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.5 MB.
+System memory in use after: 205.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3049.
+Total: 3.796500 ms (FindLiveObjects: 0.840000 ms CreateObjectMapping: 0.271500 ms MarkObjects: 2.654500 ms  DeleteObjects: 0.028400 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
