@@ -69,7 +69,6 @@ public class DebugOrbit : MonoBehaviour
     void DrawOrbits()
     {
         // all bodies
-        //SimulateBody[] bodies = FindObjectsOfType<SimulateBody>();
         var simulatedBodies = new SimulatedBody[bodies.Length];
         var drawPoints = new Vector3[bodies.Length][];
         int referenceFrameIndex = 0;
@@ -81,9 +80,10 @@ public class DebugOrbit : MonoBehaviour
             simulatedBodies[i] = new SimulatedBody(bodies[i]);
             drawPoints[i] = new Vector3[numSteps];
 
+            // save Index and position of centralBody to reference
             if (bodies[i] == centralBody && relativeToCentralBody)
             {
-                referenceFrameIndex = i;
+                referenceFrameIndex = i; 
                 referenceBodyInitialPosition = simulatedBodies[i].position;
             }
         }
@@ -91,7 +91,7 @@ public class DebugOrbit : MonoBehaviour
         // Simulate
         for (int step = 0; step < numSteps; step++)
         {
-            // celectial body which is seen as the center
+            // celectial body which is seen as the center / set referenceBodyPos to simulatedBody at Position of centralBody
             Vector3 referenceBodyPosition = (relativeToCentralBody) ? simulatedBodies[referenceFrameIndex].position : Vector3.zero;
 
             // loop through simulated Bodies and calculate all accelerations
@@ -125,23 +125,24 @@ public class DebugOrbit : MonoBehaviour
         {
             // set pathColor to material color
             var pathColor = bodies[bodyIndex].gameObject.GetComponentInChildren<MeshRenderer>().sharedMaterial.color;
+            var pathMaterial = bodies[bodyIndex].gameObject.GetComponentInChildren<MeshRenderer>().sharedMaterial;
 
             if (useThickLines)
             {
                 var lineRenderer = bodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer>();
-      
+                lineRenderer.material = pathMaterial;
                 lineRenderer.enabled = true;
                 lineRenderer.positionCount = drawPoints[bodyIndex].Length;
                 lineRenderer.SetPositions(drawPoints[bodyIndex]);
-                lineRenderer.startColor = pathColor;
-                lineRenderer.endColor = pathColor;
+                //lineRenderer.startColor = pathColor;
+                //lineRenderer.endColor = pathColor;
                 lineRenderer.widthMultiplier = width;                
             }
             else
             {
                 for (int i = 0; i < drawPoints[bodyIndex].Length - 1; i++)
                 {
-                    Debug.DrawLine(drawPoints[bodyIndex][i], drawPoints[bodyIndex][i + 1], pathColor);
+                   Debug.DrawLine(drawPoints[bodyIndex][i], drawPoints[bodyIndex][i + 1], pathColor);
                 }
 
                 // Hide renderer
@@ -227,18 +228,7 @@ public class DebugOrbit : MonoBehaviour
 
     void SetBodies()
     {
-        //if (GameObject.FindGameObjectsWithTag("Planet") != null)
-        //{
-        //    GameObject[] tmp = GameObject.FindGameObjectsWithTag("Planet");
-
-        //    bodies = new SolarsystemBody[tmp.Length];
-        //    for (int i = 0; i < tmp.Length; i++)
-        //    {
-        //        bodies[i] = tmp[i].gameObject.GetComponent<SolarsystemBody>();
-        //    }
-
-        //}
-            bodies = FindObjectsOfType<SolarsystemBody>();
+        bodies = FindObjectsOfType<SolarsystemBody>();
 
         if (usePhysicsTimeStep)
         {
