@@ -20,33 +20,33 @@ MonoBehaviour:
       filterType: 0
       stdNoiseSettings:
         numberOfLayers: 3
-        strength: 0.014574872
-        baseRoughness: 1.354895
-        roughness: 2.9889522
-        persistence: 0.51157457
-        centre: {x: 7.245637, y: 0.020370483, z: 4.272404}
-        seaLevel: 1.2463112
+        strength: 0.010100314
+        baseRoughness: 1.0220108
+        roughness: 2.7423866
+        persistence: 0.56187105
+        centre: {x: 7.20436, y: 9.257928, z: 2.2815204}
+        seaLevel: 0.694742
   - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 1
       stdNoiseSettings:
         numberOfLayers: 3
-        strength: 4.198544
-        baseRoughness: 1.3504914
-        roughness: 3.7707763
-        persistence: 0.60433817
-        centre: {x: 8.819454, y: 4.902243, z: 1.7309153}
-        seaLevel: 0.7415029
+        strength: 4.0081425
+        baseRoughness: 1.4950551
+        roughness: 2.6047997
+        persistence: 0.6389498
+        centre: {x: 8.768067, y: 5.298448, z: 4.3616624}
+        seaLevel: 0.6858907
   - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 1
       stdNoiseSettings:
         numberOfLayers: 3
-        strength: 5.8841887
-        baseRoughness: 1.0955625
-        roughness: 2.5853674
-        persistence: 0.58751094
-        centre: {x: 8.276175, y: 7.498219, z: 0.8194959}
-        seaLevel: 0.74711
+        strength: 8.611272
+        baseRoughness: 1.2223077
+        roughness: 3.0543635
+        persistence: 0.5015888
+        centre: {x: 1.3348472, y: 0.88579535, z: 1.3387573}
+        seaLevel: 1.3364711
