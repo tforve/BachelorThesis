@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7549268204566238083}
-  - component: {fileID: 7549268204566238082}
   - component: {fileID: 7549268204566238084}
   - component: {fileID: 964187872}
   - component: {fileID: 760525957}
+  - component: {fileID: 1108855955}
   m_Layer: 0
   m_Name: SimulationManager
   m_TagString: Untagged
@@ -34,34 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7549268204566238082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7549268204566238085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e545769b7a337ed499b47e743ea6a195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numSteps: 2116
-  timeStep: 0.27
-  usePhysicsTimeStep: 0
-  centralBody: {fileID: 0}
-  relativeToCentralBody: 1
-  drawInPlayMode: 0
-  useThickLines: 0
-  width: 50
-  bodies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  addBodiesToDebug: 0
 --- !u!114 &7549268204566238084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,3 +83,29 @@ MonoBehaviour:
   text2: {fileID: 0}
   observerCamera: {fileID: 0}
   mainCam: {fileID: 0}
+--- !u!114 &1108855955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7549268204566238085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ec4e708d1a66244aed5e4664a505d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numSteps: 500
+  timeStep: 0.14
+  centralBody: {fileID: 0}
+  relativeToCentralBody: 1
+  drawInPlayMode: 0
+  thickness: 20
+  bodies:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  addBodiesToDebug: 0

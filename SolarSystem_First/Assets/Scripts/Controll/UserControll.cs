@@ -12,7 +12,7 @@ public class UserControll : MonoBehaviour
     [SerializeField]
     private Text text1, text2;
 
-    private DebugOrbit debug;
+    private OrbitPainter orbitPainter;
 
     [Header("Cameras")]
     [SerializeField]
@@ -25,7 +25,7 @@ public class UserControll : MonoBehaviour
         copyFactory = GetComponent<CopyFactory>();
         thirdPersonCamera = FindObjectOfType<ThirdPersonCamera>();
         planet = FindObjectOfType<BlueprintPlanet>();
-        debug = FindObjectOfType<DebugOrbit>();
+        orbitPainter = FindObjectOfType<OrbitPainter>();
 
         foreach (MeshRenderer mesh in planet.GetComponentsInChildren<MeshRenderer>())
         {
@@ -81,7 +81,7 @@ public class UserControll : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.O))
         {
             // Show Flightpath
-            debug.ShowOrbit();
+            orbitPainter.ShowOrbit();
         }
         if(Input.GetKeyDown(KeyCode.Escape))
         {
