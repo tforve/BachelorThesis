@@ -44,7 +44,7 @@ public class FinalPlanet : MonoBehaviour
         {
             if (meshFilters[i] == null)
             {
-                GameObject meshObj = new GameObject("facemesh");
+                GameObject meshObj = new GameObject("facemesh"+this.name);
                 meshObj.transform.SetParent(this.transform);
 
                 meshObj.AddComponent<MeshRenderer>();

@@ -38,24 +38,24 @@ public class UserControll : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             // Randomize whole Planet
-            planet.GetComponent<BlueprintPlanet>().RandomizePlanetColor();
-            planet.GetComponent<BlueprintPlanet>().RandomizePlanetShape();
-            planet.GetComponent<BlueprintPlanet>().GeneratePlanet();
-            FinalPlanet fplanet = thirdPersonCamera.targets[thirdPersonCamera.index].GetComponentInChildren<FinalPlanet>();
+            planet.RandomizePlanetColor();
+            planet.RandomizePlanetShape();
+            planet.GeneratePlanet();
+            var fplanet = thirdPersonCamera.targets[thirdPersonCamera.index].GetComponentInChildren<FinalPlanet>();
             copyFactory.UpdateParameters(fplanet);
         }
         if (Input.GetKeyDown(KeyCode.T))
         {
             // Randomize Planet Color
-            planet.GetComponent<BlueprintPlanet>().RandomizePlanetColor();
-            planet.GetComponent<BlueprintPlanet>().GeneratePlanet();
+            planet.RandomizePlanetColor();
+            planet.GeneratePlanet();
             copyFactory.UpdateParameters(thirdPersonCamera.targets[thirdPersonCamera.index].GetComponentInChildren<FinalPlanet>());
         }
         if (Input.GetKeyDown(KeyCode.Y))
         {
             // Randomize Planet Shape
-            planet.GetComponent<BlueprintPlanet>().RandomizePlanetShape();
-            planet.GetComponent<BlueprintPlanet>().GeneratePlanet();
+            planet.RandomizePlanetShape();
+            planet.GeneratePlanet();
             copyFactory.UpdateParameters(thirdPersonCamera.targets[thirdPersonCamera.index].GetComponentInChildren<FinalPlanet>());
         }
         if (Input.GetKeyDown(KeyCode.U))

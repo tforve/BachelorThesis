@@ -22,7 +22,12 @@ public class BlueprintPlanet : MonoBehaviour
 
     [SerializeField, HideInInspector]
     private MeshFilter[] meshFilters;           // array of all 6 meshes
-    private Face[] faces;                      // array for all faces
+    private Face[] faces;                       // array for all faces
+
+    private void Awake()
+    {
+        GeneratePlanet();
+    }
 
     void Initialize()
     {
