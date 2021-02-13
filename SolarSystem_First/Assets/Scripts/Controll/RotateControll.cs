@@ -6,33 +6,40 @@ using UnityEngine;
 public class RotateControll : MonoBehaviour
 {
     public float planetSpeed = 5f;
-    public float sunSpeed = 5f;
+    public int layerIndex;
+    [SerializeField]
+    private Light sun;
 
-    public CPlanet planet;
-    public GameObject sun;
-
-    private void RotatePlanet()
+    private void Start()
     {
-        this.transform.Rotate(Vector3.up * (planetSpeed * Time.deltaTime));
-        sun.transform.Rotate(Vector3.up * (sunSpeed * Time.deltaTime));
+        SetLayer(this.gameObject, layerIndex);
     }
+
     private void FixedUpdate()
     {
-        RotatePlanet();
+        RotateCelectialObjects();
     }
 
-    private void OnValidate()
+    /// <summary>
+    /// Use culling mask to apply light just to this.
+    /// need to set Layers in Unity Insepctor
+    /// </summary>
+    void SetLayer(GameObject obj, int newLayer)
     {
-        RotatePlanet();
-    }
+        if (obj is null) return;
+        
+        obj.layer = newLayer;
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.N))
+        foreach (Transform child in obj.GetComponentsInChildren<Transform>())
         {
-            planet.RandomizePlanetShape();
-            planet.RandomizePlanetColor();
-            planet.GeneratePlanet();
+            if (child is null) continue;
+            child.gameObject.layer = newLayer;            
         }
+    }
+
+    private void RotateCelectialObjects()
+    {
+        this.transform.Rotate(Vector3.down * (planetSpeed * Time.deltaTime));
+        sun.transform.LookAt(this.transform);
     }
 }

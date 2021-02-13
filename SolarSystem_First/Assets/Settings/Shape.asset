@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6456885c29055894194d92a3e9fbc95e, type: 3}
+  m_Name: Shape
+  m_EditorClassIdentifier: 
+  planetRadius: 120
+  noiseLayers:
+  - enabled: 1
+    useFirstLayerAsMask: 1
+    noiseSettings:
+      filterType: 0
+      stdNoiseSettings:
+        numberOfLayers: 3
+        strength: 0.017370421
+        baseRoughness: 1.2869277
+        roughness: 3.1738894
+        persistence: 0.61268497
+        centre: {x: 0.86601615, y: 6.4713216, z: 9.203911}
+        seaLevel: 0.47892398
+  - enabled: 1
+    useFirstLayerAsMask: 1
+    noiseSettings:
+      filterType: 2
+      stdNoiseSettings:
+        numberOfLayers: 3
+        strength: 2.8916264
+        baseRoughness: 1.1736743
+        roughness: 3.5200088
+        persistence: 0.63162446
+        centre: {x: 5.457235, y: 4.479384, z: 8.694653}
+        seaLevel: 0.7705773
+  - enabled: 1
+    useFirstLayerAsMask: 1
+    noiseSettings:
+      filterType: 1
+      stdNoiseSettings:
+        numberOfLayers: 3
+        strength: 5.7236085
+        baseRoughness: 1.0374999
+        roughness: 2.9127438
+        persistence: 0.61464345
+        centre: {x: 9.030919, y: 8.561863, z: 3.7088923}
+        seaLevel: 1.2290425

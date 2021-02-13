@@ -32,28 +32,49 @@ public class CopyFactory : MonoBehaviour
      * Do it One by One - in between randomize Planet to get n variants of planets
      */
 
-    private CPlanet planetToCopy;
-    private FinalPlanet[] finalPlanet;
+    private BlueprintPlanet planetToCopy;
+    private FinalPlanet[] finalPlanets;
 
     // --- values to copy ---
     // Color and Shape
-    private CFace[] faces;
+    private Face[] faces;
     private int originResolution;
-    private CColorSettings originColSettings;
-    private CShapeSettings originShapeSettings;
-    // gravity Simulation related
-    private SolarsystemBody solarsystemBody;
-
+    private ColorSettings originColSettings;
+    private ShapeSettings originShapeSettings;
 
     private void Awake()
     {
-        planetToCopy = FindObjectOfType<CPlanet>();
-        StoreParameters();
+        planetToCopy = FindObjectOfType<BlueprintPlanet>();
+        finalPlanets = FindObjectsOfType<FinalPlanet>();
 
-        finalPlanet = FindObjectsOfType<FinalPlanet>();
-        ApplyParameters();
+        InitPlanets();
+        RandomizePlanets();
     }
 
+    void InitPlanets()
+    {
+        for (int i = 0; i < finalPlanets.Length; i++)
+        {
+            StoreParameters();
+            ApplyParameters(finalPlanets[i]);
+            finalPlanets[i].Initialize();
+            finalPlanets[i].GeneratePlanet();
+        }
+    }
+
+    void RandomizePlanets()
+    {
+        for (int i = 0; i < finalPlanets.Length; i++)
+        {
+            // randomize Blueprintplanet  
+            planetToCopy.RandomizePlanetColor();
+            planetToCopy.RandomizePlanetShape();
+
+            StoreParameters();
+            ApplyParameters(finalPlanets[i]);
+            UpdateParameters(finalPlanets[i]);
+        }
+    }
 
     void StoreParameters()
     {
@@ -66,29 +87,24 @@ public class CopyFactory : MonoBehaviour
     /// <summary>
     /// apply values to final planet object
     /// </summary>
-    void ApplyParameters()
+    void ApplyParameters(FinalPlanet planet)
     {
-        // now go through all planets - later one by one with different settings !!!!!!!!!!
-        for (int i = 0; i < finalPlanet.Length; i++)
-        {
-            finalPlanet[i].faces = faces;
-            finalPlanet[i].resolution = originResolution;
-            finalPlanet[i].colorSettings = originColSettings;
-            finalPlanet[i].shapeSettings = originShapeSettings;
-        }
+        planet.faces = faces;
+        planet.resolution = originResolution;
+        planet.colorSettings = originColSettings;
+        planet.shapeSettings = originShapeSettings;
     }
 
     /// <summary>
-    /// if FinalPlanet calls for an Update, called by FinalPlanet itself
+    /// Update Parameters by use Planet.UpdateColors, Initialize and Regenerate
     /// </summary>
-    /// <param name="planetWhoAsk"></param>
-    public void UpdateParameters(FinalPlanet planetWhoAsk)
+    public void UpdateParameters(FinalPlanet planet)
     {
-        planetWhoAsk.faces = planetToCopy.GetFaces;
-        planetWhoAsk.resolution = planetToCopy.resolution;
-        // redundante if not having own Settings - because we already give planetToCopySettings
-        //planetWhoAsk.shapeSettings = planetToCopy.shapeSettings;
-        //planetWhoAsk.colorSettings = planetToCopy.colorSettings;
+        planet.faces = planetToCopy.GetFaces;
+        planet.resolution = planetToCopy.resolution;
+        planet.UpdateColors();
+        planet.Initialize();
+        planet.GeneratePlanet();
     }
 
 }

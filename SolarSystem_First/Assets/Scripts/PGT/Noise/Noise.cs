@@ -13,8 +13,7 @@ along with libnoise-dotnet.  If not, see <http://www.gnu.org/licenses/>.
 Simplex Noise in 2D, 3D and 4D. Based on the example code of this paper:
 http://staffwww.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf
 From Stefan Gustavson, Linkping University, Sweden (stegu at itn dot liu dot se)
-From Karsten Schmidt (slight optimizations & restructuring)
-Some changes by Sebastian Lague for use in a tutorial series.
+From Karsten Schmidt (slight optimizations & restructuring).
 */
 
 /*

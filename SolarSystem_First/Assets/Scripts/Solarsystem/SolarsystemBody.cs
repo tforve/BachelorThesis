@@ -74,13 +74,12 @@ public class SolarsystemBody : MonoBehaviour
                 // dir vector to each other - has to be turned 90 degrees! or? REWORK HERE! Which Vector to rotate
                 // ----------- 
                 Vector3 dir = (otherPlanet.rb.position - this.rb.position).normalized;
-                dir = Quaternion.Euler(0.0f, -90.0f, -90.0f) * dir;
+                dir = Quaternion.Euler(-90.0f, 0.0f, -90.0f) * dir;
                 // v = sqr(G*(M/r))
                 Vector3 forceToStart = dir * (Mathf.Sqrt(Universe.gravitationalConstant * (otherPlanet.mass / sqrDistance)));
                 startVelocity = forceToStart;
                 currentVelocity = forceToStart;
             }
-
         }
     }
 

@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GravitationTest.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Solarsystem01.unity
+    guid: da3a8eaf4a18899459686671c681146f
   - enabled: 1
-    path: Assets/Scenes/CubePlanetCreation.unity
-    guid: a6d2fc2cecf5e644ebfa6da864cb970d
+    path: Assets/Scenes/PlanetFactory.unity
+    guid: fe822b007155e58499eefd61ead99264
   m_configObjects: {}
