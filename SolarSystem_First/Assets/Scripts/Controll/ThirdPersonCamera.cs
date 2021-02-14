@@ -7,6 +7,7 @@ public class ThirdPersonCamera : MonoBehaviour
     public bool lockCursor;
     public float mouseSensitivity = 10.0f;
 
+    [HideInInspector]
     public SolarsystemBody[] targets;
     public int index = 0;                                           // Planet Index
     public float distanceFromTarget = 200.0f;

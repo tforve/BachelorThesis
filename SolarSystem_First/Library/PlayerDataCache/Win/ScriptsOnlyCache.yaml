@@ -69,6 +69,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
@@ -77,61 +78,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/PlanetFactory.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 1950}
-    - Class: 114
-      Script: {instanceID: 2538}
-    - Class: 114
-      Script: {instanceID: 3258}
-    - Class: 114
-      Script: {instanceID: 3976}
-    - Class: 114
-      Script: {instanceID: 4230}
-    - Class: 114
-      Script: {instanceID: 4504}
-    - Class: 114
-      Script: {instanceID: 5158}
-    - Class: 114
-      Script: {instanceID: 5814}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 258
-      Script: {instanceID: 0}
     Assets/Scenes/Solarsystem01.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -213,6 +159,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3336}
     - Class: 114
       Script: {instanceID: 3344}
+    - Class: 114
+      Script: {instanceID: 3472}
     - Class: 114
       Script: {instanceID: 3474}
     - Class: 114
@@ -740,7 +688,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIndirectFloatField
   - hash:
       serializedVersion: 2
-      Hash: ac832dccfa13d5f4d3a53fa9f987c2a1
+      Hash: 6fc5bfd77323c7b755f531fa2ed6fd38
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UserControll
@@ -1299,5 +1247,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Solarsystem01.unity
-  - Assets/Scenes/PlanetFactory.unity
-  playerPath: D:/Clouds/OneDrive/01 Thesis/00 Procedural/SolarSystem/DeBuild01/SolarSystem_First.exe
+  playerPath: D:/Clouds/OneDrive/01 Thesis/00 Procedural/SolarSystem/01Build/ProceduralSolarSystem.exe

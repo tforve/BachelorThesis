@@ -67,10 +67,10 @@ public class BlueprintPlanet : MonoBehaviour
     //called to Generate whole Planet
     public void GeneratePlanet()
     {
-        if (useSeed)
-        {
-            SetSeed();
-        }
+        //if (useSeed)
+        //{
+        //    SetSeed();
+        //}
         Initialize();
         GenerateMesh();
         GenerateColors();
@@ -152,14 +152,13 @@ public class BlueprintPlanet : MonoBehaviour
         colorSettings.biomeColorSettings.RandomOceanColor();
     }
 
-    /// <summary>
-    /// set seed for generating planetshape 
-    /// </summary>
-    private void SetSeed()
-    {
-        int seed = seedGenerator.seed;
-        UnityEngine.Random.InitState(seed);
-    }
+    ///// <summary>
+    ///// set seed for generating planetshape 
+    ///// </summary>
+    //public void SetSeed(int seed)
+    //{
+    //    UnityEngine.Random.InitState(seed);
+    //}
 
     // -------- GETTER ---------
 

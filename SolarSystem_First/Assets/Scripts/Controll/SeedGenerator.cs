@@ -20,6 +20,16 @@ public class SeedGenerator : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// get seed as int and set RNG on seed
+    /// </summary>
+    public void InputSeed(string seed)
+    {
+        this.seed = seed.GetHashCode();
+        UnityEngine.Random.InitState(this.seed);
+    }
+
+    // --- DEBUG only ---
     private void OnValidate()
     {
         GenerateSeed();
