@@ -57,9 +57,15 @@ public class OrbitPainter : MonoBehaviour
     void Start()
     {
         bodies = FindObjectsOfType<SolarsystemBody>();
+
     }
 
     void Update()
+    {
+        UpdateOrbit();
+    }
+
+    void UpdateOrbit()
     {
         if (drawInPlayMode || !Application.isPlaying)
         {

@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - ColorSettings
     - CopyFactory
     - FinalPlanet
+    - NebularControll
     - OrbitPainter
     - RotateControll
     - SeedGenerator
@@ -215,6 +216,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6002}
     - Class: 114
       Script: {instanceID: 6042}
+    - Class: 114
+      Script: {instanceID: 18540}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -230,6 +233,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -688,7 +693,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIndirectFloatField
   - hash:
       serializedVersion: 2
-      Hash: eb3a69df22414724df6cdd20f9a5fb3d
+      Hash: 835e60335c884adb971e39f6804f46a6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UserControll
@@ -1244,6 +1249,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: AmbientOcclusion
+  - hash:
+      serializedVersion: 2
+      Hash: a2f64d5b5e88d39a6ce19fd681b214b2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NebularControll
   platform: 5
   scenePathNames:
   - Assets/Scenes/Solarsystem01.unity

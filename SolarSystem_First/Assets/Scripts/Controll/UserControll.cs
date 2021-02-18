@@ -25,6 +25,8 @@ public class UserControll : MonoBehaviour
     [SerializeField]
     private GameObject mainCam;
 
+    public bool useOrbitCam = false;
+
     void Start()
     {
         copyFactory = GetComponent<CopyFactory>();
@@ -83,11 +85,13 @@ public class UserControll : MonoBehaviour
                 {
                     mainCam.SetActive(false);
                     observerCamera.SetActive(true);
+                    useOrbitCam = true;
                 }
                 else if (!mainCam.activeSelf)
                 {
                     observerCamera.SetActive(false);
                     mainCam.SetActive(true);
+                    useOrbitCam = false;
                 }
             }
             // Show Flightpath
