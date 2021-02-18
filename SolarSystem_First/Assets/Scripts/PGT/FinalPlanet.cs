@@ -7,7 +7,6 @@ public class FinalPlanet : MonoBehaviour
     /* apply all parameters from Planet to himself
     * create himselft 
     * instantiate himself on placeHolder.transform
-    * end
     */
 
     // copied parameters

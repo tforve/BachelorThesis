@@ -48,7 +48,7 @@ public class ColorSettings : ScriptableObject
             public Gradient gradient;           // main color gradient
             public Color tint;                  // laying on top of the gradient
             [Range(0, 1)]
-            public float startHeight;           // to set poles etc
+            public float startHeight;           
             [Range(0, 1)]
             public float tintPercent;
 

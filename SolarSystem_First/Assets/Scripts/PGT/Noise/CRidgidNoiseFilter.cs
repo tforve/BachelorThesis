@@ -22,7 +22,7 @@ public class CRidgidNoiseFilter : INoiseFilter
 
         for (int i = 0; i < settings.numberOfLayers; i++)
         {
-            // get inverted absolut value of noise for hilly mountains
+            // get inverted absolut value of noise for sharp mountains
             float v = 1 - Mathf.Abs(noise.Evaluate(point * frequency + settings.centre));
 
             noiseValue += v * amplitude;

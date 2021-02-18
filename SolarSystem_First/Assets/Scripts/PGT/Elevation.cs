@@ -7,8 +7,8 @@ using UnityEngine;
 /// </summary>
 public class Elevation
 {
-    public float minElevation { get; private set; }
-    public float maxElevation { get; private set; }
+    public float minElevation { get; private set; }         // lowest point
+    public float maxElevation { get; private set; }         // highest point 
 
     public Elevation()
     {

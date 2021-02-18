@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UserControll : MonoBehaviour
 {
-
     private CopyFactory copyFactory;
     private ThirdPersonCamera thirdPersonCamera;
     private BlueprintPlanet planet;
@@ -15,6 +14,8 @@ public class UserControll : MonoBehaviour
     [SerializeField]
     private InputField inputField;
     private bool textfieldIsActive;
+    [SerializeField]
+    private GameObject exitScreen;
 
     private OrbitPainter orbitPainter;
 
@@ -39,46 +40,45 @@ public class UserControll : MonoBehaviour
 
         inputField.gameObject.SetActive(false);
         textfieldIsActive = false;
+        exitScreen.SetActive(false);
     }
 
     private void Update()
     {
         if (!textfieldIsActive)
         {
+            // Randomize whole Planet
             if (Input.GetKeyDown(KeyCode.R))
             {
-                // Randomize whole Planet
                 planet.RandomizePlanetColor();
                 planet.RandomizePlanetShape();
                 planet.GeneratePlanet();
                 var fplanet = thirdPersonCamera.targets[thirdPersonCamera.index].GetComponentInChildren<FinalPlanet>();
                 copyFactory.UpdateParameters(fplanet);
             }
+            // Randomize Planet Color
             if (Input.GetKeyDown(KeyCode.T))
             {
-                // Randomize Planet Color
                 planet.RandomizePlanetColor();
                 planet.GeneratePlanet();
                 copyFactory.UpdateParameters(thirdPersonCamera.targets[thirdPersonCamera.index].GetComponentInChildren<FinalPlanet>());
             }
+            // Randomize Planet Shape
             if (Input.GetKeyDown(KeyCode.Y))
             {
-                // Randomize Planet Shape
                 planet.RandomizePlanetShape();
                 planet.GeneratePlanet();
                 copyFactory.UpdateParameters(thirdPersonCamera.targets[thirdPersonCamera.index].GetComponentInChildren<FinalPlanet>());
             }
-
+            // turn UI text on off
             if (Input.GetKeyDown(KeyCode.U))
             {
-                // turn UI text on off
                 text1.enabled = !text1.enabled;
                 text2.enabled = !text2.enabled;
             }
-
+            // swap between systemview and singlePlanet view     
             if (Input.GetKeyDown(KeyCode.I))
             {
-                // show system instead of single Planets            
                 if (mainCam.activeSelf)
                 {
                     mainCam.SetActive(false);
@@ -90,19 +90,30 @@ public class UserControll : MonoBehaviour
                     mainCam.SetActive(true);
                 }
             }
+            // Show Flightpath
             if (Input.GetKeyDown(KeyCode.O))
             {
-                // Show Flightpath
                 orbitPainter.ShowOrbit();
             }
         }
-
-        if(Input.GetKeyDown(KeyCode.Escape))
+        // show Exit 
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            if (!exitScreen.activeSelf)
+            {
+                exitScreen.SetActive(true);
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+            else
+            {
+                exitScreen.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
-
-        if (Input.GetButtonDown("Submit"))
+        // Show inputfield to set seed to planet
+        if (Input.GetButtonDown("Submits"))
         {
             textfieldIsActive = !textfieldIsActive;
 
@@ -132,4 +143,21 @@ public class UserControll : MonoBehaviour
             copyFactory.UpdateParameters(thirdPersonCamera.targets[thirdPersonCamera.index].GetComponentInChildren<FinalPlanet>());
         }
     }
+
+    public void ExitApplication(bool yes)
+    {
+        if (yes)
+        {
+            Debug.Log("close Application");
+            Application.Quit();
+        }
+        else
+        {
+            exitScreen.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
+
 }

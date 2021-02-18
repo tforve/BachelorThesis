@@ -7,7 +7,7 @@ public class BlueprintPlanet : MonoBehaviour
 {
     [Range(2, 256)]
     public int resolution = 10;                 // resolution of each face, 256 is max for mesh in unity
-    public bool autoUpdate = true;              // to set autoUpdate   --- DELETE LATER 
+    public bool autoUpdate = true;              // to set autoUpdate
 
 
     [Header("ScriptableObject")]
@@ -67,10 +67,6 @@ public class BlueprintPlanet : MonoBehaviour
     //called to Generate whole Planet
     public void GeneratePlanet()
     {
-        //if (useSeed)
-        //{
-        //    SetSeed();
-        //}
         Initialize();
         GenerateMesh();
         GenerateColors();
@@ -127,7 +123,7 @@ public class BlueprintPlanet : MonoBehaviour
     public void RandomizePlanetShape()
     {
         // randomize shapesettings in noiseLayers[0].noiseSettings.stdNoiseSettings
-        int multiplier = 1;
+        int multiplier = 1; // used on each layer 
 
         for (int i = 0; i < shapeSettings.noiseLayers.Length; i++)
         {
@@ -152,20 +148,8 @@ public class BlueprintPlanet : MonoBehaviour
         colorSettings.biomeColorSettings.RandomOceanColor();
     }
 
-    ///// <summary>
-    ///// set seed for generating planetshape 
-    ///// </summary>
-    //public void SetSeed(int seed)
-    //{
-    //    UnityEngine.Random.InitState(seed);
-    //}
-
     // -------- GETTER ---------
 
     public string GetPlanetName { get { return GetComponent<BlueprintPlanet>().name; } }
     public Face[] GetFaces { get { return faces; } }
-    // get resolution - public 
-    // get color settings - public
-    // get shape settings - public 
-    // public CShapeSettings GetSetShapeSettings { get { return shapeSettings; } set { shapeSettings = value; } }
 }

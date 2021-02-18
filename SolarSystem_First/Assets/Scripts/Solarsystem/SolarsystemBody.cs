@@ -12,7 +12,7 @@ public class SolarsystemBody : MonoBehaviour
     public float radius;                    // radius of planet
     public float surfaceGravity;            // surface Gravity to calculate mass
     public Vector3 startVelocity;           // give starting boost to planet
-    public Vector3 currentVelocity;         // update velocity
+    public Vector3 currentVelocity;         // updated velocity
     
     [SerializeField]
     private Rigidbody rb;
@@ -23,8 +23,6 @@ public class SolarsystemBody : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.mass = mass;
     }
-
-    // ------ RUNTIME: Move Planet --------
 
     /// <summary>
     /// calculate Velocity of planet based on law of universal gravitation (F = G *((m1*m2)/r^2))
@@ -65,14 +63,11 @@ public class SolarsystemBody : MonoBehaviour
     {
         foreach (var otherPlanet in planets)
         {
-            // don't want to effect the sun
-            if(otherPlanet != this) //&& this.CompareTag("Planet") || this.CompareTag("Moon"))
+            if(otherPlanet != this)
             {
                 // calculate r
                 float sqrDistance = (otherPlanet.rb.position - this.rb.position).magnitude;
-                // ----------- 
-                // dir vector to each other - has to be turned 90 degrees! or? REWORK HERE! Which Vector to rotate
-                // ----------- 
+                // dir vector to each other - turned 90 degrees
                 Vector3 dir = (otherPlanet.rb.position - this.rb.position).normalized;
                 dir = Quaternion.Euler(-90.0f, 0.0f, -90.0f) * dir;
                 // v = sqr(G*(M/r))
@@ -82,8 +77,6 @@ public class SolarsystemBody : MonoBehaviour
             }
         }
     }
-
-    // -------- MOSTLY FOR DEBUGGING PURPOSE: while in editor mode ---------
 
     /// <summary>
     /// Update mesh based on Radius of Planet
@@ -107,4 +100,6 @@ public class SolarsystemBody : MonoBehaviour
         UpdateMesh();
         CalculateMass();
     }
+
+    public Vector3 GetStartVelocity { get { return startVelocity; } }
 }

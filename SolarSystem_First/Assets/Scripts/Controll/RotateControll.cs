@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RotateControll : MonoBehaviour
 {
     public float planetSpeed = 5f;
     public int layerIndex;
     [SerializeField]
-    private Light sun;
+    private Light sun;                  // directional light that is used to light up a single Planet
 
     private void Start()
     {
@@ -21,8 +18,8 @@ public class RotateControll : MonoBehaviour
     }
 
     /// <summary>
+    /// setting layers of every Child of FinalPlanet to specific layer
     /// Use culling mask to apply light just to this.
-    /// need to set Layers in Unity Insepctor
     /// </summary>
     void SetLayer(GameObject obj, int newLayer)
     {

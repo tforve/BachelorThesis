@@ -180,6 +180,7 @@ public class OrbitPainter : MonoBehaviour
             // force (F = G *((m1*m2)/r^2))
             Vector3 force = direction * Universe.gravitationalConstant * ((simulatedBodies[j].mass * simulatedBodies[i].mass) / sqrDistance);
             acceleration += force / simulatedBodies[i].mass;
+           //acceleration += bodies[i].GetStartVelocity;
         }
 
         return acceleration;

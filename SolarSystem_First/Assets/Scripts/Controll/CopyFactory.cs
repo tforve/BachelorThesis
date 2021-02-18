@@ -62,11 +62,13 @@ public class CopyFactory : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// randomize Planet by randomize blueprintPlanet then store, apply and update finalPlanet
+    /// </summary>
     void RandomizePlanets()
     {
         for (int i = 0; i < finalPlanets.Length; i++)
         {
-            // randomize Blueprintplanet  
             planetToCopy.RandomizePlanetColor();
             planetToCopy.RandomizePlanetShape();
 

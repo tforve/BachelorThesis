@@ -11,7 +11,7 @@ public class Face
     private Mesh mesh;
     private int resolution;                    
     private Vector3 normalVector;               // facing up/ used as local up
-    private Vector3 axisX, axisY;               // other 2 dir vectors
+    private Vector3 axisX, axisY;               // other 2 dir vectors to build cartesian system
 
     public Face(ShapeGenerator shapeGenerator, Mesh mesh, int resolution, Vector3 normalVec)
     {
@@ -82,6 +82,7 @@ public class Face
 
     public void UpdateUVs(ColorGenerator colorGenerator)
     {
+        // store UVs
         Vector2[] uv = mesh.uv;
 
         for (int y = 0; y < resolution; y++)
@@ -92,7 +93,6 @@ public class Face
                 int i = x + y * resolution;
                 Vector2 percent = new Vector2(x, y) / (resolution - 1);
                 Vector3 pointOnUnitCube = normalVector + (percent.x - 0.5f) * 2 * axisX + (percent.y - 0.5f) * 2 * axisY;
-                // get vertices same distance to center of cube
                 Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;
                 //store uvs , x coords are used for biomes, y for water
                 uv[i].x = colorGenerator.BiomePercentFromtPoint(pointOnUnitSphere);

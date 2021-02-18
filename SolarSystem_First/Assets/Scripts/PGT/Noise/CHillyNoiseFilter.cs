@@ -20,7 +20,6 @@ public class CHillyNoiseFilter : INoiseFilter
         // setting frequency and amplitude to define layers of noise
         float frequency = settings.baseRoughness;
         float amplitude = 1;
-        // make it more details based on layers. heigher layers have higher weight -------- NO NEED MAYBE
 
         for (int i = 0; i < settings.numberOfLayers; i++)
         {
