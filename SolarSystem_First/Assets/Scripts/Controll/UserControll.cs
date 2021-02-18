@@ -5,10 +5,36 @@ using UnityEngine.UI;
 
 public class UserControll : MonoBehaviour
 {
+    #region SINGLETON PATTERN
+    private static UserControll _instance;
+    public static UserControll Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<UserControll>();
+
+                if (_instance == null)
+                {
+                    GameObject container = new GameObject("DebugOrbit");
+                    _instance = container.AddComponent<UserControll>();
+                }
+            }
+
+
+            return _instance;
+        }
+
+    }
+    #endregion
+
     private CopyFactory copyFactory;
     private ThirdPersonCamera thirdPersonCamera;
     private BlueprintPlanet planet;
     private SeedGenerator seedGenerator;
+    [SerializeField]
+    private GameObject sun;
     [SerializeField]
     private Text text1, text2;
     [SerializeField]
@@ -131,6 +157,8 @@ public class UserControll : MonoBehaviour
                 inputField.gameObject.SetActive(false);
             }
         }
+
+        observerCamera.transform.LookAt(sun.transform);
     }
 
     public void UseSeedToGeneratePlanet()

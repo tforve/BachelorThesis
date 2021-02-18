@@ -34,7 +34,7 @@ public class OrbitPainter : MonoBehaviour
     }
     #endregion
 
-    public int numSteps = 2000;                 // precalculated Steps
+    public int numSteps = 1170;                 // precalculated Steps
     public float timeStep = 0.1f;
 
     [Header("Centralody")]
@@ -45,11 +45,10 @@ public class OrbitPainter : MonoBehaviour
     public float thickness = 20;                // width of linerenderer
 
     [Header("Celectial Bodies")]
-    [SerializeField]
     private SolarsystemBody[] bodies;           // actual bodies of system
     private SimulatedBody[] simulatedBodies;    // placeholder to calculate futur Positions
     private Vector3[][] drawPoints;             // points inbetween we draw lines
-    private int referenceFrameIndex = 0;        
+    private int referenceFrameIndex = 0;
     private Vector3 referenceBodyInitialPosition = Vector3.zero;
 
     public bool addBodiesToDebug = false;       // used to check if new bodies were added
@@ -57,12 +56,17 @@ public class OrbitPainter : MonoBehaviour
     void Start()
     {
         bodies = FindObjectsOfType<SolarsystemBody>();
-
     }
 
     void Update()
     {
         UpdateOrbit();
+
+        if (addBodiesToDebug)
+        {
+            bodies = FindObjectsOfType<SolarsystemBody>();
+            addBodiesToDebug = false;
+        }
     }
 
     void UpdateOrbit()
@@ -73,11 +77,7 @@ public class OrbitPainter : MonoBehaviour
             SimulateFlightPath();
             DrawFlightPath();
         }
-        if (addBodiesToDebug)
-        {
-            bodies = FindObjectsOfType<SolarsystemBody>();
-            addBodiesToDebug = false;
-        }
+
     }
 
     void InitializeSimulatedBodies()
@@ -156,7 +156,7 @@ public class OrbitPainter : MonoBehaviour
             }
             else
             {
-                for (int j = 0; j < drawPoints[i].Length-1; j++)
+                for (int j = 0; j < drawPoints[i].Length - 1; j++)
                 {
                     Debug.DrawLine(drawPoints[i][j], drawPoints[i][j + 1], pathColor);
                 }
@@ -186,7 +186,6 @@ public class OrbitPainter : MonoBehaviour
             // force (F = G *((m1*m2)/r^2))
             Vector3 force = direction * Universe.gravitationalConstant * ((simulatedBodies[j].mass * simulatedBodies[i].mass) / sqrDistance);
             acceleration += force / simulatedBodies[i].mass;
-           //acceleration += bodies[i].GetStartVelocity;
         }
 
         return acceleration;
@@ -220,7 +219,7 @@ public class OrbitPainter : MonoBehaviour
         public SimulatedBody(SolarsystemBody systemBody)
         {
             this.position = systemBody.transform.position;
-            this.velocity = systemBody.startVelocity;
+            this.velocity = systemBody.currentVelocity;
             this.mass = systemBody.mass;
         }
     }
