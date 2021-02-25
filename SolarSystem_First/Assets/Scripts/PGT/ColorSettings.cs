@@ -40,6 +40,10 @@ public class ColorSettings : ScriptableObject
 
             tmpGradient.SetKeys(colorKey, alphaKey);
             oceanColor = tmpGradient;
+
+            // rnd noise
+            noiseOffset = Random.Range(0.3f, 0.6f);
+            noiseStrength = Random.Range(0.2f, 0.5f);
         }
 
         [System.Serializable]

@@ -7,7 +7,7 @@ public class ShapeGenerator
     ShapeSettings settings;                
     INoiseFilter[] noiseFilters;
 
-    public Elevation elavationMinMax;            // height to calculate hightest and lowest point of Planet to set Colors right
+    public Elevation elevantion;            // height to calculate hightest and lowest point of Planet to set Colors right
 
     public void UpdateSettings(ShapeSettings settings)
     {
@@ -19,7 +19,7 @@ public class ShapeGenerator
             noiseFilters[i] = CNoiseFilterFactory.CreateNoiseFilter(settings.noiseLayers[i].noiseSettings);
         }
 
-        elavationMinMax = new Elevation();
+        elevantion = new Elevation();
     }
 
 
@@ -49,7 +49,7 @@ public class ShapeGenerator
         }
 
         //storing lowest and highest elevation of all vertices
-        elavationMinMax.AddValue(noise);
+        elevantion.AddValue(noise);
         return noise;
     }
 

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// By creating every Face on its owne we can later easily change the LOD 
@@ -79,7 +77,10 @@ public class Face
         mesh.uv = uv;
     }
 
-
+    /// <summary>
+    /// loop throught all points on sphere and calculate in which Biome they are
+    /// </summary>
+    /// <param name="colorGenerator"></param>
     public void UpdateUVs(ColorGenerator colorGenerator)
     {
         // store UVs
@@ -92,10 +93,10 @@ public class Face
                 // index of vertices
                 int i = x + y * resolution;
                 Vector2 percent = new Vector2(x, y) / (resolution - 1);
-                Vector3 pointOnUnitCube = normalVector + (percent.x - 0.5f) * 2 * axisX + (percent.y - 0.5f) * 2 * axisY;
-                Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;
+                Vector3 pointOnCube = normalVector + (percent.x - 0.5f) * 2 * axisX + (percent.y - 0.5f) * 2 * axisY;
+                Vector3 pointOnSphere = pointOnCube.normalized;
                 //store uvs , x coords are used for biomes, y for water
-                uv[i].x = colorGenerator.BiomePercentFromtPoint(pointOnUnitSphere);
+                uv[i].x = colorGenerator.BiomePercentFromtPoint(pointOnSphere);
             }
         }
         mesh.uv = uv;

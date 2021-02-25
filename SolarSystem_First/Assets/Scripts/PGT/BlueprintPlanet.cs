@@ -108,7 +108,7 @@ public class BlueprintPlanet : MonoBehaviour
         {
             face.ConstructMesh();
         }
-        colorGenerator.UpdateElevation(shapeGenerator.elavationMinMax);
+        colorGenerator.UpdateElevation(shapeGenerator.elevantion);
     }
 
     // --- Debug Purpose in Editor ---
@@ -144,6 +144,7 @@ public class BlueprintPlanet : MonoBehaviour
         for (int i = 0; i < colorSettings.biomeColorSettings.biomes.Length; i++)
         {
             colorSettings.biomeColorSettings.biomes[i].RandomValue();
+            colorSettings.biomeColorSettings.noise.filterType = (CNoiseSettings.FilterType)UnityEngine.Random.Range(0, 4);
         }
         colorSettings.biomeColorSettings.RandomOceanColor();
     }

@@ -17,11 +17,11 @@ public class ColorGenerator
 
     /// <summary>
     /// calculate and set the Biomes strength, height and how much they blend in each other. 
-    /// 0 for Southpole, 1 for Northpole, or first and last biome
+    /// returns 0 for Southpole, 1 for Northpole, or first and last biome
     /// </summary>
     public float BiomePercentFromtPoint(Vector3 pointOnSphere)
     {
-        // set between 0, 1
+        // set between 0, 1 because unitsphere goes from -1 to 1
         float heightPercent = (pointOnSphere.y + 1) / 2.0f;
         // use noise on heightPercent to disturb the boundries
         heightPercent += (biomeNoiseFilter.Evaluate(pointOnSphere) - settings.biomeColorSettings.noiseOffset) * settings.biomeColorSettings.noiseStrength;
